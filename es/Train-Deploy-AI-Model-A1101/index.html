@@ -1,0 +1,455 @@
+<!doctype html><html lang=en-US dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-Spanish/Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/es_Train-Deploy-AI-Model-A1101" data-has-hydrated=false><meta charset=UTF-8><meta name=generator content="Docusaurus v3.8.1"><title data-rh=true>Entrena y Despliega tu Modelo de IA al SenseCAP A1101 | Seeed Studio Wiki</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"><meta data-rh=true name=twitter:card content=summary_large_image><meta data-rh=true property=og:url content=https://wiki.seeedstudio.com/es/Train-Deploy-AI-Model-A1101/><meta data-rh=true property=og:locale content=en_US><meta data-rh=true name=docusaurus_locale content=en><meta data-rh=true name=docsearch:language content=en><meta data-rh=true name=docusaurus_version content=current><meta data-rh=true name=docusaurus_tag content=docs-default-current><meta data-rh=true name=docsearch:version content=current><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current><meta data-rh=true property=og:title content="Entrena y Despliega tu Modelo de IA al SenseCAP A1101 | Seeed Studio Wiki"><meta data-rh=true name=description content="Train and Deploy Your Own AI Model Into SenseCAP A1101"><meta data-rh=true property=og:description content="Train and Deploy Your Own AI Model Into SenseCAP A1101"><meta data-rh=true name=keywords content=SenseCAP><meta data-rh=true property=og:image content=https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png><meta data-rh=true name=twitter:image content=https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png><link data-rh=true rel=icon href=/img/S.png><link data-rh=true rel=canonical href=https://wiki.seeedstudio.com/es/Train-Deploy-AI-Model-A1101/><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/es/Train-Deploy-AI-Model-A1101/ hreflang=en-US><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/es/Train-Deploy-AI-Model-A1101/ hreflang=x-default><link rel=alternate type=application/rss+xml href=/blog/rss.xml title="Seeed Studio Wiki RSS Feed"><link rel=alternate type=application/atom+xml href=/blog/atom.xml title="Seeed Studio Wiki Atom Feed"><link rel=preconnect href=https://www.googletagmanager.com><script>window.dataLayer=window.dataLayer||[],function(e,t,a,n,r){e[n]=e[n]||[],e[n].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var d=t.getElementsByTagName(a)[0],g=t.createElement(a);g.async=!0,g.src="https://www.googletagmanager.com/gtm.js?id="+r+("dataLayer"!=n?"&l="+n:""),d.parentNode.insertBefore(g,d)}(window,document,"script","dataLayer","GTM-M4JG2HVB")</script><link rel=search type=application/opensearchdescription+xml title="Seeed Studio Wiki" href=/opensearch.xml><script src=https://viewer.altium.com/client/static/js/embed.js async></script><script src=/js/custom.js async></script><script src=/js/language-switcher.js async></script><link rel=stylesheet href=/assets/css/styles.c8bd05b2.css><script src=/assets/js/runtime~main.edf1b14f.js defer></script><script src=/assets/js/main.c04f9533.js defer></script><body class=navigation-with-keyboard><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4JG2HVB" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript>
+
+
+<svg xmlns=http://www.w3.org/2000/svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="dark",e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id=__docusaurus><div role=region aria-label="Skip to main content"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Skip to main content</a></div><div class="theme-announcement-bar announcementBar_mb4j" style=background-color:#013949;color:#FFFFFF role=banner><div class="content_knG7 announcementBarContent_xLdY">Collaborate with Seeed — <a target=_blank href=https://www.seeedstudio.com/blog/affiliate-program/>Creator</a>, <a target=_blank href=https://wiki.seeedstudio.com/ranger/>Ranger</a>, or <a target=_blank href=https://wiki.seeedstudio.com/contributors/>Contributor</a>, there is always a role ideal for you!</div></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/><div class=navbar__logo><img src=https://files.seeedstudio.com/wiki/wiki-platform/SeeedStudio.png alt="Seeed Studio" class="navbar_logo_items themedComponent_mlkZ themedComponent--light_NVdE"><img src=https://files.seeedstudio.com/wiki/wiki-platform/seeed_white_logo.png alt="Seeed Studio" class="navbar_logo_items themedComponent_mlkZ themedComponent--dark_xIcU"></div></a><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link navbar_dorp_items js_getting_started" aria-haspopup=true aria-expanded=false role=button href=/Getting_Started/>Quick Links</a><ul class=dropdown__menu><li><a class=dropdown__link href=/Sensor_Network/>Sensor and Sensing</a><li><a class=dropdown__link href=/Network/>Networking</a><li><a class=dropdown__link href=/Edge_Computing/>Edge Computing</a><li><a class=dropdown__link href=/Cloud/>Cloud</a></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link navbar_dorp_items js_explore_learn" aria-haspopup=true aria-expanded=false role=button href=/topicintroduction/>Explore with Topics</a><ul class=dropdown__menu><li><a class=dropdown__link href=/tinyml_topic/>TinyML</a><li><a class=dropdown__link href=/ModelAssistant_Introduce_Overview/>SenseCraft Model Assistant</a><li><a class=dropdown__link href=/home_assistant_topic/>Home Assistant</a><li><a class=dropdown__link href=/open_source_topic/>Open Source</a><li><a class=dropdown__link href=/edge_ai_topic/>Edge AI</a><li><a class=dropdown__link href=/cn/Getting_Started/>Wiki 矽递科技 (中文)</a><li><a class=dropdown__link href=/ja/Getting_Started/>Wiki SeeedStudio (日本語)</a><li><a class=dropdown__link href=/es/SeeedStudio_XIAO_Series_Introduction/>Wiki SeeedStudio (Español)</a></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link navbar_dorp_items" aria-haspopup=true aria-expanded=false role=button href=/knowledgebase/>FAQs</a><ul class=dropdown__menu><li><a class=dropdown__link href=/Jetson_FAQ/>NVIDIA Jetson Series</a><li><a class=dropdown__link href=/XIAO_FAQ/>Seeed Studio XIAO Series</a><li><a class=dropdown__link href=/reComputer_R1000_FAQ/>reComputer R1000 Series</a><li><a class=dropdown__link href=/reTerminal-new_FAQ/>reTerminal</a><li><a class=dropdown__link href=/FAQs_For_openWrt/>reRouter</a><li><a class=dropdown__link href=/ODYSSEY_FAQ/>Odyssey</a><li><a class=dropdown__link href=/wio_terminal_faq/>Wio Terminal</a><li class=""><hr style="margin: 8px 0;"><li><a href=https://discord.com/invite/eWkprNDMU7 target=_blank rel="noopener noreferrer" class=dropdown__link>Discord<svg width=12 height=12 aria-hidden=true class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><li><a href=https://www.seeedstudio.com/contacts target=_blank rel="noopener noreferrer" class=dropdown__link>Email<svg width=12 height=12 aria-hidden=true class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><li><a href=https://forum.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=dropdown__link>Forum<svg width=12 height=12 aria-hidden=true class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><li><a href=https://github.com/Seeed-Studio/wiki-documents/discussions/69 target=_blank rel="noopener noreferrer" class=dropdown__link>Have Suggestions?<svg width=12 height=12 aria-hidden=true class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link navbar_dorp_items" aria-haspopup=true aria-expanded=false role=button href=/ranger/>Get Involved</a><ul class=dropdown__menu><li><a href=https://www.seeedstudio.com/blog/affiliate-program/ target=_blank rel="noopener noreferrer" class=dropdown__link>Affiliate & Creator</a><li><a class=dropdown__link href=/ranger/>Rangers</a><li><a class=dropdown__link href=/contributors/>Contributors</a><li><a href=https://docs.google.com/forms/d/e/1FAIpQLSdiAWHmRJqgVNTJyJDkzhufc1dygFyhWFyEtUTm-mrgSKaEgg/viewform target=_blank rel="noopener noreferrer" class=dropdown__link>Apply for Rangers<svg width=12 height=12 aria-hidden=true class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><li><a href=https://github.com/orgs/Seeed-Studio/projects/6 target=_blank rel="noopener noreferrer" class=dropdown__link>Direct to Assignments<svg width=12 height=12 aria-hidden=true class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><li><a href=https://www.seeedstudio.com/blog/2023/09/15/join-the-seeed-ranger-program-empowering-developers-and-building-communities/ target=_blank rel="noopener noreferrer" class=dropdown__link>More about Rangers<svg width=12 height=12 aria-hidden=true class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><li><a href=https://wiki.seeedstudio.com/Contributor target=_blank rel="noopener noreferrer" class=dropdown__link>More about Contributors<svg width=12 height=12 aria-hidden=true class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a></ul></div></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href=https://www.seeedstudio.com/ target=_blank rel="noopener noreferrer" class="navbar__item navbar__link navbar_doc_right_items">Bazaar 🛍️</a><a href=https://sensecraft.seeed.cc/ai/#/home target=_blank rel="noopener noreferrer" class="navbar__item navbar__link navbar_doc_right_items">SenseCraft AI</a><a href=https://sensecraft.seeed.cc/ai/#/home target=_blank rel="noopener noreferrer" class="navbar__item navbar__link header-SSCMA"></a><a href=https://github.com/Seeed-Studio/wiki-documents target=_blank rel="noopener noreferrer" class="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div><div class=navbarSearchContainer_Bca1><button type=button class="DocSearch DocSearch-Button" aria-label=Search><span class=DocSearch-Button-Container><svg width=20 height=20 class=DocSearch-Search-Icon viewBox="0 0 20 20"><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke=currentColor fill=none fill-rule=evenodd stroke-linecap=round stroke-linejoin=round /></svg><span class=DocSearch-Button-Placeholder>Search</span></span><span class=DocSearch-Button-Keys></span></button></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_z5aJ" data-sku="" data-doc-type=""><div class=docItemContainer_c0TR><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type=button class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Entrena y Despliega Tu Propio Modelo de IA en SenseCAP A1101</h1></header>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id=descripción-general>Descripción general<a href=#descripción-general class=hash-link aria-label="Direct link to Descripción general" title="Direct link to Descripción general">​</a></h2>
+<p>En este wiki, te enseñaremos cómo entrenar tu propio modelo de IA para tu aplicación específica y luego desplegarlo fácilmente en el SenseCAP A1101 - Sensor IA de Visión LoRaWAN. ¡Comencemos!</p>
+<div class="theme-admonition theme-admonition-caution admonition_xJq3 alert alert--warning"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 16 16"><path fill-rule=evenodd d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></span><strong>Nota:</strong></div><div class=admonitionContent_BuS1><p>El firmware actual del dispositivo es compatible con <a href=https://wiki.seeedstudio.com/One-Stop-Model-Training-with-Edge-Impulse/ target=_blank rel="noopener noreferrer">EI</a>. Si compraste el dispositivo después del <strong>30 de marzo de 2023</strong>, debes flashearlo de nuevo al <a href=https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101/#change-device-firmware-after-image-collection target=_blank rel="noopener noreferrer">firmware por defecto</a> para seguir este wiki.</div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id=introducción-al-hardware>Introducción al hardware<a href=#introducción-al-hardware class=hash-link aria-label="Direct link to Introducción al hardware" title="Direct link to Introducción al hardware">​</a></h2>
+<p>A lo largo de este wiki utilizaremos principalmente el SenseCAP A1101 - Sensor IA de Visión LoRaWAN. Primero, familiaricémonos con este hardware.</p>
+<p><a href=https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html target=_blank rel="noopener noreferrer">SenseCAP A1101 - Sensor IA de Visión LoRaWAN</a> combina tecnología TinyML y transmisión LoRaWAN de largo alcance para ofrecer una solución de IA de bajo consumo y alto rendimiento para exteriores. Integra la solución de visión IA de Himax, compatible con TensorFlow Lite y múltiples plataformas TinyML, capaz de ejecutar distintos modelos para funciones como detección de plagas, conteo de personas y reconocimiento de objetos. Los usuarios pueden usar modelos proporcionados por Seeed, generar modelos propios con herramientas de entrenamiento o adquirir modelos comerciales de proveedores asociados.</p>
+<div align=center><img width=1000 src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/60.jpg></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id=introducción-al-software>Introducción al software<a href=#introducción-al-software class=hash-link aria-label="Direct link to Introducción al software" title="Direct link to Introducción al software">​</a></h2>
+<p>En este wiki utilizaremos las siguientes tecnologías:</p>
+<ul>
+<li><strong>Roboflow</strong> – para anotar imágenes.</li>
+<li><strong>YOLOv5</strong> – para entrenar el modelo.</li>
+<li><strong>TensorFlow Lite</strong> – para la inferencia.</li>
+</ul>
+<div align=center><img width=600 src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/57.png></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id=qué-es-roboflow>¿Qué es Roboflow?<a href=#qué-es-roboflow class=hash-link aria-label="Direct link to ¿Qué es Roboflow?" title="Direct link to ¿Qué es Roboflow?">​</a></h3>
+<p><a href=https://roboflow.com target=_blank rel="noopener noreferrer">Roboflow</a> es una herramienta de anotación basada en la web. Permite anotar imágenes fácilmente, aplicar preprocesamiento y exportar el conjunto etiquetado en formatos como YOLOv5 PyTorch, Pascal VOC, ¡y más! Además, ofrece conjuntos de datos públicos listos para usar.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id=qué-es-yolov5>¿Qué es YOLOv5?<a href=#qué-es-yolov5 class=hash-link aria-label="Direct link to ¿Qué es YOLOv5?" title="Direct link to ¿Qué es YOLOv5?">​</a></h3>
+<p>YOLO significa “You Only Look Once”. Es un algoritmo que detecta y reconoce objetos en tiempo real. Ultralytics <a href=https://ultralytics.com/yolov5 target=_blank rel="noopener noreferrer">YOLOv5</a> es la implementación basada en PyTorch.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id=qué-es-tensorflow-lite>¿Qué es TensorFlow Lite?<a href=#qué-es-tensorflow-lite class=hash-link aria-label="Direct link to ¿Qué es TensorFlow Lite?" title="Direct link to ¿Qué es TensorFlow Lite?">​</a></h3>
+<p><a href=https://www.tensorflow.org/lite target=_blank rel="noopener noreferrer">TensorFlow Lite</a> es un framework de aprendizaje profundo multiplataforma y listo para producción. Convierte un modelo preentrenado de TensorFlow a un formato optimizado para velocidad o tamaño, para desplegar inferencia en dispositivos edge como móviles, Raspberry Pi o microcontroladores.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id=estructura-del-wiki>Estructura del wiki<a href=#estructura-del-wiki class=hash-link aria-label="Direct link to Estructura del wiki" title="Direct link to Estructura del wiki">​</a></h2>
+<p>Este wiki se divide en tres secciones principales:</p>
+<ol>
+<li><a href=#1-entrena-tu-propio-modelo-con-un-dataset-p%C3%BAblico>Entrena tu propio modelo con un dataset público</a></li>
+<li><a href=#2-entrena-tu-propio-modelo-con-tu-propio-dataset>Entrena tu propio modelo con tu propio dataset</a></li>
+<li><a href=#3-despliega-el-modelo-entrenado-en-sensecap-a1101>Despliega el modelo entrenado en SenseCAP A1101</a></li>
+</ol>
+<p>La sección 1 es la forma más rápida de crear tu modelo con pocos pasos. La sección 2 requiere más tiempo y esfuerzo, pero aporta mayor conocimiento. La sección 3 explica el despliegue del modelo y puede realizarse tras completar la 1 o la 2.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id=opciones-de-seguimiento>Opciones de seguimiento<a href=#opciones-de-seguimiento class=hash-link aria-label="Direct link to Opciones de seguimiento" title="Direct link to Opciones de seguimiento">​</a></h3>
+<ol>
+<li>Sigue la <a href=#1-entrena-tu-propio-modelo-con-un-dataset-p%C3%BAblico>sección 1</a> y luego la <a href=#3-despliega-el-modelo-entrenado-en-sensecap-a1101>sección 3</a> – rápido.</li>
+<li>Sigue la <a href=#2-entrena-tu-propio-modelo-con-tu-propio-dataset>sección 2</a> y luego la <a href=#3-despliega-el-modelo-entrenado-en-sensecap-a1101>sección 3</a> – detallado.</li>
+</ol>
+<p>Recomendamos empezar por la primera opción y luego avanzar a la segunda.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id=1-entrena-tu-propio-modelo-con-un-dataset-público>1. Entrena tu propio modelo con un dataset público<a href=#1-entrena-tu-propio-modelo-con-un-dataset-público class=hash-link aria-label="Direct link to 1. Entrena tu propio modelo con un dataset público" title="Direct link to 1. Entrena tu propio modelo con un dataset público">​</a></h2>
+<p>El primer paso en un proyecto de detección de objetos es obtener datos para entrenamiento. Puedes descargar datasets públicos o crear el tuyo propio. Usar datasets públicos te ahorra tiempo de recolección y anotación, ya están listos para usar.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id=preparación-de-hardware>Preparación de hardware<a href=#preparación-de-hardware class=hash-link aria-label="Direct link to Preparación de hardware" title="Direct link to Preparación de hardware">​</a></h3>
+<ul>
+<li>SenseCAP A1101 – Sensor IA de Visión LoRaWAN</li>
+<li>Cable USB tipo C</li>
+<li>Windows/Linux/macOS con Internet</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id=preparación-de-software>Preparación de software<a href=#preparación-de-software class=hash-link aria-label="Direct link to Preparación de software" title="Direct link to Preparación de software">​</a></h3>
+<ul>
+<li>No se requiere software adicional</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id=uso-de-un-dataset-público-anotado>Uso de un dataset público anotado<a href=#uso-de-un-dataset-público-anotado class=hash-link aria-label="Direct link to Uso de un dataset público anotado" title="Direct link to Uso de un dataset público anotado">​</a></h3>
+<p>Puedes descargar datasets públicos como el <a href=https://cocodataset.org target=_blank rel="noopener noreferrer">COCO dataset</a> o el <a href=http://host.robots.ox.ac.uk/pascal/VOC target=_blank rel="noopener noreferrer">Pascal VOC dataset</a>. Se recomienda <a href=https://universe.roboflow.com target=_blank rel="noopener noreferrer">Roboflow Universe</a>, que ofrece más de 90 000 datasets con 66 millones de imágenes. También puedes buscar “open-source datasets” en Google.</p>
+<ul>
+<li><strong>Paso 1.</strong> Visita <a href=https://universe.roboflow.com/lakshantha-dissanayake/apple-detection-5z37o/dataset/1 target=_blank rel="noopener noreferrer">este enlace de Roboflow</a> para acceder a un dataset de detección de manzanas.</li>
+<li><strong>Paso 2.</strong> Haz clic en <strong>Create Account</strong> para crear una cuenta Roboflow.</li>
+</ul>
+<div align=center><img width=1000 src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/53.png></div>
+<ul>
+<li><strong>Paso 3.</strong> Haz clic en <strong>Download</strong>, selecciona <strong>YOLO v5 PyTorch</strong> como <strong>Format</strong>, pulsa <strong>show download code</strong> y luego <strong>Continue</strong>.</li>
+</ul>
+<div align=center><img width=1000 src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/51.png></div>
+<p>Se generará un snippet de código que usaremos luego en Google Colab. Mantén esta ventana abierta.</p>
+<div align=center><img width=700 src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/52.png></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id=entrena-usando-yolov5-en-google-colab>Entrena usando YOLOv5 en Google Colab<a href=#entrena-usando-yolov5-en-google-colab class=hash-link aria-label="Direct link to Entrena usando YOLOv5 en Google Colab" title="Direct link to Entrena usando YOLOv5 en Google Colab">​</a></h3>
+<p>Tras elegir el dataset, usamos Google Colab para entrenar en la nube. Integramos la API de Roboflow en Colab para descargar fácilmente el dataset.</p>
+<p>Abre este <a href=https://colab.research.google.com/github/Seeed-Studio/yolov5-swift/blob/master/tutorial.ipynb target=_blank rel="noopener noreferrer">notebook preconfigurado</a>, sigue los pasos y ejecuta las celdas de código en orden.</p>
+<blockquote>
+<p><strong>Nota:</strong> En Colab, en la celda de <strong>Step 4</strong>, copia directamente el código generado por Roboflow.</p>
+</blockquote>
+<p>El notebook hará:</p>
+<ul>
+<li>Configurar entorno de entrenamiento</li>
+<li>Descargar el dataset</li>
+<li>Entrenar el modelo</li>
+<li>Descargar el modelo entrenado</li>
+</ul>
+<div align=center><img width=1000 src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/18.png></div>
+<p>Para un dataset de detección de manzanas con 699 imágenes, tardó unos 7 min en completarse en Colab con GPU NVIDIA Tesla T4 (16 GB).</p>
+<div align=center><img width=1000 src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/43.png></div>
+<p>Aunque Colab permite guardar 4 modelos, el dispositivo carga uno a la vez; el usuario seleccionará cuál usar más adelante.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id=despliegue-e-inferencia>Despliegue e inferencia<a href=#despliegue-e-inferencia class=hash-link aria-label="Direct link to Despliegue e inferencia" title="Direct link to Despliegue e inferencia">​</a></h3>
+<p>Si deseas ir directamente a la sección 3 sobre cómo desplegar e inferir, <a href=#3-despliega-el-modelo-entrenado-en-sensecap-a1101>haz clic aquí</a>.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id=2-entrena-tu-propio-modelo-con-tu-dataset>2. Entrena tu propio modelo con tu dataset<a href=#2-entrena-tu-propio-modelo-con-tu-dataset class=hash-link aria-label="Direct link to 2. Entrena tu propio modelo con tu dataset" title="Direct link to 2. Entrena tu propio modelo con tu dataset">​</a></h2>
+<p>Si los objetos que necesitas no existen en datasets públicos, crea tu propio dataset. Graba muestras cubriendo todos los ángulos (360 °), entornos, iluminación y condiciones climáticas. Luego anota las imágenes. Recomendamos usar la cámara integrada del A1101 para uniformidad en colores y calidad.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id=preparación-de-hardware-1>Preparación de hardware<a href=#preparación-de-hardware-1 class=hash-link aria-label="Direct link to Preparación de hardware" title="Direct link to Preparación de hardware">​</a></h3>
+<ul>
+<li>SenseCAP A1101 – Sensor IA de Visión LoRaWAN</li>
+<li>Cable USB tipo C</li>
+<li>Windows/Linux/macOS con Internet</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id=preparación-de-software-1>Preparación de software<a href=#preparación-de-software-1 class=hash-link aria-label="Direct link to Preparación de software" title="Direct link to Preparación de software">​</a></h3>
+<p>En la siguiente sección configuraremos el software para Windows, Linux e Intel Mac; para Mac M1/M2 el proceso difiere.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id=windows-linux-mac-con-intel>Windows, Linux, Mac con Intel<a href=#windows-linux-mac-con-intel class=hash-link aria-label="Direct link to Windows, Linux, Mac con Intel" title="Direct link to Windows, Linux, Mac con Intel">​</a></h4>
+<ul>
+<li>
+<p><strong>Paso 1.</strong> Asegúrate de tener Python instalado. Si no es así, visita <a href=https://www.python.org/downloads/ target=_blank rel="noopener noreferrer">python.org</a> para descargar e instalar la última versión.</p>
+</li>
+<li>
+<p><strong>Paso 2.</strong> Instala la siguiente dependencia:</p>
+</li>
+</ul>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">pip3 install libusb1</span><br></span></code></pre></div></div>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id=mac-con-m1m2-apple-silicon>Mac con M1/M2 (Apple Silicon)<a href=#mac-con-m1m2-apple-silicon class=hash-link aria-label="Direct link to Mac con M1/M2 (Apple Silicon)" title="Direct link to Mac con M1/M2 (Apple Silicon)">​</a></h4>
+<ul>
+<li><strong>Paso 1.</strong> Instala Homebrew</li>
+</ul>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>Paso 2.</strong> Instala conda</li>
+</ul>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">brew install conda</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>Paso 3.</strong> Descarga libusb</li>
+</ul>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">wget https://conda.anaconda.org/conda-forge/osx-arm64/libusb-1.0.26-h1c322ee_100.tar.bz2</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>Paso 4.</strong> Instala libusb</li>
+</ul>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">conda install libusb-1.0.26-h1c322ee_100.tar.bz2</span><br></span></code></pre></div></div>
+<div class="theme-admonition theme-admonition-caution admonition_xJq3 alert alert--warning"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 16 16"><path fill-rule=evenodd d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></span>caution</div><div class=admonitionContent_BuS1><p>Debes asegurarte de que la versión de tu <strong>BootLoader sea mayor a 2.0.0</strong> antes de poder cambiar el firmware y continuar con los siguientes pasos.<br>
+<!-- -->Si no estás seguro, revisa la versión del BootLoader siguiendo los pasos en <a href=#check-bootloader-version>esta sección</a>.<br>
+<!-- -->Si la versión es menor a 2.0.0, actualiza el BootLoader siguiendo las instrucciones de <a href=#update-bootloader>esta sección</a>.</div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id=recolección-del-conjunto-de-datos-dataset>Recolección del conjunto de datos (dataset)<a href=#recolección-del-conjunto-de-datos-dataset class=hash-link aria-label="Direct link to Recolección del conjunto de datos (dataset)" title="Direct link to Recolección del conjunto de datos (dataset)">​</a></h3>
+<ul>
+<li><strong>Paso 1.</strong> Conecta el SenseCAP A1101 a la PC mediante un cable USB Tipo-C.</li>
+</ul>
+<div align=center><img width={500} src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/38.png></div>
+<ul>
+<li><strong>Paso 2.</strong> Haz doble clic en el botón de arranque para ingresar al <strong>modo boot</strong>.</li>
+</ul>
+<div align=center><img width={500} src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/39.png></div>
+<p>Después de esto, verás que aparece una nueva unidad de almacenamiento en tu explorador de archivos con el nombre <strong>SENSECAP</strong>.</p>
+<div align=center><img width={280} src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p8.png></div>
+<ul>
+<li><strong>Paso 3.</strong> Arrastra y suelta <a href=https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v1.1.0/sensecap_ai_capture_firmware_v01-00.uf2 target=_blank rel="noopener noreferrer">este archivo <code>.uf2</code></a> dentro de la unidad <strong>SENSECAP</strong>.</li>
+</ul>
+<p>Una vez que el archivo <code>.uf2</code> se haya copiado completamente, la unidad desaparecerá. Esto indica que el firmware se cargó exitosamente en el módulo.</p>
+<ul>
+<li>
+<p><strong>Paso 4.</strong> Copia y pega <a href=https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/blob/master/tools/capture_images_script.py target=_blank rel="noopener noreferrer">este script en Python</a> en un archivo nuevo llamado <strong>capture_images_script.py</strong> en tu PC.</p>
+</li>
+<li>
+<p><strong>Paso 5.</strong> Ejecuta el script de Python para comenzar a capturar imágenes.</p>
+</li>
+</ul>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">python3 capture_images_script.py</span><br></span></code></pre></div></div>
+<p>Por defecto, capturará una imagen cada 300ms. Si quieres cambiar esto, puedes correr el script en este formato.</p>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">python3 capture_images_script.py --interval &lt;time_in_ms></span><br></span></code></pre></div></div>
+<p>Por ejemplo, para acpturar una imágen cada segundo:</p>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">python3 capture_images_script.py --interval 1000</span><br></span></code></pre></div></div>
+<p>Después de ejecutar el script anterior, el SenseCAP A1101 comenzará a capturar imágenes continuamente desde su cámara integrada y guardará todas en una carpeta llamada <strong>save_img</strong>.</p>
+<div align=center><img width=1000 src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/41.png></div>
+<p>También se abrirá una ventana de vista previa mientras se graban las imágenes:</p>
+<div align=center><img width=1000 src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/40.jpg></div>
+<p>Cuando hayas capturado suficientes imágenes, haz clic en la ventana del terminal y presiona la siguiente combinación de teclas para detener el proceso de captura:</p>
+<ul>
+<li><strong>Windows:</strong> Ctrl + Break</li>
+<li><strong>Linux:</strong> Ctrl + Shift + \</li>
+<li><strong>Mac:</strong> CMD + Shift + \</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id=cambiar-el-firmware-del-dispositivo-después-de-capturar-imágenes>Cambiar el firmware del dispositivo después de capturar imágenes<a href=#cambiar-el-firmware-del-dispositivo-después-de-capturar-imágenes class=hash-link aria-label="Direct link to Cambiar el firmware del dispositivo después de capturar imágenes" title="Direct link to Cambiar el firmware del dispositivo después de capturar imágenes">​</a></h3>
+<p>Una vez que hayas terminado de grabar imágenes para tu dataset, debes volver a cargar el firmware original en el SenseCAP A1101 para poder usar los modelos de detección de objetos nuevamente.</p>
+<ul>
+<li>
+<p><strong>Paso 1.</strong> Entra al <strong>modo boot</strong> como se explicó anteriormente.</p>
+</li>
+<li>
+<p><strong>Paso 2.</strong> Arrastra y suelta <a href=https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v1.1.0/sensecap_ai_v01-30.uf2 target=_blank rel="noopener noreferrer">este archivo <code>.uf2</code></a> en la unidad <strong>SENSECAP</strong>.</p>
+</li>
+</ul>
+<p>Una vez que termine la copia del archivo <code>.uf2</code>, la unidad desaparecerá. Esto indica que el firmware fue cargado exitosamente en el módulo.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id=anotar-el-dataset-usando-roboflow>Anotar el dataset usando Roboflow<a href=#anotar-el-dataset-usando-roboflow class=hash-link aria-label="Direct link to Anotar el dataset usando Roboflow" title="Direct link to Anotar el dataset usando Roboflow">​</a></h3>
+<p>Si usas tu propio dataset, deberás <strong>anotar manualmente</strong> todas las imágenes. Anotar significa dibujar recuadros alrededor de cada objeto que deseas detectar y asignarles una etiqueta.</p>
+<p>Usaremos <a href=https://roboflow.com target=_blank rel="noopener noreferrer">Roboflow</a>, una herramienta de anotación en línea muy práctica. Roboflow te permite importar directamente imágenes, dividir el dataset en entrenamiento, validación y prueba, aplicar procesamiento posterior y exportarlo en formato <strong>YOLOv5 PyTorch</strong>, que es el que necesitamos.</p>
+<p>Usaremos un conjunto de imágenes con manzanas como ejemplo para detección y conteo.</p>
+<ul>
+<li>
+<p><strong>Paso 1.</strong> Accede a <a href=https://app.roboflow.com/login target=_blank rel="noopener noreferrer">Roboflow</a> y crea una cuenta.</p>
+</li>
+<li>
+<p><strong>Paso 2.</strong> Haz clic en <strong>Create New Project</strong> para comenzar tu proyecto.</p>
+</li>
+</ul>
+<div align=center><img width=1000 src=https://files.seeedstudio.com/wiki/YOLOV5/2.jpg></div>
+<ul>
+<li><strong>Paso 3.</strong> Rellena:<!-- -->
+<ul>
+<li><strong>Project Name</strong></li>
+<li>Licencia: <strong>CC BY 4.0</strong> (por defecto)</li>
+<li>Tipo de proyecto: <strong>Object Detection (Bounding Box)</strong></li>
+<li>¿Qué predecirá tu modelo?: por ejemplo, <strong>apples</strong></li>
+</ul>
+</li>
+</ul>
+<p>Luego haz clic en <strong>Create Public Project</strong>.</p>
+<div align=center><img width={350} src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/6.jpg></div>
+<ul>
+<li><strong>Paso 4.</strong> Arrastra y suelta las imágenes que capturaste con el SenseCAP A1101.</li>
+</ul>
+<div align=center><img width=1000 src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/7.png></div>
+<ul>
+<li><strong>Paso 5.</strong> Una vez procesadas, haz clic en <strong>Finish Uploading</strong> y espera a que se completen.</li>
+</ul>
+<div align=center><img width=1000 src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/4.jpg></div>
+<ul>
+<li><strong>Paso 6.</strong> Haz clic en <strong>Assign Images</strong>.</li>
+</ul>
+<div align=center><img width=300 src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/5.jpg></div>
+<ul>
+<li><strong>Paso 7.</strong> Selecciona una imagen, dibuja un cuadro alrededor de una manzana, selecciona la etiqueta <strong>apple</strong> y presiona <strong>ENTER</strong>.</li>
+</ul>
+<div align=center><img width=1000 src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/9.png></div>
+<ul>
+<li><strong>Paso 8.</strong> Repite lo mismo para las demás manzanas.</li>
+</ul>
+<div align=center><img width=1000 src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/10.png></div>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></span>note</div><div class=admonitionContent_BuS1><p>Intenta etiquetar <strong>todas</strong> las manzanas visibles, incluso si solo se ve una parte.</div></div>
+<ul>
+<li><strong>Paso 9.</strong> Continúa anotando todas las imágenes.</li>
+</ul>
+<p>Roboflow tiene una función llamada <strong>Label Assist</strong> que predice etiquetas automáticamente para acelerar el proceso. Solo funciona con 80 clases predefinidas. Para activarlo:</p>
+<div align=center><img width={200} src=https://files.seeedstudio.com/wiki/YOLOV5/41.png></div>
+<div align=center><img width={400} src=https://files.seeedstudio.com/wiki/YOLOV5/39.png></div>
+<div align=center><img width={400} src=https://files.seeedstudio.com/wiki/YOLOV5/40.png></div>
+<ul>
+<li><strong>Paso 10.</strong> Una vez finalizada la anotación, haz clic en <strong>Add images to Dataset</strong>.</li>
+</ul>
+<div align=center><img width=1000 src=https://files.seeedstudio.com/wiki/YOLOV5/25.jpg></div>
+<ul>
+<li><strong>Paso 11.</strong> Divide las imágenes entre <strong>Train</strong>, <strong>Valid</strong> y <strong>Test</strong> (deja los porcentajes por defecto) y haz clic en <strong>Add Images</strong>.</li>
+</ul>
+<div align=center><img width={330} src=https://files.seeedstudio.com/wiki/YOLOV5/26.png></div>
+<ul>
+<li><strong>Paso 12.</strong> Haz clic en <strong>Generate New Version</strong>.</li>
+</ul>
+<div align=center><img width=1000 src=https://files.seeedstudio.com/wiki/YOLOV5/27.jpg></div>
+<ul>
+<li><strong>Paso 13.</strong> En la sección de <strong>Preprocessing</strong>, cambia el tamaño de las imágenes a <strong>192x192</strong>.</li>
+</ul>
+<div align=center><img width=1000 src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/11.png></div>
+<div align=center><img width={450} src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/13.png></div>
+<p>Esto acelera el entrenamiento y reduce el consumo de recursos.</p>
+<ul>
+<li><strong>Paso 14.</strong> Haz clic en <strong>Generate</strong>.</li>
+</ul>
+<div align=center><img width=1000 src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/14.png></div>
+<ul>
+<li><strong>Paso 15.</strong> Finalmente, haz clic en <strong>Export</strong>, selecciona <strong>Formato: YOLO v5 PyTorch</strong>, haz clic en <strong>show download code</strong> y luego en <strong>Continue</strong>.</li>
+</ul>
+<div align=center><img width=1000 src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/54.png></div>
+<p>Esto generará un fragmento de código que utilizarás más adelante en Google Colab para el entrenamiento.</p>
+<div align=center><img width={600} src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/55.png></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id=entrenar-usando-yolov5-en-google-colab>Entrenar usando YOLOv5 en Google Colab<a href=#entrenar-usando-yolov5-en-google-colab class=hash-link aria-label="Direct link to Entrenar usando YOLOv5 en Google Colab" title="Direct link to Entrenar usando YOLOv5 en Google Colab">​</a></h3>
+<p>Una vez que hayas terminado de anotar tu dataset, necesitas entrenarlo. Salta a <a href=https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101/#train-using-yolov5-on-google-colab target=_blank rel="noopener noreferrer">esta sección</a> para ver cómo entrenar un modelo AI con YOLOv5 en Google Colab.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id=3-cargar-el-modelo-entrenado-y-realizar-inferencia>3. Cargar el modelo entrenado y realizar inferencia<a href=#3-cargar-el-modelo-entrenado-y-realizar-inferencia class=hash-link aria-label="Direct link to 3. Cargar el modelo entrenado y realizar inferencia" title="Direct link to 3. Cargar el modelo entrenado y realizar inferencia">​</a></h2>
+<p>Ahora transferiremos el archivo <strong>model-1.uf2</strong> (obtenido tras el entrenamiento) al SenseCAP A1101.</p>
+<ul>
+<li>
+<p><strong>Paso 1.</strong> Instala la última versión de <a href=https://www.google.com/chrome target=_blank rel="noopener noreferrer">Google Chrome</a> o <a href="https://www.microsoft.com/en-us/edge?r=1" target=_blank rel="noopener noreferrer">Microsoft Edge</a> y ábrelo.</p>
+</li>
+<li>
+<p><strong>Paso 2.</strong> Conecta el SenseCAP A1101 a tu PC mediante un cable USB Tipo-C.</p>
+</li>
+</ul>
+<div align=center><img width={500} src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/38.png></div>
+<ul>
+<li><strong>Paso 3.</strong> Haz doble clic en el botón <strong>boot</strong> del SenseCAP A1101 para entrar en modo de almacenamiento masivo.</li>
+</ul>
+<div align=center><img width={500} src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/39.png></div>
+<p>Aparecerá una nueva unidad llamada <strong>SENSECAP</strong> en el explorador de archivos.</p>
+<div align=center><img width={280} src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p8.png></div>
+<ul>
+<li><strong>Paso 4.</strong> Arrastra y suelta el archivo <strong>model-1.uf2</strong> en la unidad <strong>SENSECAP</strong>.</li>
+</ul>
+<p>Una vez completada la copia del archivo <code>.uf2</code>, la unidad desaparecerá, indicando que el firmware fue cargado con éxito.</p>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></span>note</div><div class=admonitionContent_BuS1><p>Si tienes 4 modelos listos, puedes cargarlos uno por uno repitiendo el proceso: arrastrar modelo → esperar que desaparezca la unidad → entrar en modo boot de nuevo → cargar el siguiente.</div></div>
+<ul>
+<li>
+<p><strong>Paso 5.</strong> Abre la aplicación <strong>SenseCAP Mate App</strong>. Si no la tienes, descárgala:</p>
+<ul>
+<li><a href="https://play.google.com/store/apps/details?id=cc.seeed.sensecapmate&hl=en&gl=US" target=_blank rel="noopener noreferrer">Android</a></li>
+<li><a href=https://apps.apple.com/gb/app/sensecap-mate/id1619944834 target=_blank rel="noopener noreferrer">iOS</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Paso 6.</strong> En la app, en la pantalla <strong>Config</strong>, selecciona <strong>Vision AI Sensor</strong>.</p>
+</li>
+</ul>
+<div align=center><img width={100} src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/21.jpg></div>
+<ul>
+<li><strong>Paso 7.</strong> Mantén presionado el botón de configuración del SenseCAP A1101 durante 3 segundos para activar el modo de emparejamiento por Bluetooth.</li>
+</ul>
+<div align=center><img width={100} src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/37.png></div>
+<ul>
+<li><strong>Paso 8.</strong> Toca <strong>Setup</strong> en la app y comenzará a buscar dispositivos SenseCAP A1101 cercanos.</li>
+</ul>
+<div align=center><img width={100} src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/23.jpg></div>
+<ul>
+<li><strong>Paso 9.</strong> Selecciona tu dispositivo en la lista.</li>
+</ul>
+<div align=center><img width={100} src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/24.jpg></div>
+<ul>
+<li><strong>Paso 10.</strong> Ve a <strong>Settings</strong> y asegúrate de que <strong>Object Detection</strong> esté seleccionado. Si no lo está, selecciónalo y presiona <strong>Send</strong>.</li>
+</ul>
+<div align=center><img width={100} src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/25.jpg></div>
+<ul>
+<li><strong>Paso 11.</strong> En la pestaña <strong>General</strong>, toca <strong>Detect</strong>.</li>
+</ul>
+<div align=center><img width={100} src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/26.jpg></div>
+<ul>
+<li><strong>Paso 12.</strong> Abre <a href=https://files.seeedstudio.com/grove_ai_vision/index.html target=_blank rel="noopener noreferrer">este visor web</a>.</li>
+</ul>
+<div align=center><img width=1000 src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/31.png></div>
+<ul>
+<li><strong>Paso 13.</strong> Haz clic en el botón <strong>Connect</strong>. Aparecerá una ventana emergente, selecciona <strong>SenseCAP Vision AI - Paired</strong> y haz clic en <strong>Connect</strong>.</li>
+</ul>
+<div align=center><img width=1000 src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/32.png></div>
+<ul>
+<li><strong>Paso 14.</strong> ¡Visualiza los resultados de inferencia en tiempo real!</li>
+</ul>
+<div align=center><img width=1000 src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/33.jpg></div>
+<p>Como puedes ver, las manzanas son detectadas con cuadros delimitadores. El número "0" indica la clase detectada (en este caso, manzana). Si hubiera más clases, se enumerarían como 0, 1, 2, etc. También se muestra el <strong>score de confianza</strong> (por ejemplo, 0.8 y 0.84).</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id=contenido-adicional>Contenido adicional<a href=#contenido-adicional class=hash-link aria-label="Direct link to Contenido adicional" title="Direct link to Contenido adicional">​</a></h2>
+<p>¿Quieres ir más allá? Puedes entrenar tu modelo de IA directamente en tu PC.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id=puedo-entrenar-un-modelo-ai-en-mi-pc>¿Puedo entrenar un modelo AI en mi PC?<a href=#puedo-entrenar-un-modelo-ai-en-mi-pc class=hash-link aria-label="Direct link to ¿Puedo entrenar un modelo AI en mi PC?" title="Direct link to ¿Puedo entrenar un modelo AI en mi PC?">​</a></h3>
+<p>Sí. Puedes usar tu propia PC con Linux (por ejemplo, Ubuntu 20.04) para entrenar un modelo de detección de objetos. El rendimiento dependerá de tu hardware.</p>
+<ul>
+<li><strong>Paso 1.</strong> Clona el repositorio <code>yolov5-swift</code> e instala los requisitos en un entorno con <strong>Python >= 3.7.0</strong>:</li>
+</ul>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">git clone https://github.com/Seeed-Studio/yolov5-swift</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">cd yolov5-swift</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">pip install -r requirements.txt</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>Paso 2.</strong> Si seguiste los pasos anteriores, probablemente exportaste tu dataset desde Roboflow. Allí tuviste la opción de descargar como archivo .zip en formato YOLO v5 PyTorch. Ahora hazlo:</li>
+</ul>
+<div align=center><img width={400} src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/16.png></div>
+<div align=center><img width={400} src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/17.png></div>
+<ul>
+<li><strong>Paso 3.</strong> Copia ese archivo .zip descargado dentro del directorio yolov5-swift y extráelo.</li>
+</ul>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain"># example</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">cp ~/Downloads/Apples.v1i.yolov5pytorch.zip ~/yolov5-swift</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">unzip Apples.v1i.yolov5pytorch.zip</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>Paso 4.</strong> Abre el archivo <strong>data.yaml</strong> y edita los directorios <strong>train</strong> y <strong>val</strong> de la siguiente forma</li>
+</ul>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">train: train/images</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">val: valid/images</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>Paso 5.</strong> Descarga el modelo pre-entrenado que sirve para nuestro entrenamienot</li>
+</ul>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">sudo apt install wget</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">wget https://github.com/Seeed-Studio/yolov5-swift/releases/download/v0.1.0-alpha/yolov5n6-xiao.pt</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>Paso 6.</strong> Ejecuta el siguiente comando para iniciar el entrenamiento.</li>
+</ul>
+<p>Aquí podemos pasar varios argumentos:</p>
+<ul>
+<li><strong>img:</strong> tamaño de imagen de entrada</li>
+<li><strong>batch:</strong> tamaño del batch</li>
+<li><strong>epochs:</strong> número de épocas de entrenamiento</li>
+<li><strong>data:</strong> ruta al archivo yaml con la configuración del dataset</li>
+<li><strong>cfg:</strong> configuración del modelo (arquitectura)</li>
+<li><strong>weights:</strong> ruta personalizada a pesos preentrenados</li>
+<li><strong>name:</strong> nombre para los resultados generados</li>
+<li><strong>nosave:</strong> guarda sólo el checkpoint final</li>
+<li><strong>cache:</strong> cachea las imágenes para acelerar el entrenamiento</li>
+</ul>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">python3 train.py --img 192 --batch 64 --epochs 100 --data data.yaml --cfg yolov5n6-xiao.yaml --weights yolov5n6-xiao.pt --name yolov5n6_results --cache</span><br></span></code></pre></div></div>
+<p>Para un dataset de detección de manzanas con 987 imágenes, el proceso tomó aproximadamente 30 minutos en una PC local con GPU NVIDIA GeForce GTX 1660 Super (6GB VRAM).</p>
+<div align=center><img width=1000 src=https://files.seeedstudio.com/wiki/SenseCAP-A1101/44.png></div>
+<p>Si seguiste el proyecto de Colab, sabes que puedes cargar hasta 4 modelos en el dispositivo simultáneamente. Sin embargo, solo un modelo puede estar activo a la vez; esto lo puede configurar el usuario (se explica más adelante).</p>
+<ul>
+<li><strong>Paso 7.</strong> Navega a <code>runs/train/exp/weights</code>, y verás el archivo <strong>best.pt</strong>, que es el modelo entrenado resultante.</li>
+</ul>
+<div align=center><img width={600} src=https://files.seeedstudio.com/wiki/YOLOV5/33.jpg></div>
+<ul>
+<li><strong>Paso 8.</strong> Exporta el modelo entrenado a TensorFlow Lite</li>
+</ul>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">python3 export.py --data {dataset.location}/data.yaml --weights runs/train/yolov5n6_results/weights/best.pt --imgsz 192 --int8 --include tflite</span><br></span></code></pre></div></div>
+<ul>
+<li><strong>Paso 9.</strong> Convierte el archivo TensorFlow Lite a formato UF2</li>
+</ul>
+<p>El formato UF2, desarrollado por Microsoft, es usado por Seeed para almacenar modelos .tflite en dispositivos AIoT. Actualmente, los dispositivos Seeed soportan hasta 4 modelos, cada uno menor a 1 MB.</p>
+<p>Puedes especificar el índice del modelo con la opción -t. Por ejemplo:</p>
+<ul>
+<li><code>-t 1</code>: index 1</li>
+<li><code>-t 2</code>: index 2</li>
+</ul>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain"># Place the model to index 1</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">python3 uf2conv.py -f GROVEAI -t 1 -c runs//train/yolov5n6_results//weights/best-int8.tflite -o model-1.uf2</span><br></span></code></pre></div></div>
+<p>Aunque puedes cargar hasta 4 modelos simultáneamente, recuerda que solo uno estará activo a la vez, y esta selección la puede hacer el usuario (se explica más adelante).</p>
+<ul>
+<li><strong>Paso 10.</strong> Se generará un archivo llamado <strong>model-1.uf2</strong>, que es el que cargarás en el SenseCAP A1101 para hacer inferencias.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id=verificar-versión-de-bootloader>Verificar versión de BootLoader<a href=#verificar-versión-de-bootloader class=hash-link aria-label="Direct link to Verificar versión de BootLoader" title="Direct link to Verificar versión de BootLoader">​</a></h2>
+<ul>
+<li>Haz doble clic en el botón BOOT y espera que se monte la unidad extraíble.</li>
+<li>Abre el archivo INFO_UF2.TXT dentro de esa unidad.</li>
+</ul>
+<div align=center><img width={600} src=https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/raw/master/assert/q2.png></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id=actualizar-bootloader>Actualizar BootLoader<a href=#actualizar-bootloader class=hash-link aria-label="Direct link to Actualizar BootLoader" title="Direct link to Actualizar BootLoader">​</a></h2>
+<p>Si tu SenseCAP A1101 no es reconocido por la computadora y no aparece ningún puerto, puede que necesites actualizar el BootLoader.</p>
+<ul>
+<li><strong>Paso 1.</strong> Descarga el archivo BootLoader <code>.bin</code> en tu PC con Windows.</li>
+</ul>
+<p>Por favor, descarga la última versión del BootLoader en el siguiente enlace. El nombre suele ser <code>tinyuf2-sensecap_vision_ai_vx.x.x.bin</code>.</p>
+<div class=github_container style=text-align:center><a class=github_item href=https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases><strong><span><font color=FFFFFF size=4> Descarga el Firware</font></span></strong><svg aria-hidden=true focusable=false role=img class=mr-2 viewBox="-3 10 9 1" width=16 height=16 fill=currentColor style=text-align:center;display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg></a></div>
+<p>Este firmware controla el chip BL702, que gestiona la conexión entre la computadora y el chip Himax. La versión más reciente soluciona problemas de reconocimiento en Mac y Linux.</p>
+<ul>
+<li><strong>Paso 2.</strong> Descarga y abre el software <a href=https://files.seeedstudio.com/wiki/Grove_AI_Module/BouffaloLabDevCube-1.6.6-win32.rar target=_blank rel="noopener noreferrer"><strong>BLDevCube.exe</strong></a>, selecciona <strong>BL702/704/706</strong> y luego haz clic en <strong>Finish</strong>.</li>
+</ul>
+<div style=text-align:center><img src=https://files.seeedstudio.com/wiki/Grove_AI_Module/GroveAI01a.png style=width:300px;height:auto></div>
+<ul>
+<li><strong>Paso 3.</strong> En el software, haz clic en <strong>View</strong>, elige <strong>MCU</strong>, luego en <strong>Image file</strong> haz clic en <strong>Browse</strong> y selecciona el archivo <code>.bin</code> que descargaste.</li>
+</ul>
+<div style=text-align:center><img src=https://files.seeedstudio.com/wiki/Grove_AI_Module/1.png style=width:800px;height:auto></div>
+<ul>
+<li>
+<p><strong>Paso 4.</strong> Asegúrate de no tener otros dispositivos conectados a la PC. Mantén presionado el botón Boot en el módulo y conéctalo al PC.</p>
+</li>
+<li>
+<p><strong>Paso 5.</strong> En BLDevCube, haz clic en <strong>Refresh</strong>, selecciona el puerto correcto, haz clic en <strong>Open UART</strong>, activa <strong>Chip Erase</strong> (colócalo en True) y luego haz clic en <strong>Create&Program</strong>. Espera a que termine el proceso.</p>
+</li>
+</ul>
+<div style=text-align:center><img src=https://files.seeedstudio.com/wiki/Grove_AI_Module/GroveAI07.png style=width:800px;height:auto></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id=resources>Resources<a href=#resources class=hash-link aria-label="Direct link to Resources" title="Direct link to Resources">​</a></h2>
+<ul>
+<li>
+<p><strong>[Página Web]</strong> <a href=https://docs.ultralytics.com target=_blank rel="noopener noreferrer">Documentación YOLOv5</a></p>
+</li>
+<li>
+<p><strong>[Página Web]</strong> <a href=https://ultralytics.com/hub target=_blank rel="noopener noreferrer">Ultralytics HUB</a></p>
+</li>
+<li>
+<p><strong>[Página Web]</strong> <a href=https://docs.roboflow.com target=_blank rel="noopener noreferrer">Documentación Roboflow</a></p>
+</li>
+<li>
+<p><strong>[Página Web]</strong> <a href=https://www.tensorflow.org/lite/guide target=_blank rel="noopener noreferrer">Guía TensorFlow Lite</a></p>
+</li>
+<li>
+<p><strong>[PDF]</strong> <a href=https://files.seeedstudio.com/wiki/SenseCAP-A1101/SenseCAP_A1101_spec.pdf target=_blank rel="noopener noreferrer">Ficha técnica SenseCAP A1101 LoRaWAN Vision AI Sensor</a></p>
+</li>
+<li>
+<p><strong>[PDF]</strong> <a href=https://files.seeedstudio.com/wiki/SenseCAP-A1101/SenseCAP_A1101_LoRaWAN_Vision_AI_Sensor_User_Guide_V1.0.2.pdf target=_blank rel="noopener noreferrer">Guía de usuario SenseCAP A1101 LoRaWAN Vision AI Sensor</a></p>
+</li>
+<li>
+<p><strong>[PDF]</strong> <a href=https://files.seeedstudio.com/products/114992867/SenseCAP%20S210X%20LoRaWAN%20Sensor%20Catalogue.pdf target=_blank rel="noopener noreferrer">Catálogo SenseCAP S210X LoRaWAN Sensor</a></p>
+</li>
+<li>
+<p><strong>[PDF]</strong> <a href=https://files.seeedstudio.com/wiki/SenseCAP-A1101/FAQ_for_SenseCAP_A1101_LoRaWAN_AI_Vision_Sensor_v1.0.0.pdf target=_blank rel="noopener noreferrer">FAQ SenseCAP A1101 LoRaWAN Vision AI Sensor</a></p>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id=soporte-técnico-y-discusión-de-producto>Soporte Técnico y Discusión de Producto<a href=#soporte-técnico-y-discusión-de-producto class=hash-link aria-label="Direct link to Soporte Técnico y Discusión de Producto" title="Direct link to Soporte Técnico y Discusión de Producto">​</a></h2>
+<br>
+<p>¡Gracias por elegir nuestros productos! Estamos disponibles para brindarte soporte y asegurar que tu experiencia sea lo más fluida posible. Ofrecemos varios canales de comunicación para diferentes necesidades y preferencias.</p>
+<div class=button_tech_support_container><a href=https://forum.seeedstudio.com/ class=button_forum></a><a href=https://www.seeedstudio.com/contacts class=button_email></a></div>
+<div class=button_tech_support_container><a href=https://discord.gg/eWkprNDMU7 class=button_discord></a><a href=https://github.com/Seeed-Studio/wiki-documents/discussions/69 class=button_discussion></a></div></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class=col><a href=https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/docs/Spanish/Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/es_Train-Deploy-AI-Model-A1101.md target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_Z9Sw aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"><span class=theme-last-updated>Last updated<!-- --> on <b><time datetime=2025-07-22T00:00:00.000Z itemprop=dateModified>Jul 22, 2025</time></b> by <b>Guillermo</b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"></nav></div><div>Loading Comments...</div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#descripción-general class="table-of-contents__link toc-highlight">Descripción general</a><li><a href=#introducción-al-hardware class="table-of-contents__link toc-highlight">Introducción al hardware</a><li><a href=#introducción-al-software class="table-of-contents__link toc-highlight">Introducción al software</a><ul><li><a href=#qué-es-roboflow class="table-of-contents__link toc-highlight">¿Qué es Roboflow?</a><li><a href=#qué-es-yolov5 class="table-of-contents__link toc-highlight">¿Qué es YOLOv5?</a><li><a href=#qué-es-tensorflow-lite class="table-of-contents__link toc-highlight">¿Qué es TensorFlow Lite?</a></ul><li><a href=#estructura-del-wiki class="table-of-contents__link toc-highlight">Estructura del wiki</a><ul><li><a href=#opciones-de-seguimiento class="table-of-contents__link toc-highlight">Opciones de seguimiento</a></ul><li><a href=#1-entrena-tu-propio-modelo-con-un-dataset-público class="table-of-contents__link toc-highlight">1. Entrena tu propio modelo con un dataset público</a><ul><li><a href=#preparación-de-hardware class="table-of-contents__link toc-highlight">Preparación de hardware</a><li><a href=#preparación-de-software class="table-of-contents__link toc-highlight">Preparación de software</a><li><a href=#uso-de-un-dataset-público-anotado class="table-of-contents__link toc-highlight">Uso de un dataset público anotado</a><li><a href=#entrena-usando-yolov5-en-google-colab class="table-of-contents__link toc-highlight">Entrena usando YOLOv5 en Google Colab</a><li><a href=#despliegue-e-inferencia class="table-of-contents__link toc-highlight">Despliegue e inferencia</a></ul><li><a href=#2-entrena-tu-propio-modelo-con-tu-dataset class="table-of-contents__link toc-highlight">2. Entrena tu propio modelo con tu dataset</a><ul><li><a href=#preparación-de-hardware-1 class="table-of-contents__link toc-highlight">Preparación de hardware</a><li><a href=#preparación-de-software-1 class="table-of-contents__link toc-highlight">Preparación de software</a><ul><li><a href=#windows-linux-mac-con-intel class="table-of-contents__link toc-highlight">Windows, Linux, Mac con Intel</a><li><a href=#mac-con-m1m2-apple-silicon class="table-of-contents__link toc-highlight">Mac con M1/M2 (Apple Silicon)</a></ul><li><a href=#recolección-del-conjunto-de-datos-dataset class="table-of-contents__link toc-highlight">Recolección del conjunto de datos (dataset)</a><li><a href=#cambiar-el-firmware-del-dispositivo-después-de-capturar-imágenes class="table-of-contents__link toc-highlight">Cambiar el firmware del dispositivo después de capturar imágenes</a><li><a href=#anotar-el-dataset-usando-roboflow class="table-of-contents__link toc-highlight">Anotar el dataset usando Roboflow</a><li><a href=#entrenar-usando-yolov5-en-google-colab class="table-of-contents__link toc-highlight">Entrenar usando YOLOv5 en Google Colab</a></ul><li><a href=#3-cargar-el-modelo-entrenado-y-realizar-inferencia class="table-of-contents__link toc-highlight">3. Cargar el modelo entrenado y realizar inferencia</a><li><a href=#contenido-adicional class="table-of-contents__link toc-highlight">Contenido adicional</a><ul><li><a href=#puedo-entrenar-un-modelo-ai-en-mi-pc class="table-of-contents__link toc-highlight">¿Puedo entrenar un modelo AI en mi PC?</a></ul><li><a href=#verificar-versión-de-bootloader class="table-of-contents__link toc-highlight">Verificar versión de BootLoader</a><li><a href=#actualizar-bootloader class="table-of-contents__link toc-highlight">Actualizar BootLoader</a><li><a href=#resources class="table-of-contents__link toc-highlight">Resources</a><li><a href=#soporte-técnico-y-discusión-de-producto class="table-of-contents__link toc-highlight">Soporte Técnico y Discusión de Producto</a></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Navigation</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/Getting_Started/>Getting Started</a><li class=footer__item><a class=footer__link-item href=/Sensor_Network/>Sensor and Sensing</a><li class=footer__item><a class=footer__link-item href=/Network/>Network</a><li class=footer__item><a class=footer__link-item href=/Edge_Computing/>Edge Computing</a><li class=footer__item><a class=footer__link-item href=/Cloud/>Cloud</a><li class=footer__item><a class=footer__link-item href=/Solutions/>Solutions</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Ecosystem</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://discord.com/invite/QqMgVwHT3X target=_blank rel="noopener noreferrer" class=footer__link-item>Discord</a><li class=footer__item><a href=https://project.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=footer__link-item>Project Hub</a><li class=footer__item><a href=https://www.seeedstudio.com/ecosystem/ target=_blank rel="noopener noreferrer" class=footer__link-item>Partners</a><li class=footer__item><a href=https://www.seeedstudio.com/distributors.html target=_blank rel="noopener noreferrer" class=footer__link-item>Distributors</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Quick Guide</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://www.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=footer__link-item>Bazaar</a><li class=footer__item><a href=https://www.seeedstudio.com/get_help/HowToGetHelp target=_blank rel="noopener noreferrer" class=footer__link-item>How to get help</a><li class=footer__item><a href=https://support.seeedstudio.com/knowledgebase target=_blank rel="noopener noreferrer" class=footer__link-item>FAQs</a><li class=footer__item><a href=https://forum.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=footer__link-item>Forum</a><li class=footer__item><a href=https://www.seeedstudio.com/get_help/TechnicalSupport target=_blank rel="noopener noreferrer" class=footer__link-item>Technical Support</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Company</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://www.seeedstudio.com/about-us/ target=_blank rel="noopener noreferrer" class=footer__link-item>About Seeed</a><li class=footer__item><a href=https://www.seeedstudio.com/join-us/ target=_blank rel="noopener noreferrer" class=footer__link-item>Join us</a><li class=footer__item><a href=https://www.seeedstudio.com/contacts target=_blank rel="noopener noreferrer" class=footer__link-item>Contact Us</a><li class=footer__item><a href=https://www.seeedstudio.com/blog/2020/04/22/seeed-in-the-news/ target=_blank rel="noopener noreferrer" class=footer__link-item>Press</a></ul></div></div><div class="footer__bottom text--center"><div class=footer__copyright>Copyright © 2025 Seeed Studio, Inc. Built with Docusaurus.</div></div></div></footer></div>
