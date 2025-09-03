@@ -1,4 +1,4 @@
-<!doctype html><html lang=en-US dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-Edge/Raspberry_Pi_Devices/Edge_Controller/reComputer_R1100/recomputer_r1100_configure_system" data-has-hydrated=false><meta charset=UTF-8><meta name=generator content="Docusaurus v3.8.1"><title data-rh=true>Configure reComputer R1100 | Seeed Studio Wiki</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"><meta data-rh=true name=twitter:card content=summary_large_image><meta data-rh=true property=og:url content=https://wiki.seeedstudio.com/recomputer_r1100_configure_system/><meta data-rh=true property=og:locale content=en_US><meta data-rh=true name=docusaurus_locale content=en><meta data-rh=true name=docsearch:language content=en><meta data-rh=true name=docusaurus_version content=current><meta data-rh=true name=docusaurus_tag content=docs-default-current><meta data-rh=true name=docsearch:version content=current><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current><meta data-rh=true property=og:title content="Configure reComputer R1100 | Seeed Studio Wiki"><meta data-rh=true name=description content="Learn how to configure and test hardware components on the reComputer R1100 series after installing devices. This wiki covers GPIO mapping, USER LED testing, SPI communication, Wi-Fi and Bluetooth scanning, LoRa®, 4G, Zigbee over Mini-PCIe, RS485, RS232, DI/DO testing, and UPS for safe shutdown."><meta data-rh=true property=og:description content="Learn how to configure and test hardware components on the reComputer R1100 series after installing devices. This wiki covers GPIO mapping, USER LED testing, SPI communication, Wi-Fi and Bluetooth scanning, LoRa®, 4G, Zigbee over Mini-PCIe, RS485, RS232, DI/DO testing, and UPS for safe shutdown."><meta data-rh=true name=keywords content="Raspberry pi,Edge Controller,reComputer R1100"><meta data-rh=true property=og:image content=https://files.seeedstudio.com/wiki/R1100/reComputer-R1125-1.jpg><meta data-rh=true name=twitter:image content=https://files.seeedstudio.com/wiki/R1100/reComputer-R1125-1.jpg><link data-rh=true rel=icon href=/img/S.png><link data-rh=true rel=canonical href=https://wiki.seeedstudio.com/recomputer_r1100_configure_system/><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/recomputer_r1100_configure_system/ hreflang=en-US><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/recomputer_r1100_configure_system/ hreflang=x-default><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://wiki.seeedstudio.com/raspberry-pi-devices","name":"Raspberry Pi Devices","position":1},{"@type":"ListItem","item":"https://wiki.seeedstudio.com/recomputer_r1100_configure_system","name":"Configure reComputer R1100","position":2}]}</script><link rel=alternate type=application/rss+xml href=/blog/rss.xml title="Seeed Studio Wiki RSS Feed"><link rel=alternate type=application/atom+xml href=/blog/atom.xml title="Seeed Studio Wiki Atom Feed"><link rel=preconnect href=https://www.googletagmanager.com><script>window.dataLayer=window.dataLayer||[],function(e,t,a,n,r){e[n]=e[n]||[],e[n].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var d=t.getElementsByTagName(a)[0],g=t.createElement(a);g.async=!0,g.src="https://www.googletagmanager.com/gtm.js?id="+r+("dataLayer"!=n?"&l="+n:""),d.parentNode.insertBefore(g,d)}(window,document,"script","dataLayer","GTM-M4JG2HVB")</script><link rel=search type=application/opensearchdescription+xml title="Seeed Studio Wiki" href=/opensearch.xml><script src=https://viewer.altium.com/client/static/js/embed.js async></script><script src=/js/custom.js async></script><script src=/js/language-switcher.js async></script><link rel=stylesheet href=/assets/css/styles.c8bd05b2.css><script src=/assets/js/runtime~main.aeb8538c.js defer></script><script src=/assets/js/main.c0e728f1.js defer></script><body class=navigation-with-keyboard><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4JG2HVB" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript>
+<!doctype html><html lang=en-US dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-Edge/Raspberry_Pi_Devices/Edge_Controller/reComputer_R1100/recomputer_r1100_configure_system" data-has-hydrated=false><meta charset=UTF-8><meta name=generator content="Docusaurus v3.8.1"><title data-rh=true>Configure reComputer R1100 | Seeed Studio Wiki</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"><meta data-rh=true name=twitter:card content=summary_large_image><meta data-rh=true property=og:url content=https://wiki.seeedstudio.com/recomputer_r1100_configure_system/><meta data-rh=true property=og:locale content=en_US><meta data-rh=true name=docusaurus_locale content=en><meta data-rh=true name=docsearch:language content=en><meta data-rh=true name=docusaurus_version content=current><meta data-rh=true name=docusaurus_tag content=docs-default-current><meta data-rh=true name=docsearch:version content=current><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current><meta data-rh=true property=og:title content="Configure reComputer R1100 | Seeed Studio Wiki"><meta data-rh=true name=description content="Learn how to configure and test hardware components on the reComputer R1100 series after installing devices. This wiki covers GPIO mapping, USER LED testing, SPI communication, Wi-Fi and Bluetooth scanning, LoRa®, 4G, Zigbee over Mini-PCIe, RS485, RS232, DI/DO testing, and UPS for safe shutdown."><meta data-rh=true property=og:description content="Learn how to configure and test hardware components on the reComputer R1100 series after installing devices. This wiki covers GPIO mapping, USER LED testing, SPI communication, Wi-Fi and Bluetooth scanning, LoRa®, 4G, Zigbee over Mini-PCIe, RS485, RS232, DI/DO testing, and UPS for safe shutdown."><meta data-rh=true name=keywords content="Raspberry pi,Edge Controller,reComputer R1100"><meta data-rh=true property=og:image content=https://files.seeedstudio.com/wiki/R1100/reComputer-R1125-1.jpg><meta data-rh=true name=twitter:image content=https://files.seeedstudio.com/wiki/R1100/reComputer-R1125-1.jpg><link data-rh=true rel=icon href=/img/S.png><link data-rh=true rel=canonical href=https://wiki.seeedstudio.com/recomputer_r1100_configure_system/><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/recomputer_r1100_configure_system/ hreflang=en-US><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/recomputer_r1100_configure_system/ hreflang=x-default><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://wiki.seeedstudio.com/raspberry-pi-devices","name":"Raspberry Pi Devices","position":1},{"@type":"ListItem","item":"https://wiki.seeedstudio.com/recomputer_r1100_configure_system","name":"Configure reComputer R1100","position":2}]}</script><link rel=alternate type=application/rss+xml href=/blog/rss.xml title="Seeed Studio Wiki RSS Feed"><link rel=alternate type=application/atom+xml href=/blog/atom.xml title="Seeed Studio Wiki Atom Feed"><link rel=preconnect href=https://www.googletagmanager.com><script>window.dataLayer=window.dataLayer||[],function(e,t,a,n,r){e[n]=e[n]||[],e[n].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var d=t.getElementsByTagName(a)[0],g=t.createElement(a);g.async=!0,g.src="https://www.googletagmanager.com/gtm.js?id="+r+("dataLayer"!=n?"&l="+n:""),d.parentNode.insertBefore(g,d)}(window,document,"script","dataLayer","GTM-M4JG2HVB")</script><link rel=search type=application/opensearchdescription+xml title="Seeed Studio Wiki" href=/opensearch.xml><script src=https://viewer.altium.com/client/static/js/embed.js async></script><script src=/js/custom.js async></script><script src=/js/language-switcher.js async></script><link rel=stylesheet href=/assets/css/styles.c8bd05b2.css><script src=/assets/js/runtime~main.aad8f714.js defer></script><script src=/assets/js/main.9a063041.js defer></script><body class=navigation-with-keyboard><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4JG2HVB" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript>
 
 
 <svg xmlns=http://www.w3.org/2000/svg style="display: none;"><defs>
@@ -138,22 +138,28 @@
 </ul>
 <p><strong>Steps to Configure as a Coordinator:</strong></p>
 <ol>
-<li><strong>Set as Coordinator:</strong> Send command:<!-- -->
+<li>
+<p><strong>Set as Coordinator:</strong> Send command:</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-text codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">55 04 00 05 00 05  </span><br></span></code></pre></div></div>
 <ul>
 <li>Expected response:</li>
 </ul>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-text codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">55 04 00 05 00 05  </span><br></span></code></pre></div></div>
 </li>
-<li><strong>Reset Device:</strong>
+<li>
+<p><strong>Reset Device:</strong></p>
 <ul>
-<li>Press the <strong>reset button</strong>, or</li>
-<li>Send command:<!-- -->
+<li>
+<p>Press the <strong>reset button</strong>, or</p>
+</li>
+<li>
+<p>Send command:</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-text codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">55 07 00 04 00 FF FF 00 04  </span><br></span></code></pre></div></div>
 </li>
 </ul>
 </li>
-<li><strong>Network Formation:</strong>
+<li>
+<p><strong>Network Formation:</strong></p>
 <ul>
 <li>Send command:</li>
 </ul>
@@ -166,22 +172,28 @@
 </ul>
 <p><strong>Steps to Configure as a Router:</strong></p>
 <ol>
-<li><strong>Set as Router:</strong> Send command:<!-- -->
+<li>
+<p><strong>Set as Router:</strong> Send command:</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-text codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">55 04 00 05 01 04  </span><br></span></code></pre></div></div>
 <ul>
 <li>Expected response:</li>
 </ul>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-text codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">55 04 00 05 00 05  </span><br></span></code></pre></div></div>
 </li>
-<li><strong>Reset Device:</strong>
+<li>
+<p><strong>Reset Device:</strong></p>
 <ul>
-<li>Press the <strong>reset button</strong>, or</li>
-<li>Send command:<!-- -->
+<li>
+<p>Press the <strong>reset button</strong>, or</p>
+</li>
+<li>
+<p>Send command:</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-text codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">55 07 00 04 00 FF FF 00 04  </span><br></span></code></pre></div></div>
 </li>
 </ul>
 </li>
-<li><strong>Network Formation:</strong> Send command:<!-- -->
+<li>
+<p><strong>Network Formation:</strong> Send command:</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-text codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">55 03 00 02 02  </span><br></span></code></pre></div></div>
 </li>
 </ol>
@@ -201,15 +213,19 @@
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-text codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">+++  </span><br></span></code></pre></div></div>
 <p><strong>Additional Notes</strong></p>
 <ul>
-<li>If <strong>router configuration fails</strong>, the device may already be a <strong>coordinator</strong>. To leave the network, send:<!-- -->
+<li>
+<p>If <strong>router configuration fails</strong>, the device may already be a <strong>coordinator</strong>. To leave the network, send:</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-text codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">55 07 00 04 02 XXXX XX  </span><br></span></code></pre></div></div>
 </li>
-<li>To <strong>test transmission power</strong>, use:<!-- -->
+<li>
+<p>To <strong>test transmission power</strong>, use:</p>
 <ul>
-<li><strong>Query power:</strong>
+<li>
+<p><strong>Query power:</strong></p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-text codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">55 04 0D 00 00 0D  </span><br></span></code></pre></div></div>
 </li>
-<li><strong>Set power:</strong>
+<li>
+<p><strong>Set power:</strong></p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-text codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">55 04 0D 01 XXXX  </span><br></span></code></pre></div></div>
 </li>
 </ul>
@@ -252,16 +268,20 @@
 <li>
 <p><strong>Run the test program:</strong></p>
 <ul>
-<li>Clone the test program repository:<!-- -->
+<li>
+<p>Clone the test program repository:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">git clone https://github.com/ackPeng/R1100_TEST.git</span><br></span></code></pre></div></div>
 </li>
-<li>Navigate to the directory:<!-- -->
+<li>
+<p>Navigate to the directory:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">cd R1100_TEST</span><br></span></code></pre></div></div>
 </li>
-<li>Compile the test program:<!-- -->
+<li>
+<p>Compile the test program:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">gcc -o serial_test serial_test.c</span><br></span></code></pre></div></div>
 </li>
-<li>Run the test:<!-- -->
+<li>
+<p>Run the test:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">./serial_test /dev/ttyACM2 /dev/ttyACM3 115200</span><br></span></code></pre></div></div>
 </li>
 </ul>
@@ -339,12 +359,19 @@
 <p>This command will display the RTC time.</p>
 <p><strong>Test RTC Retention</strong></p>
 <ul>
-<li><strong>Disconnect the power source</strong> from the RTC.</li>
-<li><strong>Wait a few minutes</strong>.</li>
-<li><strong>Reconnect the power</strong> and check the RTC time again using:<!-- -->
+<li>
+<p><strong>Disconnect the power source</strong> from the RTC.</p>
+</li>
+<li>
+<p><strong>Wait a few minutes</strong>.</p>
+</li>
+<li>
+<p><strong>Reconnect the power</strong> and check the RTC time again using:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">sudo hwclock -r</span><br></span></code></pre></div></div>
 </li>
-<li>If the time remains correct, the RTC is functioning properly.</li>
+<li>
+<p>If the time remains correct, the RTC is functioning properly.</p>
+</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id=watchdog-timer-testing>Watchdog Timer Testing<a href=#watchdog-timer-testing class=hash-link aria-label="Direct link to Watchdog Timer Testing" title="Direct link to Watchdog Timer Testing">​</a></h2>
 <p>To test the <strong>watchdog timer</strong> on <strong>reComputer R1100</strong>, follow these steps:</p>
