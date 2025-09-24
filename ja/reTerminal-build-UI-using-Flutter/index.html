@@ -1,4 +1,4 @@
-<!doctype html><html lang=en-US dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-ja/Edge/Raspberry_Pi_Devices/Application/AIoT/UI_design/ja_reTerminal-build-UI-using-Flutter" data-has-hydrated=false><meta charset=UTF-8><meta name=generator content="Docusaurus v3.8.1"><title data-rh=true>reTerminal用Flutter | Seeed Studio Wiki</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"><meta data-rh=true name=twitter:card content=summary_large_image><meta data-rh=true property=og:url content=https://wiki.seeedstudio.com/ja/reTerminal-build-UI-using-Flutter/><meta data-rh=true property=og:locale content=en_US><meta data-rh=true name=docusaurus_locale content=en><meta data-rh=true name=docsearch:language content=en><meta data-rh=true name=docusaurus_version content=current><meta data-rh=true name=docusaurus_tag content=docs-default-current><meta data-rh=true name=docsearch:version content=current><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current><meta data-rh=true property=og:title content="reTerminal用Flutter | Seeed Studio Wiki"><meta data-rh=true name=description content=reTerminal用Flutter><meta data-rh=true property=og:description content=reTerminal用Flutter><meta data-rh=true name=keywords content="Edge,reTerminal Application"><meta data-rh=true property=og:image content=https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png><meta data-rh=true name=twitter:image content=https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png><link data-rh=true rel=icon href=/img/S.png><link data-rh=true rel=canonical href=https://wiki.seeedstudio.com/ja/reTerminal-build-UI-using-Flutter/><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/ja/reTerminal-build-UI-using-Flutter/ hreflang=en-US><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/ja/reTerminal-build-UI-using-Flutter/ hreflang=x-default><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://wiki.seeedstudio.com/ja/raspberry-pi-devices","name":"Raspberry Piデバイス","position":1},{"@type":"ListItem","item":"https://wiki.seeedstudio.com/ja/reTerminal-build-UI-using-Flutter","name":"reTerminal用Flutter","position":2}]}</script><link rel=alternate type=application/rss+xml href=/blog/rss.xml title="Seeed Studio Wiki RSS Feed"><link rel=alternate type=application/atom+xml href=/blog/atom.xml title="Seeed Studio Wiki Atom Feed"><link rel=preconnect href=https://www.googletagmanager.com><script>window.dataLayer=window.dataLayer||[],function(e,t,a,n,r){e[n]=e[n]||[],e[n].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var d=t.getElementsByTagName(a)[0],g=t.createElement(a);g.async=!0,g.src="https://www.googletagmanager.com/gtm.js?id="+r+("dataLayer"!=n?"&l="+n:""),d.parentNode.insertBefore(g,d)}(window,document,"script","dataLayer","GTM-M4JG2HVB")</script><link rel=search type=application/opensearchdescription+xml title="Seeed Studio Wiki" href=/opensearch.xml><script src=https://viewer.altium.com/client/static/js/embed.js async></script><script src=/js/custom.js async></script><script src=/js/language-switcher.js async></script><link rel=stylesheet href=/assets/css/styles.e5b41788.css><script src=/assets/js/runtime~main.f59630cd.js defer></script><script src=/assets/js/main.d0b29a29.js defer></script><body class=navigation-with-keyboard><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4JG2HVB" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript>
+<!doctype html><html lang=en-US dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-ja/Edge/Raspberry_Pi_Devices/Application/AIoT/UI_design/ja_reTerminal-build-UI-using-Flutter" data-has-hydrated=false><meta charset=UTF-8><meta name=generator content="Docusaurus v3.8.1"><title data-rh=true>reTerminal用Flutter | Seeed Studio Wiki</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"><meta data-rh=true name=twitter:card content=summary_large_image><meta data-rh=true property=og:url content=https://wiki.seeedstudio.com/ja/reTerminal-build-UI-using-Flutter/><meta data-rh=true property=og:locale content=en_US><meta data-rh=true name=docusaurus_locale content=en><meta data-rh=true name=docsearch:language content=en><meta data-rh=true name=docusaurus_version content=current><meta data-rh=true name=docusaurus_tag content=docs-default-current><meta data-rh=true name=docsearch:version content=current><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current><meta data-rh=true property=og:title content="reTerminal用Flutter | Seeed Studio Wiki"><meta data-rh=true name=description content=reTerminal用Flutter><meta data-rh=true property=og:description content=reTerminal用Flutter><meta data-rh=true name=keywords content="Edge,reTerminal Application"><meta data-rh=true property=og:image content=https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png><meta data-rh=true name=twitter:image content=https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png><link data-rh=true rel=icon href=/img/S.png><link data-rh=true rel=canonical href=https://wiki.seeedstudio.com/ja/reTerminal-build-UI-using-Flutter/><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/ja/reTerminal-build-UI-using-Flutter/ hreflang=en-US><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/ja/reTerminal-build-UI-using-Flutter/ hreflang=x-default><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://wiki.seeedstudio.com/ja/raspberry-pi-devices","name":"Raspberry Piデバイス","position":1},{"@type":"ListItem","item":"https://wiki.seeedstudio.com/ja/reTerminal-build-UI-using-Flutter","name":"reTerminal用Flutter","position":2}]}</script><link rel=alternate type=application/rss+xml href=/blog/rss.xml title="Seeed Studio Wiki RSS Feed"><link rel=alternate type=application/atom+xml href=/blog/atom.xml title="Seeed Studio Wiki Atom Feed"><link rel=preconnect href=https://www.googletagmanager.com><script>window.dataLayer=window.dataLayer||[],function(e,t,a,n,r){e[n]=e[n]||[],e[n].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var d=t.getElementsByTagName(a)[0],g=t.createElement(a);g.async=!0,g.src="https://www.googletagmanager.com/gtm.js?id="+r+("dataLayer"!=n?"&l="+n:""),d.parentNode.insertBefore(g,d)}(window,document,"script","dataLayer","GTM-M4JG2HVB")</script><link rel=search type=application/opensearchdescription+xml title="Seeed Studio Wiki" href=/opensearch.xml><script src=https://viewer.altium.com/client/static/js/embed.js async></script><script src=/js/custom.js async></script><script src=/js/language-switcher.js async></script><link rel=stylesheet href=/assets/css/styles.e5b41788.css><script src=/assets/js/runtime~main.962a43b2.js defer></script><script src=/assets/js/main.a25c96a2.js defer></script><body class=navigation-with-keyboard><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4JG2HVB" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript>
 
 
 <svg xmlns=http://www.w3.org/2000/svg style="display: none;"><defs>
@@ -25,11 +25,11 @@
 </ul>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">sudo apt install cmake libgl1-mesa-dev libgles2-mesa-dev libegl1-mesa-dev libdrm-dev libgbm-dev ttf-mscorefonts-installer fontconfig libsystemd-dev libinput-dev libudev-dev  libxkbcommon-dev</span><br></span></code></pre></div></div>
 <ul>
-<li><strong>Step 3.</strong> Update the system fonts</li>
+<li><strong>ステップ 3.</strong> システムフォントを更新する</li>
 </ul>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">sudo fc-cache</span><br></span></code></pre></div></div>
 <ul>
-<li><strong>Step 4.</strong> Clone flutter-pi and cd into the cloned directory</li>
+<li><strong>ステップ 4.</strong> flutter-piをクローンし、クローンしたディレクトリにcdで移動する</li>
 </ul>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">git clone https://github.com/ardera/flutter-pi</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">cd flutter-pi</span><br></span></code></pre></div></div>
 <ul>
@@ -41,7 +41,7 @@
 </ul>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">sudo make install</span><br></span></code></pre></div></div>
 <ul>
-<li><strong>Step 7.</strong> Open raspi-config</li>
+<li><strong>ステップ 7.</strong> Open raspi-config</li>
 </ul>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">sudo raspi-config</span><br></span></code></pre></div></div>
 <ul>
@@ -63,7 +63,7 @@
 </ul>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">usermod -a -G render pi</span><br></span></code></pre></div></div>
 <ul>
-<li><strong>Step 13.</strong> Reboot reTerminal</li>
+<li><strong>ステップ 13.</strong> Reboot reTerminal</li>
 </ul>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">sudo reboot</span><br></span></code></pre></div></div>
 <p>必要なツールのreTerminalへのインストールが完了しました</p>
@@ -81,40 +81,40 @@
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/ReTerminal/flutter/flutter-version.png alt=pir width=800 height=auto></p>
 <ul>
 <li>
-<p><strong>Step 3.</strong> お使いのオペレーティングシステムに応じて<a href=https://developer.android.com/studio target=_blank rel="noopener noreferrer">Android Studio</a>をダウンロードしてインストールします</p>
+<p><strong>ステップ 3.</strong> お使いのオペレーティングシステムに応じて<a href=https://developer.android.com/studio target=_blank rel="noopener noreferrer">Android Studio</a>をダウンロードしてインストールします</p>
 </li>
 <li>
-<p><strong>Step 4.</strong> Android Studioを開き、<code>Configure > Plugins</code>に移動します</p>
+<p><strong>ステップ 4.</strong> Android Studioを開き、<code>Configure > Plugins</code>に移動します</p>
 </li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-6.png alt=pir width=650 height=auto></p>
 <ul>
-<li><strong>Step 5.</strong> <strong>Marketplace</strong>で、検索ボックスに<strong>flutter</strong>と入力し、<strong>Install</strong>をクリックします</li>
+<li><strong>ステップ 5.</strong> <strong>Marketplace</strong>で、検索ボックスに<strong>flutter</strong>と入力し、<strong>Install</strong>をクリックします</li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-7.png alt=pir width=650 height=auto></p>
 <ul>
-<li><strong>Step 6.</strong> プロンプトウィンドウで<strong>Install</strong>をクリックして<strong>Dart</strong>プラグインもインストールします</li>
+<li><strong>ステップ 6.</strong> プロンプトウィンドウで<strong>Install</strong>をクリックして<strong>Dart</strong>プラグインもインストールします</li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-8.png alt=pir width=650 height=auto></p>
 <ul>
-<li><strong>Step 7.</strong> <strong>Restart IDE</strong>をクリックして、インストールしたプラグインでIDEを再起動します</li>
+<li><strong>ステップ 7.</strong> <strong>Restart IDE</strong>をクリックして、インストールしたプラグインでIDEを再起動します</li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-9.png alt=pir width=650 height=auto></p>
 <ul>
-<li><strong>Step 8.</strong> IDEが再び開いたら、<code>Configure > AVD Manager</code>に移動します</li>
+<li><strong>ステップ 8.</strong> IDEが再び開いたら、<code>Configure > AVD Manager</code>に移動します</li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/ReTerminal/flutter/android-studio-open.png alt=pir width=800 height=auto></p>
 <ul>
-<li><strong>Step 9.</strong> <strong>Create Virtual Device</strong>をクリックします</li>
+<li><strong>ステップ 9.</strong> <strong>Create Virtual Device</strong>をクリックします</li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-1.png alt=pir width=800 height=auto></p>
 <ul>
-<li><strong>Step 10.</strong> <strong>New Hardware Profile</strong>をクリックします</li>
+<li><strong>ステップ 10.</strong> <strong>New Hardware Profile</strong>をクリックします</li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-2.png alt=pir width=800 height=auto></p>
 <ul>
 <li>
-<p><strong>Step 11.</strong> 以下のように設定を構成します</p>
+<p><strong>ステップ 11.</strong> 以下のように設定を構成します</p>
 <ul>
 <li>
 <p>Device Name: reTerminal</p>
@@ -144,19 +144,19 @@
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-3.png alt=pir width=800 height=auto></p>
 <ul>
 <li>
-<p><strong>Step 12.</strong> <strong>Finish</strong>をクリックし、次に<strong>Next</strong>をクリックします</p>
+<p><strong>ステップ 12.</strong> <strong>Finish</strong>をクリックし、次に<strong>Next</strong>をクリックします</p>
 </li>
 <li>
-<p><strong>Step 13.</strong> 最新のAndroid Imageを選択し、<strong>Next</strong>をクリックします</p>
+<p><strong>ステップ 13.</strong> 最新のAndroid Imageを選択し、<strong>Next</strong>をクリックします</p>
 </li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-4.png alt=pir width=800 height=auto></p>
 <ul>
-<li><strong>Step 14.</strong> <strong>Emulated Performance</strong>で、加速されたパフォーマンスのために<strong>Hardware - GLES 2.0</strong>を選択します</li>
+<li><strong>ステップ 14.</strong> <strong>Emulated Performance</strong>で、加速されたパフォーマンスのために<strong>Hardware - GLES 2.0</strong>を選択します</li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-5.png alt=pir width=800 height=auto></p>
 <ul>
-<li><strong>Step 15.</strong> 最後に<strong>Finish</strong>をクリックします</li>
+<li><strong>ステップ 15.</strong> 最後に<strong>Finish</strong>をクリックします</li>
 </ul>
 <p>これで開発環境の準備が正常に完了しました</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id=smart-lamp-flutter-application>Smart Lamp Flutter Application<a href=#smart-lamp-flutter-application class=hash-link aria-label="Direct link to Smart Lamp Flutter Application" title="Direct link to Smart Lamp Flutter Application">​</a></h2>
@@ -166,16 +166,16 @@
 <p><strong>注意:</strong> GPIOピンとLEDの間に抵抗が必要です。そうしないとLEDが焼損します。</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id=アプリケーションの作成と初期化>アプリケーションの作成と初期化<a href=#アプリケーションの作成と初期化 class=hash-link aria-label="Direct link to アプリケーションの作成と初期化" title="Direct link to アプリケーションの作成と初期化">​</a></h3>
 <ul>
-<li><strong>Step 1.</strong> Android Studioを開き、<strong>Create New Flutter Project</strong>をクリックします</li>
+<li><strong>ステップ 1.</strong> Android Studioを開き、<strong>Create New Flutter Project</strong>をクリックします</li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-10.png alt=pir width=550 height=auto></p>
 <ul>
-<li><strong>Step 2.</strong> <strong>Flutter SDK path</strong>は自動的に設定されます</li>
+<li><strong>ステップ 2.</strong> <strong>Flutter SDK path</strong>は自動的に設定されます</li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-11.png alt=pir width=800 height=auto></p>
 <p><strong>注意:</strong> このウィンドウにFlutter SDK pathが表示されない場合は、手動でFlutter SDKの場所を指定できます</p>
 <ul>
-<li><strong>Step 3.</strong> プロジェクトの詳細を以下のように入力し、<strong>Finish</strong>をクリックします</li>
+<li><strong>ステップ 3.</strong> プロジェクトの詳細を以下のように入力し、<strong>Finish</strong>をクリックします</li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-12.png alt=pir width=800 height=auto></p>
 <p>これで<strong>main.dart</strong>でサンプルプロジェクトが開きます</p>
@@ -201,40 +201,40 @@
 </ul>
 <div class="language-yaml codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-yaml codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token key atrule">dependencies</span><span class="token punctuation" style="color:rgb(248, 248, 242)">:</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">  </span><span class="token key atrule">flutter_gpiod</span><span class="token punctuation" style="color:rgb(248, 248, 242)">:</span><span class="token plain"> ^0.4.0</span><span class="token punctuation" style="color:rgb(248, 248, 242)">-</span><span class="token plain">nullsafety</span><br></span></code></pre></div></div>
 <ul>
-<li><strong>Step 2.</strong> ファイルを保存し、<strong>Pub get</strong> をクリックします</li>
+<li><strong>ステップ 2.</strong> ファイルを保存し、<strong>Pub get</strong> をクリックします</li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-17.jpg alt=pir width=520 height=auto></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id=アプリをテストする>アプリをテストする<a href=#アプリをテストする class=hash-link aria-label="Direct link to アプリをテストする" title="Direct link to アプリをテストする">​</a></h3>
 <ul>
 <li>
-<p><strong>Step 1.</strong> <strong>main.dart</strong> ファイルを開きます</p>
+<p><strong>ステップ 1.</strong> <strong>main.dart</strong> ファイルを開きます</p>
 </li>
 <li>
-<p><strong>Step 2.</strong> <strong>no device selected</strong> ボタンをクリックし、先ほど作成したAndroidデバイスを選択します</p>
+<p><strong>ステップ 2.</strong> <strong>no device selected</strong> ボタンをクリックし、先ほど作成したAndroidデバイスを選択します</p>
 </li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-13.1.jpg alt=pir width=800 height=auto></p>
 <p>以下の出力が表示されます</p>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-5.png alt=pir width=800 height=auto></p>
 <ul>
-<li><strong>Step 3.</strong> <strong>再生ボタン</strong> をクリックしてアプリケーションを実行します</li>
+<li><strong>ステップ 3.</strong> <strong>再生ボタン</strong> をクリックしてアプリケーションを実行します</li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-14.png alt=pir width=800 height=auto></p>
 <p>Androidエミュレーター上で以下のアプリケーションが実行されているのが確認できます</p>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-13.png alt=pir width=800 height=auto></p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id=アプリ��ケーションをビルドしてreterminalに転送する>アプリケーションをビルドしてreTerminalに転送する<a href=#アプリケーションをビルドしてreterminalに転送する class=hash-link aria-label="Direct link to アプリケーションをビルドしてreTerminalに転送する" title="Direct link to アプリケーションをビルドしてreTerminalに転送する">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id=アプリケーションをビルドしてreterminalに転送する>アプリケーションをビルドしてreTerminalに転送する<a href=#アプリケーションをビルドしてreterminalに転送する class=hash-link aria-label="Direct link to アプリケーションをビルドしてreTerminalに転送する" title="Direct link to アプリケーションをビルドしてreTerminalに転送する">​</a></h3>
 <p>次に、FlutterアプリケーションをビルドしてreTerminalに転送します</p>
 <ul>
 <li>
-<p><strong>Step 1.</strong> Android Studio内でターミナルウィンドウを開きます。<code>View > Tool Windows > Terminal</code> に移動します</p>
+<p><strong>ステップ 1.</strong> Android Studio内でターミナルウィンドウを開きます。<code>View > Tool Windows > Terminal</code> に移動します</p>
 </li>
 <li>
-<p><strong>Step 2.</strong> 以下を入力してビルドの準備をします</p>
+<p><strong>ステップ 2.</strong> 以下を入力してビルドの準備をします</p>
 </li>
 </ul>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">flutter clean</span><br></span></code></pre></div></div>
 <ul>
-<li><strong>Step 3.</strong> Build the project</li>
+<li><strong>ステップ 3.</strong> Build the project</li>
 </ul>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">flutter build bundle</span><br></span></code></pre></div></div>
 <ul>
@@ -262,7 +262,7 @@
 <li><strong>[Webpage]</strong> <a href=https://flutter.dev/docs target=_blank rel="noopener noreferrer">公式Flutterドキュメント</a></li>
 <li><strong>[GitHub]</strong> <a href=https://github.com/lakshanthad/Flutter_reTerminal_LED_UI target=_blank rel="noopener noreferrer">Flutterデモソースコード</a></li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id=技術サポート--製品ディスカッション>技術サポート & 製品ディスカッション<a href=#技術サポート--製品ディスカッション class=hash-link aria-label="Direct link to 技術サポート & 製品ディスカッション" title="Direct link to 技術サポート & 製品ディスカッション">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id=技術サポート--製品ディスカッション>技術サポート & 製品ディスカッション<a href=#技術サポート--製品ディスカッション class=hash-link aria-label="Direct link to 技術サポート & 製品ディスカッション" title="Direct link to 技術サポート & 製品ディスカッ�ション">​</a></h2>
 <p>私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。</p>
 <div class=button_tech_support_container><a href=https://forum.seeedstudio.com/ class=button_forum></a><a href=https://www.seeedstudio.com/contacts class=button_email></a></div>
 <div class=button_tech_support_container><a href=https://discord.gg/eWkprNDMU7 class=button_discord></a><a href=https://github.com/Seeed-Studio/wiki-documents/discussions/69 class=button_discussion></a></div></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class=col><a href=https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/docs/ja/Edge/Raspberry_Pi_Devices/Application/AIoT/UI_design/ja_reTerminal-build-UI-using-Flutter.md target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_Z9Sw aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"><span class=theme-last-updated>Last updated<!-- --> on <b><time datetime=2023-01-31T00:00:00.000Z itemprop=dateModified>Jan 31, 2023</time></b> by <b>jianjing Huang</b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href=/ja/reTerminal-build-UI-using-Electron/><div class=pagination-nav__sublabel>Previous</div><div class=pagination-nav__label>reTerminal用Electron</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/ja/reTerminal-build-UI-using-LVGL/><div class=pagination-nav__sublabel>Next</div><div class=pagination-nav__label>reTerminal用LVGL</div></a></nav></div><div>Loading Comments...</div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#はじめに class="table-of-contents__link toc-highlight">はじめに</a><li><a href=#開発環境の準備 class="table-of-contents__link toc-highlight">開発環境の準備</a><ul><li><a href=#reterminal上で class="table-of-contents__link toc-highlight">reTerminal上で</a><li><a href=#ホストpc上で class="table-of-contents__link toc-highlight">ホストPC上で</a></ul><li><a href=#smart-lamp-flutter-application class="table-of-contents__link toc-highlight">Smart Lamp Flutter Application</a><ul><li><a href=#ハードウェア接続 class="table-of-contents__link toc-highlight">ハードウェア接続</a><li><a href=#アプリケーションの作成と初期化 class="table-of-contents__link toc-highlight">アプリケーションの作成と初期化</a><li><a href=#maindartメインアプリの作成 class="table-of-contents__link toc-highlight">main.dart（メインアプリ）の作成</a><ul><li><a href=#flutter-で使用されるウィジェット class="table-of-contents__link toc-highlight">Flutter で使用されるウィジェット</a><li><a href=#google-material-icons class="table-of-contents__link toc-highlight">Google Material Icons</a></ul><li><a href=#gpio-ライブラリのインストール class="table-of-contents__link toc-highlight">GPIO ライブラリのインストール</a><li><a href=#アプリをテストする class="table-of-contents__link toc-highlight">アプリをテストする</a><li><a href=#アプリケーションをビルドしてreterminalに転送する class="table-of-contents__link toc-highlight">アプリケーションをビルドしてreTerminalに転送する</a></ul><li><a href=#reterminal-でアプリケーションを起動する class="table-of-contents__link toc-highlight">reTerminal でアプリケーションを起動する</a><li><a href=#ボーナスデモ class="table-of-contents__link toc-highlight">ボーナスデモ</a><li><a href=#リソース class="table-of-contents__link toc-highlight">リソース</a><li><a href=#技術サポート--製品ディスカッション class="table-of-contents__link toc-highlight">技術サポート & 製品ディスカッション</a></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Navigation</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/Getting_Started/>Getting Started</a><li class=footer__item><a class=footer__link-item href=/Sensor_Network/>Sensor and Sensing</a><li class=footer__item><a class=footer__link-item href=/Network/>Network</a><li class=footer__item><a class=footer__link-item href=/Edge_Computing/>Edge Computing</a><li class=footer__item><a class=footer__link-item href=/Cloud/>Cloud</a><li class=footer__item><a href=https://solution.seeed.cc/ target=_blank rel="noopener noreferrer" class=footer__link-item>Solutions</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Ecosystem</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://discord.com/invite/QqMgVwHT3X target=_blank rel="noopener noreferrer" class=footer__link-item>Discord</a><li class=footer__item><a href=https://project.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=footer__link-item>Project Hub</a><li class=footer__item><a href=https://www.seeedstudio.com/ecosystem/ target=_blank rel="noopener noreferrer" class=footer__link-item>Partners</a><li class=footer__item><a href=https://www.seeedstudio.com/distributors.html target=_blank rel="noopener noreferrer" class=footer__link-item>Distributors</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Quick Guide</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://www.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=footer__link-item>Bazaar</a><li class=footer__item><a href=https://www.seeedstudio.com/get_help/HowToGetHelp target=_blank rel="noopener noreferrer" class=footer__link-item>How to get help</a><li class=footer__item><a href=https://support.seeedstudio.com/knowledgebase target=_blank rel="noopener noreferrer" class=footer__link-item>FAQs</a><li class=footer__item><a href=https://forum.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=footer__link-item>Forum</a><li class=footer__item><a href=https://www.seeedstudio.com/get_help/TechnicalSupport target=_blank rel="noopener noreferrer" class=footer__link-item>Technical Support</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Company</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://www.seeedstudio.com/about-us/ target=_blank rel="noopener noreferrer" class=footer__link-item>About Seeed</a><li class=footer__item><a href=https://www.seeedstudio.com/join-us/ target=_blank rel="noopener noreferrer" class=footer__link-item>Join us</a><li class=footer__item><a href=https://www.seeedstudio.com/contacts target=_blank rel="noopener noreferrer" class=footer__link-item>Contact Us</a><li class=footer__item><a href=https://www.seeedstudio.com/blog/2020/04/22/seeed-in-the-news/ target=_blank rel="noopener noreferrer" class=footer__link-item>Press</a></ul></div></div><div class="footer__bottom text--center"><div class=footer__copyright>Copyright © 2025 Seeed Studio, Inc. Built with Docusaurus.</div></div></div></footer></div>

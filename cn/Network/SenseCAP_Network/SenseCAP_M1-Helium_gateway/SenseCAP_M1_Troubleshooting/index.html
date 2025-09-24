@@ -1,4 +1,4 @@
-<!doctype html><html lang=en-US dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-zh-CN/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/cn_SenseCAP_M1_Troubleshooting" data-has-hydrated=false><meta charset=UTF-8><meta name=generator content="Docusaurus v3.8.1"><title data-rh=true>SenseCAP M1 故障排除 | Seeed Studio Wiki</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"><meta data-rh=true name=twitter:card content=summary_large_image><meta data-rh=true property=og:url content=https://wiki.seeedstudio.com/cn/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Troubleshooting/><meta data-rh=true property=og:locale content=en_US><meta data-rh=true name=docusaurus_locale content=en><meta data-rh=true name=docsearch:language content=en><meta data-rh=true name=docusaurus_version content=current><meta data-rh=true name=docusaurus_tag content=docs-default-current><meta data-rh=true name=docsearch:version content=current><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current><meta data-rh=true property=og:title content="SenseCAP M1 故障排除 | Seeed Studio Wiki"><meta data-rh=true name=description content="SenseCAP M1 故障排除"><meta data-rh=true property=og:description content="SenseCAP M1 故障排除"><meta data-rh=true name=keywords content="SenseCAP Network"><meta data-rh=true property=og:image content=https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png><meta data-rh=true name=twitter:image content=https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png><link data-rh=true rel=icon href=/img/S.png><link data-rh=true rel=canonical href=https://wiki.seeedstudio.com/cn/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Troubleshooting/><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/cn/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Troubleshooting/ hreflang=en-US><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/cn/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Troubleshooting/ hreflang=x-default><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://wiki.seeedstudio.com/cn/Network/SenseCAP_Network/SenseCAP_Gateway_Intro","name":"SenseCAP 网关","position":1},{"@type":"ListItem","item":"https://wiki.seeedstudio.com/cn/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Troubleshooting","name":"SenseCAP M1 故障排除","position":2}]}</script><link rel=alternate type=application/rss+xml href=/blog/rss.xml title="Seeed Studio Wiki RSS Feed"><link rel=alternate type=application/atom+xml href=/blog/atom.xml title="Seeed Studio Wiki Atom Feed"><link rel=preconnect href=https://www.googletagmanager.com><script>window.dataLayer=window.dataLayer||[],function(e,t,a,n,r){e[n]=e[n]||[],e[n].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var d=t.getElementsByTagName(a)[0],g=t.createElement(a);g.async=!0,g.src="https://www.googletagmanager.com/gtm.js?id="+r+("dataLayer"!=n?"&l="+n:""),d.parentNode.insertBefore(g,d)}(window,document,"script","dataLayer","GTM-M4JG2HVB")</script><link rel=search type=application/opensearchdescription+xml title="Seeed Studio Wiki" href=/opensearch.xml><script src=https://viewer.altium.com/client/static/js/embed.js async></script><script src=/js/custom.js async></script><script src=/js/language-switcher.js async></script><link rel=stylesheet href=/assets/css/styles.e5b41788.css><script src=/assets/js/runtime~main.f59630cd.js defer></script><script src=/assets/js/main.d0b29a29.js defer></script><body class=navigation-with-keyboard><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4JG2HVB" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript>
+<!doctype html><html lang=en-US dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-zh-CN/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/cn_SenseCAP_M1_Troubleshooting" data-has-hydrated=false><meta charset=UTF-8><meta name=generator content="Docusaurus v3.8.1"><title data-rh=true>SenseCAP M1 故障排除 | Seeed Studio Wiki</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"><meta data-rh=true name=twitter:card content=summary_large_image><meta data-rh=true property=og:url content=https://wiki.seeedstudio.com/cn/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Troubleshooting/><meta data-rh=true property=og:locale content=en_US><meta data-rh=true name=docusaurus_locale content=en><meta data-rh=true name=docsearch:language content=en><meta data-rh=true name=docusaurus_version content=current><meta data-rh=true name=docusaurus_tag content=docs-default-current><meta data-rh=true name=docsearch:version content=current><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current><meta data-rh=true property=og:title content="SenseCAP M1 故障排除 | Seeed Studio Wiki"><meta data-rh=true name=description content="SenseCAP M1 故障排除"><meta data-rh=true property=og:description content="SenseCAP M1 故障排除"><meta data-rh=true name=keywords content="SenseCAP Network"><meta data-rh=true property=og:image content=https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png><meta data-rh=true name=twitter:image content=https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png><link data-rh=true rel=icon href=/img/S.png><link data-rh=true rel=canonical href=https://wiki.seeedstudio.com/cn/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Troubleshooting/><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/cn/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Troubleshooting/ hreflang=en-US><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/cn/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Troubleshooting/ hreflang=x-default><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://wiki.seeedstudio.com/cn/Network/SenseCAP_Network/SenseCAP_Gateway_Intro","name":"SenseCAP 网关","position":1},{"@type":"ListItem","item":"https://wiki.seeedstudio.com/cn/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Troubleshooting","name":"SenseCAP M1 故障排除","position":2}]}</script><link rel=alternate type=application/rss+xml href=/blog/rss.xml title="Seeed Studio Wiki RSS Feed"><link rel=alternate type=application/atom+xml href=/blog/atom.xml title="Seeed Studio Wiki Atom Feed"><link rel=preconnect href=https://www.googletagmanager.com><script>window.dataLayer=window.dataLayer||[],function(e,t,a,n,r){e[n]=e[n]||[],e[n].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var d=t.getElementsByTagName(a)[0],g=t.createElement(a);g.async=!0,g.src="https://www.googletagmanager.com/gtm.js?id="+r+("dataLayer"!=n?"&l="+n:""),d.parentNode.insertBefore(g,d)}(window,document,"script","dataLayer","GTM-M4JG2HVB")</script><link rel=search type=application/opensearchdescription+xml title="Seeed Studio Wiki" href=/opensearch.xml><script src=https://viewer.altium.com/client/static/js/embed.js async></script><script src=/js/custom.js async></script><script src=/js/language-switcher.js async></script><link rel=stylesheet href=/assets/css/styles.e5b41788.css><script src=/assets/js/runtime~main.962a43b2.js defer></script><script src=/assets/js/main.a25c96a2.js defer></script><body class=navigation-with-keyboard><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4JG2HVB" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript>
 
 
 <svg xmlns=http://www.w3.org/2000/svg style="display: none;"><defs>
@@ -180,28 +180,28 @@
 <ul>
 <li><strong>步骤 1：</strong> 关闭您的热点电源，然后拆下天线。</li>
 </ul>
-<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-1-1.png alt="SenseCAP M1 SD Card Step 1" class=img_ev3q></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-1-1.png alt="SenseCAP M1 SD 卡 步骤 1" class=img_ev3q></p>
 <ul>
-<li><strong>步骤 2</strong>：使用螺丝刀松开前面板上的两颗螺丝。</li>
+<li><strong>步骤 2：</strong> 使用螺丝刀松开前面板上的两颗螺丝。</li>
 </ul>
-<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-2.png alt="SenseCAP M1 SD Card Step 2" class=img_ev3q></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-2.png alt="SenseCAP M1 SD 卡 步骤 2" class=img_ev3q></p>
 <ul>
-<li><strong>步骤 3</strong>：移开前面板并将其放在一边。</li>
+<li><strong>步骤 3：</strong> 移开前面板并将其放在一边。</li>
 </ul>
-<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-3.png alt="SenseCAP M1 SD Card Step 3" class=img_ev3q></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-3.png alt="SenseCAP M1 SD 卡 步骤 3" class=img_ev3q></p>
 <ul>
-<li><strong>步骤 4</strong>：撕掉 Micro SD 卡顶部的黄色贴纸（您可以使用镊子）。</li>
+<li><strong>步骤 4：</strong> 撕掉 Micro SD 卡顶部的黄色贴纸（您可以使用镊子）。</li>
 </ul>
-<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4.png alt="SenseCAP M1 SD Card Step 4" class=img_ev3q></p>
-<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4a.png alt="SenseCAP M1 SD Card Step 4B" class=img_ev3q></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4.png alt="SenseCAP M1 SD 卡 步骤 4" class=img_ev3q></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4a.png alt="SenseCAP M1 SD 卡 步骤 4B" class=img_ev3q></p>
 <hr>
 <p><strong>如何读取 Micro SD 卡并刷写镜像</strong></p>
 <ul>
 <li><strong>步骤 1</strong>：将新的 Micro SD 卡插入 Micro SD 读卡器。</li>
 </ul>
-<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-1-1.png alt="SenseCAP M1 SD Card Image Step 1" class=img_ev3q></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-1-1.png alt="SenseCAP M1 SD Card Image 步骤 1" class=img_ev3q></p>
 <p><em>将新的 Micro SD 卡插入 Micro SD 读卡器</em></p>
-<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-2.png alt="SenseCAP M1 SD Card Image Step 1B" class=img_ev3q></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-2.png alt="SenseCAP M1 SD Card Image 步骤 1B" class=img_ev3q></p>
 <p><em>确保完全插入</em></p>
 <ul>
 <li><strong>步骤 2</strong>：使用 Balena Etcher 将 SenseCAP M1 镜像刷写到新的 Micro SD 卡。<!-- -->
@@ -227,12 +227,12 @@
 <li><strong>步骤 4</strong>：从您的计算机中拔出新的 Micro SD 卡。</li>
 <li><strong>步骤 5</strong>：将新的 Micro SD 卡插入您的 SenseCAP M1。</li>
 </ul>
-<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-5.png alt="SenseCAP M1 SD Card Step 5" class=img_ev3q></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-5.png alt="SenseCAP M1 SD Card 步骤 5" class=img_ev3q></p>
 <ul>
 <li><strong>步骤 6</strong>：开启 SenseCAP M1 电源，并重新连接到互联网（最好使用以太网线）。</li>
 <li><strong>步骤 7</strong>：等待大约 20 分钟以应用更新，然后检查仪表板（<strong><a href=https://status.sensecapmx.cloud/ target=_blank rel="noopener noreferrer">https://status.sensecapmx.cloud/)</a></strong>）或在完成后在 Helium 应用中运行诊断。</li>
 </ul>
-<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/diagnostics-1.png alt="SenseCAP M1 SD Card Step 6" class=img_ev3q></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/diagnostics-1.png alt="SenseCAP M1 SD Card 步骤 6" class=img_ev3q></p>
 <p><strong>注意</strong>：只有在确认您的热点正常工作后，才应该组装热点的前面板。</p>
 <p>如果您有任何其他问题或疑问，请在此处提交工单：<a href=https://support.sensecapmx.com/ target=_blank rel="noopener noreferrer"><strong>https://support.sensecapmx.com/</strong></a></p>
 <hr>
@@ -284,28 +284,28 @@
 <ul>
 <li><strong>步骤 1：</strong> 关闭热点电源，然后拆下天线。</li>
 </ul>
-<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-1-1.png alt="SenseCAP M1 SD Card Step 1" class=img_ev3q></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-1-1.png alt="SenseCAP M1 SD Card 步骤 1" class=img_ev3q></p>
 <ul>
 <li><strong>步骤 2</strong>：使用螺丝刀松开前面板上的两颗螺丝。</li>
 </ul>
-<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-2.png alt="SenseCAP M1 SD Card Step 2" class=img_ev3q></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-2.png alt="SenseCAP M1 SD Card 步骤 2" class=img_ev3q></p>
 <ul>
 <li><strong>步骤 3</strong>：移开前面板并将其放在一边。</li>
 </ul>
-<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-3.png alt="SenseCAP M1 SD Card Step 3" class=img_ev3q></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-3.png alt="SenseCAP M1 SD Card 步骤 3" class=img_ev3q></p>
 <ul>
 <li><strong>步骤 4</strong>：撕掉 Micro SD 卡顶部的黄色贴纸（您可以使用镊子）。</li>
 </ul>
-<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4.png alt="SenseCAP M1 SD Card Step 4" class=img_ev3q></p>
-<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4a.png alt="SenseCAP M1 SD Card Step 4B" class=img_ev3q></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4.png alt="SenseCAP M1 SD Card 步骤 4" class=img_ev3q></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4a.png alt="SenseCAP M1 SD Card 步骤 4B" class=img_ev3q></p>
 <hr>
 <p><strong>如何格式化 Micro SD 卡（Windows）</strong></p>
 <ul>
 <li><strong>步骤 1</strong>**：** 将新的 Micro SD 卡插入 Micro SD 卡读卡器。</li>
 </ul>
-<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-1-1.png alt="SenseCAP M1 SD Card Image Step 1" class=img_ev3q></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-1-1.png alt="SenseCAP M1 SD Card Image 步骤 1" class=img_ev3q></p>
 <p><em>将新的 Micro SD 卡插入 Micro SD 卡读卡器</em></p>
-<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-2.png alt="SenseCAP M1 SD Card Image Step 1B" class=img_ev3q></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-2.png alt="SenseCAP M1 SD Card Image 步骤 1B" class=img_ev3q></p>
 <p><em>确保完全插入</em></p>
 <ul>
 <li><strong>步骤 2</strong>**：** 安装并运行 SD Card Formatter</li>
@@ -357,12 +357,12 @@
 <li><strong>步骤 1</strong>：从计算机中拔出新的 Micro SD 卡。</li>
 <li><strong>步骤 2</strong>：将新的 Micro SD 卡插入您的 SenseCAP M1。</li>
 </ul>
-<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-5.png alt="SenseCAP M1 SD Card Step 5" class=img_ev3q></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-5.png alt="SenseCAP M1 SD Card 步骤 5" class=img_ev3q></p>
 <ul>
 <li><strong>步骤 6</strong>：打开 SenseCAP M1 电源，并重新连接到互联网（最好使用以太网电缆）。</li>
 <li><strong>步骤 7</strong>：等待大约 20 分钟以应用更新，然后检查仪表板（<strong><a href=https://status.sensecapmx.cloud/ target=_blank rel="noopener noreferrer">https://status.sensecapmx.cloud/)</a></strong>）或在完成后在 Helium 应用中运行诊断。</li>
 </ul>
-<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/diagnostics-1.png alt="SenseCAP M1 SD Card Step 6" class=img_ev3q></p>
+<p><img decoding=async loading=lazy src=https://www.sensecapmx.com/wp-content/uploads/2022/07/diagnostics-1.png alt="SenseCAP M1 SD Card 步��骤 6" class=img_ev3q></p>
 <p><strong>注意</strong>：只有在确认您的热点正常工作后，才应该组装热点的前面板。</p>
 <p>如果您有任何进一步的问题或疑问，请在此处开启工单：<a href=https://support.sensecapmx.com/ target=_blank rel="noopener noreferrer"><strong>https://support.sensecapmx.com/</strong></a></p>
 <hr>

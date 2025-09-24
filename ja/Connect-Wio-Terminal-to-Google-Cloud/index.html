@@ -1,4 +1,4 @@
-<!doctype html><html lang=en-US dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-ja/Network/SenseCAP_K1100/Wi-Fi-Network_Application/Cloud_Service/ja_Connect-Wio-Terminal-to-Google-Cloud" data-has-hydrated=false><meta charset=UTF-8><meta name=generator content="Docusaurus v3.8.1"><title data-rh=true>Google 使用方法 | Seeed Studio Wiki</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"><meta data-rh=true name=twitter:card content=summary_large_image><meta data-rh=true property=og:url content=https://wiki.seeedstudio.com/ja/Connect-Wio-Terminal-to-Google-Cloud/><meta data-rh=true property=og:locale content=en_US><meta data-rh=true name=docusaurus_locale content=en><meta data-rh=true name=docsearch:language content=en><meta data-rh=true name=docusaurus_version content=current><meta data-rh=true name=docusaurus_tag content=docs-default-current><meta data-rh=true name=docsearch:version content=current><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current><meta data-rh=true property=og:title content="Google 使用方法 | Seeed Studio Wiki"><meta data-rh=true name=description content="Google Cloud IoT"><meta data-rh=true property=og:description content="Google Cloud IoT"><meta data-rh=true name=keywords content=SenseCap><meta data-rh=true property=og:image content=https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png><meta data-rh=true name=twitter:image content=https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png><link data-rh=true rel=icon href=/img/S.png><link data-rh=true rel=canonical href=https://wiki.seeedstudio.com/ja/Connect-Wio-Terminal-to-Google-Cloud/><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/ja/Connect-Wio-Terminal-to-Google-Cloud/ hreflang=en-US><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/ja/Connect-Wio-Terminal-to-Google-Cloud/ hreflang=x-default><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://wiki.seeedstudio.com/ja/SenseCAP_K1100_Intro","name":"SenseCAP K1100","position":1},{"@type":"ListItem","item":"https://wiki.seeedstudio.com/ja/Connect-Wio-Terminal-to-Google-Cloud","name":"Google 使用方法","position":2}]}</script><link rel=alternate type=application/rss+xml href=/blog/rss.xml title="Seeed Studio Wiki RSS Feed"><link rel=alternate type=application/atom+xml href=/blog/atom.xml title="Seeed Studio Wiki Atom Feed"><link rel=preconnect href=https://www.googletagmanager.com><script>window.dataLayer=window.dataLayer||[],function(e,t,a,n,r){e[n]=e[n]||[],e[n].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var d=t.getElementsByTagName(a)[0],g=t.createElement(a);g.async=!0,g.src="https://www.googletagmanager.com/gtm.js?id="+r+("dataLayer"!=n?"&l="+n:""),d.parentNode.insertBefore(g,d)}(window,document,"script","dataLayer","GTM-M4JG2HVB")</script><link rel=search type=application/opensearchdescription+xml title="Seeed Studio Wiki" href=/opensearch.xml><script src=https://viewer.altium.com/client/static/js/embed.js async></script><script src=/js/custom.js async></script><script src=/js/language-switcher.js async></script><link rel=stylesheet href=/assets/css/styles.e5b41788.css><script src=/assets/js/runtime~main.f59630cd.js defer></script><script src=/assets/js/main.d0b29a29.js defer></script><body class=navigation-with-keyboard><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4JG2HVB" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript>
+<!doctype html><html lang=en-US dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-ja/Network/SenseCAP_K1100/Wi-Fi-Network_Application/Cloud_Service/ja_Connect-Wio-Terminal-to-Google-Cloud" data-has-hydrated=false><meta charset=UTF-8><meta name=generator content="Docusaurus v3.8.1"><title data-rh=true>Google 使用方法 | Seeed Studio Wiki</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"><meta data-rh=true name=twitter:card content=summary_large_image><meta data-rh=true property=og:url content=https://wiki.seeedstudio.com/ja/Connect-Wio-Terminal-to-Google-Cloud/><meta data-rh=true property=og:locale content=en_US><meta data-rh=true name=docusaurus_locale content=en><meta data-rh=true name=docsearch:language content=en><meta data-rh=true name=docusaurus_version content=current><meta data-rh=true name=docusaurus_tag content=docs-default-current><meta data-rh=true name=docsearch:version content=current><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current><meta data-rh=true property=og:title content="Google 使用方法 | Seeed Studio Wiki"><meta data-rh=true name=description content="Google Cloud IoT"><meta data-rh=true property=og:description content="Google Cloud IoT"><meta data-rh=true name=keywords content=SenseCap><meta data-rh=true property=og:image content=https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png><meta data-rh=true name=twitter:image content=https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png><link data-rh=true rel=icon href=/img/S.png><link data-rh=true rel=canonical href=https://wiki.seeedstudio.com/ja/Connect-Wio-Terminal-to-Google-Cloud/><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/ja/Connect-Wio-Terminal-to-Google-Cloud/ hreflang=en-US><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/ja/Connect-Wio-Terminal-to-Google-Cloud/ hreflang=x-default><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://wiki.seeedstudio.com/ja/SenseCAP_K1100_Intro","name":"SenseCAP K1100","position":1},{"@type":"ListItem","item":"https://wiki.seeedstudio.com/ja/Connect-Wio-Terminal-to-Google-Cloud","name":"Google 使用方法","position":2}]}</script><link rel=alternate type=application/rss+xml href=/blog/rss.xml title="Seeed Studio Wiki RSS Feed"><link rel=alternate type=application/atom+xml href=/blog/atom.xml title="Seeed Studio Wiki Atom Feed"><link rel=preconnect href=https://www.googletagmanager.com><script>window.dataLayer=window.dataLayer||[],function(e,t,a,n,r){e[n]=e[n]||[],e[n].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var d=t.getElementsByTagName(a)[0],g=t.createElement(a);g.async=!0,g.src="https://www.googletagmanager.com/gtm.js?id="+r+("dataLayer"!=n?"&l="+n:""),d.parentNode.insertBefore(g,d)}(window,document,"script","dataLayer","GTM-M4JG2HVB")</script><link rel=search type=application/opensearchdescription+xml title="Seeed Studio Wiki" href=/opensearch.xml><script src=https://viewer.altium.com/client/static/js/embed.js async></script><script src=/js/custom.js async></script><script src=/js/language-switcher.js async></script><link rel=stylesheet href=/assets/css/styles.e5b41788.css><script src=/assets/js/runtime~main.962a43b2.js defer></script><script src=/assets/js/main.a25c96a2.js defer></script><body class=navigation-with-keyboard><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4JG2HVB" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript>
 
 
 <svg xmlns=http://www.w3.org/2000/svg style="display: none;"><defs>
@@ -28,63 +28,63 @@
 <p>まず、Google Cloud コンソールにアクセスし、Cloud IoT Core デバイスレジストリを作成してデバイスを登録します。</p>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id=初期設定>初期設定<a href=#初期設定 class=hash-link aria-label="Direct link to 初期設定" title="Direct link to 初期設定">​</a></h4>
 <ul>
-<li><strong>STEP 1:</strong> <a href=https://console.cloud.google.com/ target=_blank rel="noopener noreferrer">こちら</a>にアクセスして新しいプロジェクトを作成します。</li>
+<li><strong>ステップ 1:</strong> <a href=https://console.cloud.google.com/ target=_blank rel="noopener noreferrer">こちら</a>にアクセスして新しいプロジェクトを作成します。</li>
 </ul>
 <p><strong>注意:</strong> ログインを求められた場合は、Google アカウントにログインしてください。</p>
 <ul>
 <li>
-<p><strong>STEP 2:</strong> <strong>プロジェクトを選択</strong>メニューをクリックします。</p>
+<p><strong>ステップ 2:</strong> <strong>プロジェクトを選択</strong>メニューをクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 3:</strong> <strong>新しいプロジェクト</strong>をクリックし、<strong>プロジェクト名</strong>を入力します。</p>
+<p><strong>ステップ 3:</strong> <strong>新しいプロジェクト</strong>をクリックし、<strong>プロジェクト名</strong>を入力します。</p>
 </li>
 <li>
-<p><strong>STEP 4:</strong> <strong>作成</strong>をクリックします。</p>
+<p><strong>ステップ 4:</strong> <strong>作成</strong>をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 5:</strong> Cloud プロジェクトの課金を有効にします。これは、ロボットではないことを確認するために必要であり、課金されることはありません。ナビゲーションメニューで「課金」を選択し、設定を進めてください。</p>
+<p><strong>ステップ 5:</strong> Cloud プロジェクトの課金を有効にします。これは、ロボットではないことを確認するために必要であり、課金されることはありません。ナビゲーションメニューで「課金」を選択し、設定を進めてください。</p>
 </li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/Google_Cloud_IoT/1111111.png alt=pir width=500 height=auto></p>
 <ul>
-<li><strong>STEP 6:</strong> <a href="https://console.cloud.google.com/flows/enableapi?apiid=cloudiot.googleapis.com%2Cpubsub&authuser=3&_ga=2.254170561.853675115.1607885458-878786893.1606048800" target=_blank rel="noopener noreferrer">こちら</a>にアクセスして、Cloud IoT Core と Cloud Pub/Sub API を有効にします。</li>
+<li><strong>ステップ 6:</strong> <a href="https://console.cloud.google.com/flows/enableapi?apiid=cloudiot.googleapis.com%2Cpubsub&authuser=3&_ga=2.254170561.853675115.1607885458-878786893.1606048800" target=_blank rel="noopener noreferrer">こちら</a>にアクセスして、Cloud IoT Core と Cloud Pub/Sub API を有効にします。</li>
 </ul>
 <p><strong>注意:</strong> ドロップダウンメニューから、先ほど作成したプロジェクトを選択してください。</p>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id=デバイスレジストリを作成する>デバイスレジストリを作成する<a href=#デバイスレジストリを作成する class=hash-link aria-label="Direct link to デバイスレジストリを作成する" title="Direct link to デバイスレジストリを作成する">​</a></h4>
 <ul>
 <li>
-<p><strong>STEP 1:</strong> Cloud コンソールの <a href=https://console.cloud.google.com/iot/registries target=_blank rel="noopener noreferrer">Google Cloud IoT Core ページ</a> にアクセスします。</p>
+<p><strong>ステップ 1:</strong> Cloud コンソールの <a href=https://console.cloud.google.com/iot/registries target=_blank rel="noopener noreferrer">Google Cloud IoT Core ページ</a> にアクセスします。</p>
 </li>
 <li>
-<p><strong>STEP 2:</strong> <strong>レジストリを作成</strong>をクリックします。</p>
+<p><strong>ステップ 2:</strong> <strong>レジストリを作成</strong>をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 3:</strong> <strong>レジストリ ID</strong> を入力します。</p>
+<p><strong>ステップ 3:</strong> <strong>レジストリ ID</strong> を入力します。</p>
 </li>
 </ul>
 <p><strong>注意:</strong> これはレジストリの名前です。</p>
 <ul>
-<li><strong>STEP 4:</strong> <strong>リージョン</strong>を選択します。</li>
+<li><strong>ステップ 4:</strong> <strong>リージョン</strong>を選択します。</li>
 </ul>
 <p><strong>注意:</strong> 米国にいる場合は、リージョンとして us-central1 を選択します。米国外の場合は、希望するリージョンを選択してください。</p>
 <ul>
 <li>
-<p><strong>STEP 5:</strong> <strong>Cloud Pub/Sub トピックを選択</strong>ドロップダウンリストで、<strong>トピックを作成</strong>を選択し、希望する<strong>トピック ID</strong>を入力します。</p>
+<p><strong>ステップ 5:</strong> <strong>Cloud Pub/Sub トピックを選択</strong>ドロップダウンリストで、<strong>トピックを作成</strong>を選択し、希望する<strong>トピック ID</strong>を入力します。</p>
 </li>
 <li>
-<p><strong>STEP 6:</strong> <strong>トピックを作成</strong>をクリックします。</p>
+<p><strong>ステップ 6:</strong> <strong>トピックを作成</strong>をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 7:</strong> <strong>詳細オプションを表示</strong>をクリックします。</p>
+<p><strong>ステップ 7:</strong> <strong>詳細オプションを表示</strong>をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 8:</strong> <strong>デバイス状態トピック</strong>と<strong>証明書値</strong>フィールドはオプションなので、空白のままにします。</p>
+<p><strong>ステップ 8:</strong> <strong>デバイス状態トピック</strong>と<strong>証明書値</strong>フィールドはオプションなので、空白のままにします。</p>
 </li>
 <li>
-<p><strong>STEP 9:</strong> <strong>プロトコル</strong>として <strong>MQTT</strong> を選択します。</p>
+<p><strong>ステップ 9:</strong> <strong>プロトコル</strong>として <strong>MQTT</strong> を選択します。</p>
 </li>
 <li>
-<p><strong>STEP 10:</strong> Cloud IoT Core ページで <strong>作成</strong> をクリックします。</p>
+<p><strong>ステップ 10:</strong> Cloud IoT Core ページで <strong>作成</strong> をクリックします。</p>
 </li>
 </ul>
 <p>これで、デバイスのテレメトリイベントを公開するための Cloud Pub/Sub トピックを持つデバイスレジストリが作成されました。</p>
@@ -97,10 +97,10 @@
 <p>Cloud IoT Core は RSA と楕円曲線アルゴリズムをサポートしており、このチュートリアルでは楕円曲線キーを使用します。</p>
 <ul>
 <li>
-<p><strong>STEP 1:</strong> PC 上に新しいフォルダを作成します。</p>
+<p><strong>ステップ 1:</strong> PC 上に新しいフォルダを作成します。</p>
 </li>
 <li>
-<p><strong>STEP 2:</strong> ターミナルウィンドウからフォルダに移動し、以下のコマンドを入力して P-256 楕円曲線キーのペアを生成します。</p>
+<p><strong>ステップ 2:</strong> ターミナルウィンドウからフォルダに移動し、以下のコマンドを入力して P-256 楕円曲線キーのペアを生成します。</p>
 </li>
 </ul>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">openssl ecparam -genkey -name prime256v1 -noout -out ec_private.pem</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">openssl ec -in ec_private.pem -pubout -out ec_public.pem</span><br></span></code></pre></div></div>
@@ -114,79 +114,79 @@
 <p>秘密鍵のバイトを抽出し、後で作成する Arduino プロジェクトの秘密鍵文字列にコピーする必要があります。これらの鍵を保存して後で使用します。</p>
 <ul>
 <li>
-<p><strong>STEP 1:</strong> ターミナルウィンドウを開き、以前生成した楕円曲線キーのペアを含むフォルダに移動します。</p>
+<p><strong>ステップ 1:</strong> ターミナルウィンドウを開き、以前生成した楕円曲線キーのペアを含むフォルダに移動します。</p>
 </li>
 <li>
-<p><strong>STEP 2:</strong> 以下のコマンドを入力します。</p>
+<p><strong>ステップ 2:</strong> 以下のコマンドを入力します。</p>
 </li>
 </ul>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">openssl ec -in ec_private.pem -noout -text</span><br></span></code></pre></div></div>
 <ul>
-<li><strong>STEP 3:</strong> <strong>priv:</strong> の下に生成された秘密鍵バイトをコピーして、メモ帳に貼り付けて保存します。</li>
+<li><strong>ステップ 3:</strong> <strong>priv:</strong> の下に生成された秘密鍵バイトをコピーして、メモ帳に貼り付けて保存します。</li>
 </ul>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id=レジストリにデバイスを追加する>レジストリにデバイスを追加する<a href=#レジストリにデバイスを追加する class=hash-link aria-label="Direct link to レジストリにデバイスを追加する" title="Direct link to レジストリにデバイスを追加する">​</a></h4>
 <ul>
 <li>
-<p><strong>STEP 1:</strong> <a href=https://console.cloud.google.com/iot/registries target=_blank rel="noopener noreferrer">レジストリページ</a>にアクセスし、以前作成したレジストリを選択します。</p>
+<p><strong>ステップ 1:</strong> <a href=https://console.cloud.google.com/iot/registries target=_blank rel="noopener noreferrer">レジストリページ</a>にアクセスし、以前作成したレジストリを選択します。</p>
 </li>
 <li>
-<p><strong>STEP 2:</strong> <strong>デバイス</strong>タブを選択し、<strong>デバイスを作成</strong>をクリックします。</p>
+<p><strong>ステップ 2:</strong> <strong>デバイス</strong>タブを選択し、<strong>デバイスを作成</strong>をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 3:</strong> <strong>デバイス ID</strong> を入力します。</p>
+<p><strong>ステップ 3:</strong> <strong>デバイス ID</strong> を入力します。</p>
 </li>
 <li>
-<p><strong>STEP 4:</strong> <strong>デバイスメタデータ</strong>フィールドはオプションなので、空白のままにします。</p>
+<p><strong>ステップ 4:</strong> <strong>デバイスメタデータ</strong>フィールドはオプションなので、空白のままにします。</p>
 </li>
 <li>
-<p><strong>STEP 5:</strong> <strong>通信、クラウドログ、認証</strong>ドロップダウンメニューをクリックします。</p>
+<p><strong>ステップ 5:</strong> <strong>通信、クラウドログ、認証</strong>ドロップダウンメニューをクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 6:</strong> <strong>デバイス通信</strong>で <strong>許可</strong> を選択します。</p>
+<p><strong>ステップ 6:</strong> <strong>デバイス通信</strong>で <strong>許可</strong> を選択します。</p>
 </li>
 <li>
-<p><strong>STEP 7:</strong> <strong>認証</strong>フィールド内の <strong>入力方法</strong>で <strong>アップロード</strong> を選択します。</p>
+<p><strong>ステップ 7:</strong> <strong>認証</strong>フィールド内の <strong>入力方法</strong>で <strong>アップロード</strong> を選択します。</p>
 </li>
 <li>
-<p><strong>STEP 8:</strong> <strong>公開鍵形式</strong>ドロップダウンメニューから <strong>ES256</strong> を選択します。</p>
+<p><strong>ステップ 8:</strong> <strong>公開鍵形式</strong>ドロップダウンメニューから <strong>ES256</strong> を選択します。</p>
 </li>
 <li>
-<p><strong>STEP 9:</strong> <strong>公開鍵値</strong>の下で <strong>参照</strong>ボタンを押し、以前作成した楕円曲線キーのペアフォルダに移動して <strong>ec_public.pem</strong> を選択します。</p>
+<p><strong>ステップ 9:</strong> <strong>公開鍵値</strong>の下で <strong>参照</strong>ボタンを押し、以前作成した楕円曲線キーのペアフォルダに移動して <strong>ec_public.pem</strong> を選択します。</p>
 </li>
 <li>
-<p><strong>STEP 10:</strong> <strong>作成</strong>をクリックします。</p>
+<p><strong>ステップ 10:</strong> <strong>作成</strong>をクリックします。</p>
 </li>
 </ul>
 <p>これで、レジストリにデバイスを追加しました。デバイスの詳細ページに ES256 キーが表示されます。</p>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id=サブスクライバーを設定する>サブスクライバーを設定する<a href=#サブスクライバーを設定する class=hash-link aria-label="Direct link to サブスクライバーを設定する" title="Direct link to サブスクライバーを設定する">​</a></h4>
 <p>デバイスレジストリを作成し、トピックを作成し、そのレジストリにデバイスを追加したので、次に進んで、作成したトピックを購読するサブスクライバーを作成し、Wio Terminal からテレメトリデータを取得します。</p>
 <ul>
-<li><strong>STEP 1:</strong> Google Cloud コンソールの検索バーに <strong>Pub</strong> と入力し、結果から <strong>Pub/Sub</strong> を選択します。</li>
+<li><strong>ステップ 1:</strong> Google Cloud コンソールの検索バーに <strong>Pub</strong> と入力し、結果から <strong>Pub/Sub</strong> を選択します。</li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/Google_Cloud_IoT/333333.png alt=pir width=700 height=auto></p>
 <ul>
 <li>
-<p><strong>STEP 2:</strong> ナビゲーションメニューで <strong>サブスクリプション</strong> をクリックします。</p>
+<p><strong>ステップ 2:</strong> ナビゲーションメニューで <strong>サブスクリプション</strong> をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 3:</strong> <strong>CREATE SUBSCRIPTION</strong> をクリックします。</p>
+<p><strong>ステップ 3:</strong> <strong>CREATE SUBSCRIPTION</strong> をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 4:</strong> 任意の <strong>Subscription ID</strong> を入力します。</p>
+<p><strong>ステップ 4:</strong> 任意の <strong>Subscription ID</strong> を入力します。</p>
 </li>
 <li>
-<p><strong>STEP 5:</strong> <strong>Select a Cloud Pub/Sub topic</strong> ドロップダウンメニューから、以前作成した <strong>Pub/Sub topic</strong> を選択します。</p>
+<p><strong>ステップ 5:</strong> <strong>Select a Cloud Pub/Sub topic</strong> ドロップダウンメニューから、以前作成した <strong>Pub/Sub topic</strong> を選択します。</p>
 </li>
 <li>
-<p><strong>STEP 6:</strong> 配信タイプとして <strong>Pull</strong> を選択します。</p>
+<p><strong>ステップ 6:</strong> 配信タイプとして <strong>Pull</strong> を選択します。</p>
 </li>
 <li>
-<p><strong>STEP 7:</strong> <strong>Create</strong> をクリックします。</p>
+<p><strong>ステップ 7:</strong> <strong>Create</strong> をクリックします。</p>
 </li>
 </ul>
 <p>これで Google Cloud IoT Core の設定が完了しました。次に、Arduino IDE を使用して Wio Terminal の設定に進みます。</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id=arduino-ide-を使用した-wio-terminal-のセットアップ>Arduino IDE を使用した Wio Terminal のセットアップ<a href=#arduino-ide-を使用した-wio-terminal-のセットアップ class=hash-link aria-label="Direct link to Arduino IDE を使用した Wio Terminal のセットアップ" title="Direct link to Arduino IDE を使用した Wio Terminal のセットアップ">​</a></h3>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id=必要なライブラリ>必要なライブラリ<a href=#必要なライブラリ class=hash-link aria-label="Direct link to 必要なライブラリ" title="Direct link to 必要なライブラリ">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id=必要なライブラリ>必要なライブラリ<a href=#必要なライブラリ class=hash-link aria-label="Direct link to 必要なライ�ブラリ" title="Direct link to 必要なライブラリ">​</a></h4>
 <p>このチュートリアルでは、以下の2つのライブラリが必要です。</p>
 <ol>
 <li>lwMQTT MQTT Arduino ライブラリ</li>
@@ -194,30 +194,30 @@
 </ol>
 <p>これらのライブラリをダウンロードする手順：</p>
 <ul>
-<li><strong>STEP 1:</strong> Arduino IDE を開きます。</li>
-<li><strong>STEP 2:</strong> <code>Sketch > Include Library > Manage Libraries</code> に移動します。</li>
-<li><strong>STEP 3:</strong> 検索ボックスに <strong>lwMQTT</strong> と <strong>Google Cloud IoT</strong> を入力し、ライブラリをインストールします。</li>
+<li><strong>ステップ 1:</strong> Arduino IDE を開きます。</li>
+<li><strong>ステップ 2:</strong> <code>Sketch > Include Library > Manage Libraries</code> に移動します。</li>
+<li><strong>ステップ 3:</strong> 検索ボックスに <strong>lwMQTT</strong> と <strong>Google Cloud IoT</strong> を入力し、ライブラリをインストールします。</li>
 </ul>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id=資格情報とアカウント情報の設定>資格情報とアカウント情報の設定<a href=#資格情報とアカウント情報の設定 class=hash-link aria-label="Direct link to 資格情報とアカウント情報の設定" title="Direct link to 資格情報とアカウント情報の設定">​</a></h4>
 <p>次に、<strong>ciotc_config.h</strong> ファイルに Wi-Fi の資格情報と Google Cloud IoT Core の情報を設定します。</p>
 <ul>
 <li>
-<p><strong>STEP 1:</strong> Arduino IDE 内で、<code>File > Examples > Google Cloud IoT JWT > Esp32-lwmqtt</code> に移動します。</p>
+<p><strong>ステップ 1:</strong> Arduino IDE 内で、<code>File > Examples > Google Cloud IoT JWT > Esp32-lwmqtt</code> に移動します。</p>
 </li>
 <li>
-<p><strong>STEP 2:</strong> <strong>ciotc_config.h</strong> を開きます。</p>
+<p><strong>ステップ 2:</strong> <strong>ciotc_config.h</strong> を開きます。</p>
 </li>
 <li>
-<p><strong>STEP 3:</strong> <strong>Wi-Fi ネットワークの詳細</strong> を変更します。</p>
+<p><strong>ステップ 3:</strong> <strong>Wi-Fi ネットワークの詳細</strong> を変更します。</p>
 </li>
 </ul>
 <div class="language-cpp codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-cpp codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">const</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">char</span><span class="token plain"> </span><span class="token operator">*</span><span class="token plain">ssid </span><span class="token operator">=</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">"Enter_SSID"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">const</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">char</span><span class="token plain"> </span><span class="token operator">*</span><span class="token plain">password </span><span class="token operator">=</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">"Enter_Password"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><br></span></code></pre></div></div>
 <ul>
-<li><strong>STEP 4:</strong> <strong>Google Cloud IoT の詳細</strong> を変更します。</li>
+<li><strong>ステップ 4:</strong> <strong>Google Cloud IoT の詳細</strong> を変更します。</li>
 </ul>
 <div class="language-cpp codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-cpp codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">const</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">char</span><span class="token plain"> </span><span class="token operator">*</span><span class="token plain">project_id </span><span class="token operator">=</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">"Enter_Project_ID"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">const</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">char</span><span class="token plain"> </span><span class="token operator">*</span><span class="token plain">location </span><span class="token operator">=</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">"Enter_location"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">const</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">char</span><span class="token plain"> </span><span class="token operator">*</span><span class="token plain">registry_id </span><span class="token operator">=</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">"Enter_Registry_ID"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">const</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">char</span><span class="token plain"> </span><span class="token operator">*</span><span class="token plain">device_id </span><span class="token operator">=</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">"Enter_Device_ID"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><br></span></code></pre></div></div>
 <ul>
-<li><strong>STEP 5:</strong> <strong>ec_private.pem</strong> から取得したプライベートキーのバイトをコピーし、事前に保存した内容を入力します。</li>
+<li><strong>ステップ 5:</strong> <strong>ec_private.pem</strong> から取得したプライベートキーのバイトをコピーし、事前に保存した内容を入力します。</li>
 </ul>
 <div class="language-cpp codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-cpp codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">const</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">char</span><span class="token plain"> </span><span class="token operator">*</span><span class="token plain">private_key_str </span><span class="token operator">=</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    </span><span class="token string" style="color:rgb(255, 121, 198)">"6e:b8:17:35:c7:fc:6b:d7:a9:cb:cb:49:7f:a0:67:"</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    </span><span class="token string" style="color:rgb(255, 121, 198)">"63:38:b0:90:57:57:e0:c0:9a:e8:6f:06:0c:d9:ee:"</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    </span><span class="token string" style="color:rgb(255, 121, 198)">"31:41"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><br></span></code></pre></div></div>
 <p><strong>注意:</strong> キーの長さは 32 ペアの 16 進数である必要があります。</p>
@@ -232,21 +232,21 @@
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id=テレメトリデータの表示>テレメトリデータの表示<a href=#テレメトリデータの表示 class=hash-link aria-label="Direct link to テレメトリデータの表示" title="Direct link to テレメトリデータの表示">​</a></h3>
 <p>次に、Wio Terminal から送信されるテレメトリデータを表示する必要があります。この例では、Wi-Fi 信号強度がテレメトリデータとして送信されます。</p>
 <ul>
-<li><strong>STEP 1:</strong> Google Cloud Console の <strong>Pub/Sub</strong> にアクセスします。</li>
+<li><strong>ステップ 1:</strong> Google Cloud Console の <strong>Pub/Sub</strong> にアクセスします。</li>
 </ul>
 <p><strong>注意:</strong> Google Cloud Console の検索バーで <strong>Pub</strong> を検索できます。</p>
 <ul>
 <li>
-<p><strong>STEP 2:</strong> ナビゲーションメニュー内の <strong>Subscriptions</strong> に移動します。</p>
+<p><strong>ステップ 2:</strong> ナビゲーションメニュー内の <strong>Subscriptions</strong> に移動します。</p>
 </li>
 <li>
-<p><strong>STEP 3:</strong> 以前に作成したサブスクリプション ID を選択します。</p>
+<p><strong>ステップ 3:</strong> 以前に作成したサブスクリプション ID を選択します。</p>
 </li>
 <li>
-<p><strong>STEP 4:</strong> <strong>VIEW MESSAGES</strong> をクリックします。</p>
+<p><strong>ステップ 4:</strong> <strong>VIEW MESSAGES</strong> をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 5:</strong> <strong>PULL</strong> をクリックすると、以下のように受信したテレメトリデータが表示されます。</p>
+<p><strong>ステップ 5:</strong> <strong>PULL</strong> をクリックすると、以下のように受信したテレメトリデータが表示されます。</p>
 </li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/Google_Cloud_IoT/6666666.png alt=pir width=950 height=auto></p>
@@ -254,46 +254,46 @@
 <p>Wio Terminal に任意のセンサーを追加して、Google Cloud IoT Core にテレメトリデータを送信することができます。簡単にするために、Wio Terminal に内蔵されている光センサーを使用して、光の強度レベルを Google Cloud IoT Core に送信します。</p>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id=google-cloud-iot-の設定>Google Cloud IoT の設定<a href=#google-cloud-iot-の設定 class=hash-link aria-label="Direct link to Google Cloud IoT の設定" title="Direct link to Google Cloud IoT の設定">​</a></h4>
 <ul>
-<li><strong>STEP 1:</strong> Google Cloud Console の <strong>IoT Core</strong> にアクセスします。</li>
+<li><strong>ステップ 1:</strong> Google Cloud Console の <strong>IoT Core</strong> にアクセスします。</li>
 </ul>
 <p><strong>注意:</strong> Google Cloud Console の検索バーで <strong>IoT Core</strong> を検索できます。</p>
 <ul>
 <li>
-<p><strong>STEP 2:</strong> 以前に作成したレジストリを選択します。</p>
+<p><strong>ステップ 2:</strong> 以前に作成したレジストリを選択します。</p>
 </li>
 <li>
-<p><strong>STEP 3:</strong> Cloud <strong>Pub/Sub topics</strong> の下で <strong>Add or edit topics</strong> を選択します。</p>
+<p><strong>ステップ 3:</strong> Cloud <strong>Pub/Sub topics</strong> の下で <strong>Add or edit topics</strong> を選択します。</p>
 </li>
 <li>
-<p><strong>STEP 4:</strong> <strong>ADD ADDITIONAL TOPIC</strong> をクリックします。</p>
+<p><strong>ステップ 4:</strong> <strong>ADD ADDITIONAL TOPIC</strong> をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 5:</strong> <strong>Select a Cloud Pub/Sub topic</strong> のドロップダウンメニューから <strong>CREATE A TOPIC</strong> をクリックします。</p>
+<p><strong>ステップ 5:</strong> <strong>Select a Cloud Pub/Sub topic</strong> のドロップダウンメニューから <strong>CREATE A TOPIC</strong> をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 6:</strong> <strong>Topic ID</strong> を入力し、<strong>CREATE TOPIC</strong> をクリックします。</p>
+<p><strong>ステップ 6:</strong> <strong>Topic ID</strong> を入力し、<strong>CREATE TOPIC</strong> をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 7:</strong> <strong>Subfolder</strong> 列内に <strong>Subfolder name</strong> を入力します。</p>
+<p><strong>ステップ 7:</strong> <strong>Subfolder</strong> 列内に <strong>Subfolder name</strong> を入力します。</p>
 </li>
 </ul>
 <p><strong>注意:</strong> サブフォルダ名は Arduino コード内でトピックに関連付けるために使用されます。</p>
 <ul>
 <li>
-<p><strong>STEP 8:</strong> <strong>UPDATE</strong> をクリックします。</p>
+<p><strong>ステップ 8:</strong> <strong>UPDATE</strong> をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 9:</strong> 以前説明したように新しいサブスクリプションを作成します。</p>
+<p><strong>ステップ 9:</strong> 以前説明したように新しいサブスクリプションを作成します。</p>
 </li>
 </ul>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id=arduino-の設定>Arduino の設定<a href=#arduino-の設定 class=hash-link aria-label="Direct link to Arduino の設定" title="Direct link to Arduino の設定">​</a></h4>
 <p><strong>Esp32-lwmqtt.ino</strong> に移動し、以下を追加します。</p>
 <ul>
-<li><strong>STEP 1:</strong> ループの後に、内蔵光センサー用の以下を追加します。</li>
+<li><strong>ステップ 1:</strong> ループの後に、内蔵光センサー用の以下を追加します。</li>
 </ul>
 <div class="language-cpp codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-cpp codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">void</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">loop</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">  </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">int</span><span class="token plain"> light </span><span class="token operator">=</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">analogRead</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">WIO_LIGHT</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"> </span><span class="token comment" style="color:rgb(98, 114, 164)">// 光センサー値を格納する変数を割り当てる</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">  light </span><span class="token operator">=</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">map</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">light</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token number">0</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token number">1023</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token number">0</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token number">100</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"> </span><span class="token comment" style="color:rgb(98, 114, 164)">// センサー値をマッピングする</span><br></span></code></pre></div></div>
 <ul>
-<li><strong>STEP 2:</strong> サブフォルダ名を含むトピックを追加します。</li>
+<li><strong>ステップ 2:</strong> サブフォルダ名を含むトピックを追加します。</li>
 </ul>
 <div class="language-cpp codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-cpp codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">    </span><span class="token function" style="color:rgb(80, 250, 123)">publishTelemetry</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token function" style="color:rgb(80, 250, 123)">getDefaultSensor</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    </span><span class="token function" style="color:rgb(80, 250, 123)">publishTelemetry</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token string" style="color:rgb(255, 121, 198)">"/light"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token function" style="color:rgb(80, 250, 123)">String</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">light</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><br></span></code></pre></div></div>
 <p><strong>注意:</strong> サブフォルダ名が追加されない場合、テレメトリデータはデフォルトトピックに送信されます。この場合、以前説明した Wi-Fi 信号強度のテレメトリデータは、デフォルトトピックとして作成した最初のトピックに送信されます。</p>
@@ -309,105 +309,105 @@
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id=arduino-のソフトウェア設定>Arduino のソフトウェア設定<a href=#arduino-のソフトウェア設定 class=hash-link aria-label="Direct link to Arduino のソフトウェア設定" title="Direct link to Arduino のソフトウェア設定">​</a></h4>
 <ul>
 <li>
-<p><strong>STEP 1:</strong> <a href=https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor target=_blank rel="noopener noreferrer">Grove - Temperature and Humidity Sensor repo</a> にアクセスし、zip ファイルとしてダウンロードします。</p>
+<p><strong>ステップ 1:</strong> <a href=https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor target=_blank rel="noopener noreferrer">Grove - Temperature and Humidity Sensor repo</a> にアクセスし、zip ファイルとしてダウンロードします。</p>
 </li>
 <li>
-<p><strong>STEP 2:</strong> Arduino を開き、<code>Sketch > Include Library > Add .ZIP Library</code> に移動して、ダウンロードしたライブラリを選択してインストールします。</p>
+<p><strong>ステップ 2:</strong> Arduino を開き、<code>Sketch > Include Library > Add .ZIP Library</code> に移動して、ダウンロードしたライブラリを選択してインストールします。</p>
 </li>
 </ul>
 <p>以前使用した <strong>Esp32-lwmqtt.ino</strong> に移動し、以下を追加します。</p>
 <ul>
-<li><strong>STEP 1:</strong> <strong>#include "esp32-mqtt.h"</strong> の後に以下を追加します。</li>
+<li><strong>ステップ 1:</strong> <strong>#include "esp32-mqtt.h"</strong> の後に以下を追加します。</li>
 </ul>
 <div class="language-cpp codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-cpp codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token macro property directive-hash">#</span><span class="token macro property directive keyword" style="color:rgb(189, 147, 249);font-style:italic">include</span><span class="token macro property"> </span><span class="token macro property string" style="color:rgb(255, 121, 198)">"DHT.h"</span><span class="token macro property"> </span><span class="token macro property comment" style="color:rgb(98, 114, 164)">//DHT ライブラリ</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain" style=display:inline-block></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token macro property directive-hash">#</span><span class="token macro property directive keyword" style="color:rgb(189, 147, 249);font-style:italic">define</span><span class="token macro property"> </span><span class="token macro property macro-name">DHTPIN</span><span class="token macro property"> </span><span class="token macro property expression number">0</span><span class="token macro property expression"> </span><span class="token macro property comment" style="color:rgb(98, 114, 164)">//DHT の信号ピンを定義</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token macro property directive-hash">#</span><span class="token macro property directive keyword" style="color:rgb(189, 147, 249);font-style:italic">define</span><span class="token macro property"> </span><span class="token macro property macro-name">DHTTYPE</span><span class="token macro property"> </span><span class="token macro property expression">DHT11 </span><span class="token macro property comment" style="color:rgb(98, 114, 164)">//DHT センサータイプを定義</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">DHT </span><span class="token function" style="color:rgb(80, 250, 123)">dht</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">DHTPIN</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> DHTTYPE</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"> </span><span class="token comment" style="color:rgb(98, 114, 164)">//DHT センサーを初期化</span><br></span></code></pre></div></div>
 <ul>
-<li><strong>STEP 2:</strong> <strong>setup</strong> 内に以下を追加して DHT センサーを開始します。</li>
+<li><strong>ステップ 2:</strong> <strong>setup</strong> 内に以下を追加して DHT センサーを開始します。</li>
 </ul>
 <div class="language-cpp codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-cpp codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">dht</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">begin</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"> </span><br></span></code></pre></div></div>
 <ul>
-<li><strong>STEP 3:</strong> <strong>void loop()</strong> 内の <strong>if loop</strong> に以下を追加します。</li>
+<li><strong>ステップ 3:</strong> <strong>void loop()</strong> 内の <strong>if loop</strong> に以下を追加します。</li>
 </ul>
 <div class="language-cpp codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-cpp codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">int</span><span class="token plain"> temperature </span><span class="token operator">=</span><span class="token plain"> dht</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">readTemperature</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"> </span><span class="token comment" style="color:rgb(98, 114, 164)">// 温度を格納する変数を割り当てる</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">int</span><span class="token plain"> humidity </span><span class="token operator">=</span><span class="token plain"> dht</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">readHumidity</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"> </span><span class="token comment" style="color:rgb(98, 114, 164)">// 湿度を格納する変数を割り当てる</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain" style=display:inline-block></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">String payload </span><span class="token operator">=</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">String</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token string" style="color:rgb(255, 121, 198)">"{\"timestamp\":"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"> </span><span class="token operator">+</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">getNTPtime</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"> </span><span class="token operator">+</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">                  </span><span class="token function" style="color:rgb(80, 250, 123)">String</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token string" style="color:rgb(255, 121, 198)">",\"temperature\":"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"> </span><span class="token operator">+</span><span class="token plain"> temperature </span><span class="token operator">+</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">                  </span><span class="token function" style="color:rgb(80, 250, 123)">String</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token string" style="color:rgb(255, 121, 198)">",\"humidity\":"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"> </span><span class="token operator">+</span><span class="token plain"> humidity </span><span class="token operator">+</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">                  </span><span class="token function" style="color:rgb(80, 250, 123)">String</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token string" style="color:rgb(255, 121, 198)">"}"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">publishTelemetry</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">payload</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"> </span><br></span></code></pre></div></div>
 <p><strong>注意:</strong> ここでは、すべてのデータを文字列として influxDB に解析します。influxDB は時系列データベースであるため、<strong>time</strong> の解析が重要です。また、<strong>pushTelemetry</strong> 関数は、このチュートリアルの最初に作成したデフォルトのトピックにデータを送信します。</p>
 <ul>
-<li><strong>STEP 4:</strong> コードを Wio Terminal にアップロードします。</li>
+<li><strong>ステップ 4:</strong> コードを Wio Terminal にアップロードします。</li>
 </ul>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id=google-cloud-iot-のセットアップ>Google Cloud IoT のセットアップ<a href=#google-cloud-iot-のセットアップ class=hash-link aria-label="Direct link to Google Cloud IoT のセットアップ" title="Direct link to Google Cloud IoT のセットアップ">​</a></h4>
 <ul>
 <li>
-<p><strong>STEP 1:</strong> <a href=https://github.com/lakshanthad/esp32-cloud-iot-core-k8s target=_blank rel="noopener noreferrer">こちら</a> のリポジトリを訪問し、ZIP ファイルとしてダウンロードします。</p>
+<p><strong>ステップ 1:</strong> <a href=https://github.com/lakshanthad/esp32-cloud-iot-core-k8s target=_blank rel="noopener noreferrer">こちら</a> のリポジトリを訪問し、ZIP ファイルとしてダウンロードします。</p>
 </li>
 <li>
-<p><strong>STEP 2:</strong> ダウンロードした ZIP ファイルを解凍します。</p>
+<p><strong>ステップ 2:</strong> ダウンロードした ZIP ファイルを解凍します。</p>
 </li>
 <li>
-<p><strong>STEP 3:</strong> Google Cloud Console を開き、<a href=https://console.cloud.google.com/kubernetes/list target=_blank rel="noopener noreferrer">Google Kubernetes Engine</a> に移動し、システムの初期化を待ちます。</p>
+<p><strong>ステップ 3:</strong> Google Cloud Console を開き、<a href=https://console.cloud.google.com/kubernetes/list target=_blank rel="noopener noreferrer">Google Kubernetes Engine</a> に移動し、システムの初期化を待ちます。</p>
 </li>
 <li>
-<p><strong>STEP 4:</strong> 右上のボタンを押して Cloud Shell を起動します。</p>
+<p><strong>ステップ 4:</strong> 右上のボタンを押して Cloud Shell を起動します。</p>
 </li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/Google_Cloud_IoT/cloud_shell_1.png alt=pir width=700 height=auto></p>
 <ul>
-<li><strong>STEP 5:</strong> 以下のコマンドを入力して、gcloud コマンドラインツールのデフォルトを設定します。</li>
+<li><strong>ステップ 5:</strong> 以下のコマンドを入力して、gcloud コマンドラインツールのデフォルトを設定します。</li>
 </ul>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">export ZONE=&lt;enter_zone> # 例: us-central1-a, 詳細は https://cloud.google.com/compute/docs/regions-zones/#available を参照</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">export PROJECT_ID=&lt;enter_project-id> # プロジェクト ID 名</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">gcloud config set project $PROJECT_ID</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">gcloud config set compute/zone $ZONE</span><br></span></code></pre></div></div>
 <ul>
-<li><strong>STEP 6:</strong> 以下のコマンドを入力して、n1-standard-1 ノードを 1 つ持つ GKE クラスターを作成します。</li>
+<li><strong>ステップ 6:</strong> 以下のコマンドを入力して、n1-standard-1 ノードを 1 つ持つ GKE クラスターを作成します。</li>
 </ul>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">gcloud container clusters create influxdb-grafana \</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">                --num-nodes 1 \</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">                --machine-type n1-standard-1 \</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">                --zone $ZONE</span><br></span></code></pre></div></div>
 <ul>
-<li><strong>STEP 7:</strong> 以下のコマンドを入力して、InfluxDB と Grafana の認証情報を保存するシークレットを作成します。</li>
+<li><strong>ステップ 7:</strong> 以下のコマンドを入力して、InfluxDB と Grafana の認証情報を保存するシークレットを作成します。</li>
 </ul>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">kubectl create secret generic influxdb-grafana \</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">  --from-literal=influxdb-user=admin \</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">  --from-literal=influxdb-password=passw0rd \</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">  --from-literal=grafana-user=admin \</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">  --from-literal=grafana-password=passw0rd</span><br></span></code></pre></div></div>
 <p><strong>注意:</strong> influxdb / grafana のユーザー名とパスワードはお好みに応じて変更できます。</p>
 <ul>
 <li>
-<p><strong>STEP 8:</strong> Google Shell 内で <strong>Open Editor</strong> をクリックします。</p>
+<p><strong>ステップ 8:</strong> Google Shell 内で <strong>Open Editor</strong> をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 9:</strong> 先ほどダウンロードして解凍したフォルダを <strong>Cloud Shell Editor</strong> にドラッグ＆ドロップします。</p>
+<p><strong>ステップ 9:</strong> 先ほどダウンロードして解凍したフォルダを <strong>Cloud Shell Editor</strong> にドラッグ＆ドロップします。</p>
 </li>
 <li>
-<p><strong>STEP 10:</strong> <strong>Open Terminal</strong> をクリックしてターミナルに戻ります。以下を入力して <strong>05-influxdb_grafana_k8s</strong> ディレクトリに移動します。</p>
+<p><strong>ステップ 10:</strong> <strong>Open Terminal</strong> をクリックしてターミナルに戻ります。以下を入力して <strong>05-influxdb_grafana_k8s</strong> ディレクトリに移動します。</p>
 </li>
 </ul>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">cd esp32-cloud-iot-core-k8s-master/05-influxdb_grafana_k8s</span><br></span></code></pre></div></div>
 <ul>
-<li><strong>STEP 11:</strong> 以下のコマンドを入力して、InfluxDB と Grafana を Kubernetes にデプロイします。</li>
+<li><strong>ステップ 11:</strong> 以下のコマンドを入力して、InfluxDB と Grafana を Kubernetes にデプロイします。</li>
 </ul>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">kubectl create -f k8s/</span><br></span></code></pre></div></div>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id=grafana-のセットアップ>Grafana のセットアップ<a href=#grafana-のセットアップ class=hash-link aria-label="Direct link to Grafana のセットアップ" title="Direct link to Grafana のセットアップ">​</a></h4>
 <ul>
-<li><strong>STEP 1:</strong> 以下を入力して、サービスの外部 IP / ポートを確認します。</li>
+<li><strong>ステップ 1:</strong> 以下を入力して、サービスの外部 IP / ポートを確認します。</li>
 </ul>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">kubectl get services</span><br></span></code></pre></div></div>
 <ul>
 <li>
-<p><strong>STEP 2:</strong> Grafana の外部 IP をコピーします。</p>
+<p><strong>ステップ 2:</strong> Grafana の外部 IP をコピーします。</p>
 </li>
 <li>
-<p><strong>STEP 3:</strong> <code>http://&lt;grafana service external ip>:3000</code> にアクセスします。</p>
+<p><strong>ステップ 3:</strong> <code>http://&lt;grafana service external ip>:3000</code> にアクセスします。</p>
 </li>
 </ul>
 <p><strong>注意:</strong> コピーした Grafana の外部 IP を <code>&lt;grafana service external ip></code> に貼り付けます。</p>
 <ul>
 <li>
-<p><strong>STEP 4:</strong> 先ほど設定した認証情報で Grafana にログインします。</p>
+<p><strong>ステップ 4:</strong> 先ほど設定した認証情報で Grafana にログインします。</p>
 </li>
 <li>
-<p><strong>STEP 5:</strong> 歯車アイコンをクリックし、<code>Configuration > Data Sources</code> に移動します。</p>
+<p><strong>ステップ 5:</strong> 歯車アイコンをクリックし、<code>Configuration > Data Sources</code> に移動します。</p>
 </li>
 <li>
-<p><strong>STEP 6:</strong> <strong>Add data source</strong> をクリックし、<strong>influxDB</strong> を選択します。</p>
+<p><strong>ステップ 6:</strong> <strong>Add data source</strong> をクリックし、<strong>influxDB</strong> を選択します。</p>
 </li>
 <li>
-<p><strong>STEP 7:</strong> <strong>URL</strong> フィールドに以下を入力します。</p>
+<p><strong>ステップ 7:</strong> <strong>URL</strong> フィールドに以下を入力します。</p>
 </li>
 </ul>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">http://influxdb:8086</span><br></span></code></pre></div></div>
 <ul>
-<li><strong>STEP 8:</strong> <strong>Database</strong> フィールドに以下を入力し、<strong>Save & Test</strong> をクリックします。</li>
+<li><strong>ステップ 8:</strong> <strong>Database</strong> フィールドに以下を入力し、<strong>Save & Test</strong> をクリックします。</li>
 </ul>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">iot</span><br></span></code></pre></div></div>
 <p><strong>注意:</strong> <strong>InfluxDB</strong> データソースを Grafana に正常に設定できた場合、<strong>Data source is working</strong> というメッセージが表示されます。</p>
@@ -415,86 +415,86 @@
 <p>次に、Pub/Sub のトピックから InfluxDB にデータを送信し、InfluxDB のデータを Grafana のインタラクティブなダッシュボードで表示するための Google Cloud Function を作成します。</p>
 <ul>
 <li>
-<p><strong>STEP 1:</strong> <strong>Google Cloud Console</strong> に戻り、<strong>Cloud Shell</strong> を開きます。</p>
+<p><strong>ステップ 1:</strong> <strong>Google Cloud Console</strong> に戻り、<strong>Cloud Shell</strong> を開きます。</p>
 </li>
 <li>
-<p><strong>STEP 2:</strong> 以下を入力して <strong>Cloud Functions API</strong> を有効にします。</p>
+<p><strong>ステップ 2:</strong> 以下を入力して <strong>Cloud Functions API</strong> を有効にします。</p>
 </li>
 </ul>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">gcloud services enable cloudfunctions.googleapis.com</span><br></span></code></pre></div></div>
 <ul>
-<li><strong>STEP 3:</strong> 以下を入力して <strong>06-cloud_function</strong> ディレクトリに移動します。</li>
+<li><strong>ステップ 3:</strong> 以下を入力して <strong>06-cloud_function</strong> ディレクトリに移動します。</li>
 </ul>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">cd esp32-cloud-iot-core-k8s-master/06-cloud_function</span><br></span></code></pre></div></div>
 <ul>
-<li><strong>STEP 4:</strong> <strong>vim テキストエディタ</strong>で <strong>main.py</strong> を開きます。</li>
+<li><strong>ステップ 4:</strong> <strong>vim テキストエディタ</strong>で <strong>main.py</strong> を開きます。</li>
 </ul>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">cd esp32-cloud-iot-core-k8s-master/06-cloud_function</span><br></span></code></pre></div></div>
 <ul>
 <li>
-<p><strong>STEP 5:</strong> キーボードで <strong>i</strong> を押して <strong>編集モード</strong> に入ります。</p>
+<p><strong>ステップ 5:</strong> キーボードで <strong>i</strong> を押して <strong>編集モード</strong> に入ります。</p>
 </li>
 <li>
-<p><strong>STEP 6:</strong> <strong>_get_influxdb_client 関数</strong>内の <strong>InfluxDB 変数</strong>（ホスト、ポート、ユーザー名、パスワード）を変更します。</p>
+<p><strong>ステップ 6:</strong> <strong>_get_influxdb_client 関数</strong>内の <strong>InfluxDB 変数</strong>（ホスト、ポート、ユーザー名、パスワード）を変更します。</p>
 </li>
 </ul>
 <p><strong>注意:</strong> 以下を Cloud Shell で入力して外部 IP をコピーし、InfluxDB ホストを取得します。</p>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">kubectl get services</span><br></span></code></pre></div></div>
 <ul>
 <li>
-<p><strong>STEP 7:</strong> <strong>:wq</strong> を入力してファイルを保存します。</p>
+<p><strong>ステップ 7:</strong> <strong>:wq</strong> を入力してファイルを保存します。</p>
 </li>
 <li>
-<p><strong>STEP 8:</strong> 以下を入力して <strong>Cloud Function</strong> をデプロイします。</p>
+<p><strong>ステップ 8:</strong> 以下を入力して <strong>Cloud Function</strong> をデプロイします。</p>
 </li>
 </ul>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">export PUBSUB_TOPIC="enter_topic-name>"</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">export REGION="enter_region" # https://cloud.google.com/functions/docs/locations</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">gcloud functions deploy iotcore_pubsub_to_influxdb --runtime python37 --trigger-topic $PUBSUB_TOPIC --region $REGION</span><br></span></code></pre></div></div>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id=grafana-のセットアップに戻る>Grafana のセットアップに戻る<a href=#grafana-のセットアップに戻る class=hash-link aria-label="Direct link to Grafana のセットアップに戻る" title="Direct link to Grafana のセットアップに戻る">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id=grafana-のセ��ットアップに戻る>Grafana のセットアップに戻る<a href=#grafana-のセットアップに戻る class=hash-link aria-label="Direct link to Grafana のセットアップに戻る" title="Direct link to Grafana のセットアップに戻る">​</a></h4>
 <ul>
 <li>
-<p><strong>STEP 1:</strong> Grafana を開き、<code>Dashboards > Manage</code> に移動します。</p>
+<p><strong>ステップ 1:</strong> Grafana を開き、<code>Dashboards > Manage</code> に移動します。</p>
 </li>
 <li>
-<p><strong>STEP 2:</strong> <strong>New Dashboard</strong> をクリックし、<strong>Add new panel</strong> をクリックします。</p>
+<p><strong>ステップ 2:</strong> <strong>New Dashboard</strong> をクリックし、<strong>Add new panel</strong> をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 3:</strong> <strong>Visualization</strong> に移動し、<strong>Graph</strong> をクリックします。</p>
+<p><strong>ステップ 3:</strong> <strong>Visualization</strong> に移動し、<strong>Graph</strong> をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 4:</strong> <strong>Query</strong> の <strong>FROM</strong> タブで <strong>select measurement</strong> をクリックし、ドロップダウンメニューから <strong>temperature</strong> を選択します。</p>
+<p><strong>ステップ 4:</strong> <strong>Query</strong> の <strong>FROM</strong> タブで <strong>select measurement</strong> をクリックし、ドロップダウンメニューから <strong>temperature</strong> を選択します。</p>
 </li>
 <li>
-<p><strong>STEP 5:</strong> <strong>+ Query</strong> をクリックし、<strong>step 12</strong> と同じ手順を <strong>humidity</strong> に対して繰り返します。</p>
+<p><strong>ステップ 5:</strong> <strong>+ Query</strong> をクリックし、<strong>ステップ 12</strong> と同じ手順を <strong>humidity</strong> に対して繰り返します。</p>
 </li>
 <li>
-<p><strong>STEP 6:</strong> 他の設定をお好みに応じて変更します。</p>
+<p><strong>ステップ 6:</strong> 他の設定をお好みに応じて変更します。</p>
 </li>
 <li>
-<p><strong>STEP 7:</strong> <strong>Apply</strong> をクリックします。</p>
+<p><strong>ステップ 7:</strong> <strong>Apply</strong> をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 8:</strong> <strong>Add panel</strong> をクリックし、<strong>Add new panel</strong> をクリックします。</p>
+<p><strong>ステップ 8:</strong> <strong>Add panel</strong> をクリックし、<strong>Add new panel</strong> をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 9:</strong> <strong>Visualization</strong> に移動し、<strong>Gauge</strong> をクリックします。</p>
+<p><strong>ステップ 9:</strong> <strong>Visualization</strong> に移動し、<strong>Gauge</strong> をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 10:</strong> <strong>Query</strong> の <strong>FROM</strong> タブで <strong>select measurement</strong> をクリックし、ドロップダウンメニューから <strong>temperature</strong> を選択します。</p>
+<p><strong>ステップ 10:</strong> <strong>Query</strong> の <strong>FROM</strong> タブで <strong>select measurement</strong> をクリックし、ドロップダウンメニューから <strong>temperature</strong> を選択します。</p>
 </li>
 <li>
-<p><strong>STEP 11:</strong> <strong>Field</strong> タブで、<strong>Unit</strong> の下にあるドロップダウンメニューから <code>Temperature > Celcius</code> を選択します。</p>
+<p><strong>ステップ 11:</strong> <strong>Field</strong> タブで、<strong>Unit</strong> の下にあるドロップダウンメニューから <code>Temperature > Celcius</code> を選択します。</p>
 </li>
 <li>
-<p><strong>STEP 12:</strong> ゲージの最小値と最大値を <strong>Min</strong> と <strong>Max</strong> に入力します。</p>
+<p><strong>ステップ 12:</strong> ゲージの最小値と最大値を <strong>Min</strong> と <strong>Max</strong> に入力します。</p>
 </li>
 <li>
-<p><strong>STEP 13:</strong> <strong>Display name</strong> に <code>Temperature</code> と入力します。</p>
+<p><strong>ステップ 13:</strong> <strong>Display name</strong> に <code>Temperature</code> と入力します。</p>
 </li>
 <li>
-<p><strong>STEP 14:</strong> <strong>humidity</strong> に対して <strong>step 15</strong> 以降を繰り返します。</p>
+<p><strong>ステップ 14:</strong> <strong>humidity</strong> に対して <strong>ステップ 15</strong> 以降を繰り返します。</p>
 </li>
 <li>
-<p><strong>STEP 15:</strong> <strong>Apply</strong> をクリックします。</p>
+<p><strong>ステップ 15:</strong> <strong>Apply</strong> をクリックします。</p>
 </li>
 </ul>
 <p>これで Grafana に作成したダッシュボードが表示されます。</p>
@@ -502,4 +502,4 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id=技術サポートと製品ディスカッション>技術サポートと製品ディスカッション<a href=#技術サポートと製品ディスカッション class=hash-link aria-label="Direct link to 技術サポートと製品ディスカッション" title="Direct link to 技術サポートと製品ディスカッション">​</a></h2>
 <p>弊社製品をお選びいただきありがとうございます！製品をご利用いただく際に、できる限りスムーズな体験を提供するため、さまざまなサポートをご用意しております。お客様の好みやニーズに応じた複数のコミュニケーションチャネルをご利用いただけます。</p>
 <div class=button_tech_support_container><a href=https://forum.seeedstudio.com/ class=button_forum></a><a href=https://www.seeedstudio.com/contacts class=button_email></a></div>
-<div class=button_tech_support_container><a href=https://discord.gg/eWkprNDMU7 class=button_discord></a><a href=https://github.com/Seeed-Studio/wiki-documents/discussions/69 class=button_discussion></a></div></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class=col><a href=https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/docs/ja/Network/SenseCAP_K1100/Wi-Fi-Network_Application/Cloud_Service/ja_Connect-Wio-Terminal-to-Google-Cloud.md target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_Z9Sw aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"><span class=theme-last-updated>Last updated<!-- --> on <b><time datetime=2025-05-15T00:00:00.000Z itemprop=dateModified>May 15, 2025</time></b> by <b>shuxu hu</b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href=/ja/Quick-Start-to-using-Blynk/><div class=pagination-nav__sublabel>Previous</div><div class=pagination-nav__label>Blynkの使用方法</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/ja/Connect-Wio-Terminal-to-Azure-IoT-Central/><div class=pagination-nav__sublabel>Next</div><div class=pagination-nav__label>Microsoft Azure IoT Central の使い方を始める</div></a></nav></div><div>Loading Comments...</div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#産業用センサーへのアップグレード可能 class="table-of-contents__link toc-highlight">産業用センサーへのアップグレード可能</a><li><a href=#はじめに class="table-of-contents__link toc-highlight">はじめに</a><ul><li><a href=#google-cloud-とは class="table-of-contents__link toc-highlight">Google Cloud とは？</a><li><a href=#google-cloud-platform-とは class="table-of-contents__link toc-highlight">Google Cloud Platform とは？</a><li><a href=#google-cloud-iot-core-とは class="table-of-contents__link toc-highlight">Google Cloud IoT Core とは？</a><li><a href=#google-cloud-console-とは class="table-of-contents__link toc-highlight">Google Cloud Console とは？</a></ul><li><a href=#wio-terminal-を-google-cloud-iot-core-に-mqtt-経由で接続する class="table-of-contents__link toc-highlight">Wio Terminal を Google Cloud IoT Core に MQTT 経由で接続する</a><ul><li><a href=#google-cloud-コンソールのセットアップ class="table-of-contents__link toc-highlight">Google Cloud コンソールのセットアップ</a><ul><li><a href=#初期設定 class="table-of-contents__link toc-highlight">初期設定</a><li><a href=#デバイスレジストリを作成する class="table-of-contents__link toc-highlight">デバイスレジストリを作成する</a><li><a href=#デバイスキーのペアを生成する-ec-キー class="table-of-contents__link toc-highlight">デバイスキーのペアを生成する (EC キー)</a><li><a href=#秘密鍵を抽出する class="table-of-contents__link toc-highlight">秘密鍵を抽出する</a><li><a href=#レジストリにデバイスを追加する class="table-of-contents__link toc-highlight">レジストリにデバイスを追加する</a><li><a href=#サブスクライバーを設定する class="table-of-contents__link toc-highlight">サブスクライバーを設定する</a></ul><li><a href=#arduino-ide-を使用した-wio-terminal-のセットアップ class="table-of-contents__link toc-highlight">Arduino IDE を使用した Wio Terminal のセットアップ</a><ul><li><a href=#必要なライブラリ class="table-of-contents__link toc-highlight">必要なライブラリ</a><li><a href=#資格情報とアカウント情報の設定 class="table-of-contents__link toc-highlight">資格情報とアカウント情報の設定</a><li><a href=#ntp-時間取得方法の変更 class="table-of-contents__link toc-highlight">NTP 時間取得方法の変更</a><li><a href=#esp32-lwmqttino-にマクロ定義を追加 class="table-of-contents__link toc-highlight">Esp32-lwmqtt.ino にマクロ定義を追加</a></ul><li><a href=#テレメトリデータの表示 class="table-of-contents__link toc-highlight">テレメトリデータの表示</a><li><a href=#他のセンサーを追加する方法 class="table-of-contents__link toc-highlight">他のセンサーを追加する方法</a><ul><li><a href=#google-cloud-iot-の設定 class="table-of-contents__link toc-highlight">Google Cloud IoT の設定</a><li><a href=#arduino-の設定 class="table-of-contents__link toc-highlight">Arduino の設定</a></ul><li><a href=#他のセンサーを追加してダッシュボードでデータを可視化する方法 class="table-of-contents__link toc-highlight">他のセンサーを追加してダッシュボードでデータを可視化する方法</a><ul><li><a href=#arduino-のハードウェア設定 class="table-of-contents__link toc-highlight">Arduino のハードウェア設定</a><li><a href=#arduino-のソフトウェア設定 class="table-of-contents__link toc-highlight">Arduino のソフトウェア設定</a><li><a href=#google-cloud-iot-のセットアップ class="table-of-contents__link toc-highlight">Google Cloud IoT のセットアップ</a><li><a href=#grafana-のセットアップ class="table-of-contents__link toc-highlight">Grafana のセットアップ</a><li><a href=#google-cloud-function-の作成 class="table-of-contents__link toc-highlight">Google Cloud Function の作成</a><li><a href=#grafana-のセットアップに戻る class="table-of-contents__link toc-highlight">Grafana のセットアップに戻る</a></ul></ul><li><a href=#技術サポートと製品ディスカッション class="table-of-contents__link toc-highlight">技術サポートと製品ディスカッション</a></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Navigation</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/Getting_Started/>Getting Started</a><li class=footer__item><a class=footer__link-item href=/Sensor_Network/>Sensor and Sensing</a><li class=footer__item><a class=footer__link-item href=/Network/>Network</a><li class=footer__item><a class=footer__link-item href=/Edge_Computing/>Edge Computing</a><li class=footer__item><a class=footer__link-item href=/Cloud/>Cloud</a><li class=footer__item><a href=https://solution.seeed.cc/ target=_blank rel="noopener noreferrer" class=footer__link-item>Solutions</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Ecosystem</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://discord.com/invite/QqMgVwHT3X target=_blank rel="noopener noreferrer" class=footer__link-item>Discord</a><li class=footer__item><a href=https://project.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=footer__link-item>Project Hub</a><li class=footer__item><a href=https://www.seeedstudio.com/ecosystem/ target=_blank rel="noopener noreferrer" class=footer__link-item>Partners</a><li class=footer__item><a href=https://www.seeedstudio.com/distributors.html target=_blank rel="noopener noreferrer" class=footer__link-item>Distributors</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Quick Guide</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://www.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=footer__link-item>Bazaar</a><li class=footer__item><a href=https://www.seeedstudio.com/get_help/HowToGetHelp target=_blank rel="noopener noreferrer" class=footer__link-item>How to get help</a><li class=footer__item><a href=https://support.seeedstudio.com/knowledgebase target=_blank rel="noopener noreferrer" class=footer__link-item>FAQs</a><li class=footer__item><a href=https://forum.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=footer__link-item>Forum</a><li class=footer__item><a href=https://www.seeedstudio.com/get_help/TechnicalSupport target=_blank rel="noopener noreferrer" class=footer__link-item>Technical Support</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Company</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://www.seeedstudio.com/about-us/ target=_blank rel="noopener noreferrer" class=footer__link-item>About Seeed</a><li class=footer__item><a href=https://www.seeedstudio.com/join-us/ target=_blank rel="noopener noreferrer" class=footer__link-item>Join us</a><li class=footer__item><a href=https://www.seeedstudio.com/contacts target=_blank rel="noopener noreferrer" class=footer__link-item>Contact Us</a><li class=footer__item><a href=https://www.seeedstudio.com/blog/2020/04/22/seeed-in-the-news/ target=_blank rel="noopener noreferrer" class=footer__link-item>Press</a></ul></div></div><div class="footer__bottom text--center"><div class=footer__copyright>Copyright © 2025 Seeed Studio, Inc. Built with Docusaurus.</div></div></div></footer></div>
+<div class=button_tech_support_container><a href=https://discord.gg/eWkprNDMU7 class=button_discord></a><a href=https://github.com/Seeed-Studio/wiki-documents/discussions/69 class=button_discussion></a></div></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class=col><a href=https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/docs/ja/Network/SenseCAP_K1100/Wi-Fi-Network_Application/Cloud_Service/ja_Connect-Wio-Terminal-to-Google-Cloud.md target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_Z9Sw aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"><span class=theme-last-updated>Last updated<!-- --> on <b><time datetime=2025-05-15T00:00:00.000Z itemprop=dateModified>May 15, 2025</time></b> by <b>shuxu hu</b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href=/ja/Quick-Start-to-using-Blynk/><div class=pagination-nav__sublabel>Previous</div><div class=pagination-nav__label>Blynkの使用方法</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/ja/Connect-Wio-Terminal-to-Azure-IoT-Central/><div class=pagination-nav__sublabel>Next</div><div class=pagination-nav__label>Microsoft Azure IoT Central の使い方を始める</div></a></nav></div><div>Loading Comments...</div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#産業用センサーへのアップグレード可能 class="table-of-contents__link toc-highlight">産業用センサーへのアップグレード可能</a><li><a href=#はじめに class="table-of-contents__link toc-highlight">はじめに</a><ul><li><a href=#google-cloud-とは class="table-of-contents__link toc-highlight">Google Cloud とは？</a><li><a href=#google-cloud-platform-とは class="table-of-contents__link toc-highlight">Google Cloud Platform とは？</a><li><a href=#google-cloud-iot-core-とは class="table-of-contents__link toc-highlight">Google Cloud IoT Core とは？</a><li><a href=#google-cloud-console-とは class="table-of-contents__link toc-highlight">Google Cloud Console とは？</a></ul><li><a href=#wio-terminal-を-google-cloud-iot-core-に-mqtt-経由で接続する class="table-of-contents__link toc-highlight">Wio Terminal を Google Cloud IoT Core に MQTT 経由で接続する</a><ul><li><a href=#google-cloud-コンソールのセットアップ class="table-of-contents__link toc-highlight">Google Cloud コンソールのセットアップ</a><ul><li><a href=#初期設定 class="table-of-contents__link toc-highlight">初期設定</a><li><a href=#デバイスレジストリを作成する class="table-of-contents__link toc-highlight">デバイスレジストリを作成する</a><li><a href=#デバイスキーのペアを生成する-ec-キー class="table-of-contents__link toc-highlight">デバイスキーのペアを生成する (EC キー)</a><li><a href=#秘密鍵を抽出する class="table-of-contents__link toc-highlight">秘密鍵を抽出する</a><li><a href=#レジストリにデバイスを追加する class="table-of-contents__link toc-highlight">レジストリにデバイスを追加する</a><li><a href=#サブスクライバーを設定する class="table-of-contents__link toc-highlight">サブスクライバーを設定する</a></ul><li><a href=#arduino-ide-を使用した-wio-terminal-のセットアップ class="table-of-contents__link toc-highlight">Arduino IDE を使用した Wio Terminal のセットアップ</a><ul><li><a href=#必要なライブラリ class="table-of-contents__link toc-highlight">必要なライブラリ</a><li><a href=#資�格情報とアカウント情報の設定 class="table-of-contents__link toc-highlight">資格情報とアカウント情報の設定</a><li><a href=#ntp-時間取得方法の変更 class="table-of-contents__link toc-highlight">NTP 時間取得方法の変更</a><li><a href=#esp32-lwmqttino-にマクロ定義を追加 class="table-of-contents__link toc-highlight">Esp32-lwmqtt.ino にマクロ定義を追加</a></ul><li><a href=#テレメトリデータの表示 class="table-of-contents__link toc-highlight">テレメトリデータの表示</a><li><a href=#他のセンサーを追加する方法 class="table-of-contents__link toc-highlight">他のセンサーを追加する方法</a><ul><li><a href=#google-cloud-iot-の設定 class="table-of-contents__link toc-highlight">Google Cloud IoT の設定</a><li><a href=#arduino-の設定 class="table-of-contents__link toc-highlight">Arduino の設定</a></ul><li><a href=#他のセンサーを追加してダッシュボードでデータを可視化する方法 class="table-of-contents__link toc-highlight">他のセンサーを追加してダッシュボードでデータを可視化する方法</a><ul><li><a href=#arduino-のハードウェア設定 class="table-of-contents__link toc-highlight">Arduino のハードウェア設定</a><li><a href=#arduino-のソフトウェア設定 class="table-of-contents__link toc-highlight">Arduino のソフトウェア設定</a><li><a href=#google-cloud-iot-のセットアップ class="table-of-contents__link toc-highlight">Google Cloud IoT のセットアップ</a><li><a href=#grafana-のセットアップ class="table-of-contents__link toc-highlight">Grafana のセットアップ</a><li><a href=#google-cloud-function-の作成 class="table-of-contents__link toc-highlight">Google Cloud Function の作成</a><li><a href=#grafana-のセットアップに戻る class="table-of-contents__link toc-highlight">Grafana のセットアップに戻る</a></ul></ul><li><a href=#技術サポートと製品ディスカッション class="table-of-contents__link toc-highlight">技術サポートと製品ディスカッション</a></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Navigation</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/Getting_Started/>Getting Started</a><li class=footer__item><a class=footer__link-item href=/Sensor_Network/>Sensor and Sensing</a><li class=footer__item><a class=footer__link-item href=/Network/>Network</a><li class=footer__item><a class=footer__link-item href=/Edge_Computing/>Edge Computing</a><li class=footer__item><a class=footer__link-item href=/Cloud/>Cloud</a><li class=footer__item><a href=https://solution.seeed.cc/ target=_blank rel="noopener noreferrer" class=footer__link-item>Solutions</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Ecosystem</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://discord.com/invite/QqMgVwHT3X target=_blank rel="noopener noreferrer" class=footer__link-item>Discord</a><li class=footer__item><a href=https://project.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=footer__link-item>Project Hub</a><li class=footer__item><a href=https://www.seeedstudio.com/ecosystem/ target=_blank rel="noopener noreferrer" class=footer__link-item>Partners</a><li class=footer__item><a href=https://www.seeedstudio.com/distributors.html target=_blank rel="noopener noreferrer" class=footer__link-item>Distributors</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Quick Guide</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://www.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=footer__link-item>Bazaar</a><li class=footer__item><a href=https://www.seeedstudio.com/get_help/HowToGetHelp target=_blank rel="noopener noreferrer" class=footer__link-item>How to get help</a><li class=footer__item><a href=https://support.seeedstudio.com/knowledgebase target=_blank rel="noopener noreferrer" class=footer__link-item>FAQs</a><li class=footer__item><a href=https://forum.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=footer__link-item>Forum</a><li class=footer__item><a href=https://www.seeedstudio.com/get_help/TechnicalSupport target=_blank rel="noopener noreferrer" class=footer__link-item>Technical Support</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Company</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://www.seeedstudio.com/about-us/ target=_blank rel="noopener noreferrer" class=footer__link-item>About Seeed</a><li class=footer__item><a href=https://www.seeedstudio.com/join-us/ target=_blank rel="noopener noreferrer" class=footer__link-item>Join us</a><li class=footer__item><a href=https://www.seeedstudio.com/contacts target=_blank rel="noopener noreferrer" class=footer__link-item>Contact Us</a><li class=footer__item><a href=https://www.seeedstudio.com/blog/2020/04/22/seeed-in-the-news/ target=_blank rel="noopener noreferrer" class=footer__link-item>Press</a></ul></div></div><div class="footer__bottom text--center"><div class=footer__copyright>Copyright © 2025 Seeed Studio, Inc. Built with Docusaurus.</div></div></div></footer></div>

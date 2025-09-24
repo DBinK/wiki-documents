@@ -1,4 +1,4 @@
-<!doctype html><html lang=en-US dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/Embedded ML/ja_XIAO-RP2040-EI" data-has-hydrated=false><meta charset=UTF-8><meta name=generator content="Docusaurus v3.8.1"><title data-rh=true>Edge Impulseに基づくモーション認識 | Seeed Studio Wiki</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"><meta data-rh=true name=twitter:card content=summary_large_image><meta data-rh=true property=og:url content=https://wiki.seeedstudio.com/ja/XIAO-RP2040-EI/><meta data-rh=true property=og:locale content=en_US><meta data-rh=true name=docusaurus_locale content=en><meta data-rh=true name=docsearch:language content=en><meta data-rh=true name=docusaurus_version content=current><meta data-rh=true name=docusaurus_tag content=docs-default-current><meta data-rh=true name=docsearch:version content=current><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current><meta data-rh=true property=og:title content="Edge Impulseに基づくモーション認識 | Seeed Studio Wiki"><meta data-rh=true name=description content="Edge Impulseに基づくモーション認識"><meta data-rh=true property=og:description content="Edge Impulseに基づくモーション認識"><meta data-rh=true name=keywords content=xiao><meta data-rh=true property=og:image content=https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png><meta data-rh=true name=twitter:image content=https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png><link data-rh=true rel=icon href=/img/S.png><link data-rh=true rel=canonical href=https://wiki.seeedstudio.com/ja/XIAO-RP2040-EI/><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/ja/XIAO-RP2040-EI/ hreflang=en-US><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/ja/XIAO-RP2040-EI/ hreflang=x-default><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://wiki.seeedstudio.com/ja/SeeedStudio_XIAO_Series_Introduction","name":"XIAO","position":1},{"@type":"ListItem","item":"https://wiki.seeedstudio.com/ja/XIAO-RP2040-EI","name":"Edge Impulseに基づくモーション認識","position":2}]}</script><link rel=alternate type=application/rss+xml href=/blog/rss.xml title="Seeed Studio Wiki RSS Feed"><link rel=alternate type=application/atom+xml href=/blog/atom.xml title="Seeed Studio Wiki Atom Feed"><link rel=preconnect href=https://www.googletagmanager.com><script>window.dataLayer=window.dataLayer||[],function(e,t,a,n,r){e[n]=e[n]||[],e[n].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var d=t.getElementsByTagName(a)[0],g=t.createElement(a);g.async=!0,g.src="https://www.googletagmanager.com/gtm.js?id="+r+("dataLayer"!=n?"&l="+n:""),d.parentNode.insertBefore(g,d)}(window,document,"script","dataLayer","GTM-M4JG2HVB")</script><link rel=search type=application/opensearchdescription+xml title="Seeed Studio Wiki" href=/opensearch.xml><script src=https://viewer.altium.com/client/static/js/embed.js async></script><script src=/js/custom.js async></script><script src=/js/language-switcher.js async></script><link rel=stylesheet href=/assets/css/styles.e5b41788.css><script src=/assets/js/runtime~main.f59630cd.js defer></script><script src=/assets/js/main.d0b29a29.js defer></script><body class=navigation-with-keyboard><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4JG2HVB" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript>
+<!doctype html><html lang=en-US dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/Embedded ML/ja_XIAO-RP2040-EI" data-has-hydrated=false><meta charset=UTF-8><meta name=generator content="Docusaurus v3.8.1"><title data-rh=true>Edge Impulseに基づくモーション認識 | Seeed Studio Wiki</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"><meta data-rh=true name=twitter:card content=summary_large_image><meta data-rh=true property=og:url content=https://wiki.seeedstudio.com/ja/XIAO-RP2040-EI/><meta data-rh=true property=og:locale content=en_US><meta data-rh=true name=docusaurus_locale content=en><meta data-rh=true name=docsearch:language content=en><meta data-rh=true name=docusaurus_version content=current><meta data-rh=true name=docusaurus_tag content=docs-default-current><meta data-rh=true name=docsearch:version content=current><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current><meta data-rh=true property=og:title content="Edge Impulseに基づくモーション認識 | Seeed Studio Wiki"><meta data-rh=true name=description content="Edge Impulseに基づくモーション認識"><meta data-rh=true property=og:description content="Edge Impulseに基づくモーション認識"><meta data-rh=true name=keywords content=xiao><meta data-rh=true property=og:image content=https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png><meta data-rh=true name=twitter:image content=https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png><link data-rh=true rel=icon href=/img/S.png><link data-rh=true rel=canonical href=https://wiki.seeedstudio.com/ja/XIAO-RP2040-EI/><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/ja/XIAO-RP2040-EI/ hreflang=en-US><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/ja/XIAO-RP2040-EI/ hreflang=x-default><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://wiki.seeedstudio.com/ja/SeeedStudio_XIAO_Series_Introduction","name":"XIAO","position":1},{"@type":"ListItem","item":"https://wiki.seeedstudio.com/ja/XIAO-RP2040-EI","name":"Edge Impulseに基づくモーション認識","position":2}]}</script><link rel=alternate type=application/rss+xml href=/blog/rss.xml title="Seeed Studio Wiki RSS Feed"><link rel=alternate type=application/atom+xml href=/blog/atom.xml title="Seeed Studio Wiki Atom Feed"><link rel=preconnect href=https://www.googletagmanager.com><script>window.dataLayer=window.dataLayer||[],function(e,t,a,n,r){e[n]=e[n]||[],e[n].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var d=t.getElementsByTagName(a)[0],g=t.createElement(a);g.async=!0,g.src="https://www.googletagmanager.com/gtm.js?id="+r+("dataLayer"!=n?"&l="+n:""),d.parentNode.insertBefore(g,d)}(window,document,"script","dataLayer","GTM-M4JG2HVB")</script><link rel=search type=application/opensearchdescription+xml title="Seeed Studio Wiki" href=/opensearch.xml><script src=https://viewer.altium.com/client/static/js/embed.js async></script><script src=/js/custom.js async></script><script src=/js/language-switcher.js async></script><link rel=stylesheet href=/assets/css/styles.e5b41788.css><script src=/assets/js/runtime~main.962a43b2.js defer></script><script src=/assets/js/main.a25c96a2.js defer></script><body class=navigation-with-keyboard><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4JG2HVB" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript>
 
 
 <svg xmlns=http://www.w3.org/2000/svg style="display: none;"><defs>
@@ -54,34 +54,34 @@
 </ul>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">sudo edge-impulse-data-forwarder</span><br></span></code></pre></div></div>
 <ul>
-<li><strong>Step 5.</strong> CLIを使用してSeeed Studio XIAO RP2040をEdge Impulseに接続する必要があります。まず、アカウントにログインしてプロジェクトを選択します</li>
+<li><strong>ステップ 5.</strong> CLIを使用してSeeed Studio XIAO RP2040をEdge Impulseに接続する必要があります。まず、アカウントにログインしてプロジェクトを選択します</li>
 </ul>
 <p>加速度計とデバイスに名前を付けます。</p>
 <p>Edge Impulseの「Data acquisition」ページに戻ると、接続が成功した場合の結果は次のようになります。ページの右側に「XIAO RP2040」のデバイスが表示されているのが確認できます。</p>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/04.jpg alt=pir width=800 height=auto></p>
 <ul>
-<li><strong>Step 6.</strong> センサーを「3 axes」として選択します。ラベルを<code>up</code>と<code>down</code>として名前を付け、Sample length (ms.)を20000に変更してstart samplingをクリックします。</li>
+<li><strong>ステップ 6.</strong> センサーを「3 axes」として選択します。ラベルを<code>up</code>と<code>down</code>として名前を付け、Sample length (ms.)を20000に変更してstart samplingをクリックします。</li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/05.jpg alt=pir width=800 height=auto></p>
 <ul>
-<li><strong>Step 7.</strong> <a href=https://wiki.seeedstudio.com/ja/XIAO-RP2040/ target=_blank rel="noopener noreferrer">Seeed Studio XIAO RP2040</a>を上下に振り、20秒間その動作を続けます。取得結果は次のように表示されます：</li>
+<li><strong>ステップ 7.</strong> <a href=https://wiki.seeedstudio.com/ja/XIAO-RP2040/ target=_blank rel="noopener noreferrer">Seeed Studio XIAO RP2040</a>を上下に振り、20秒間その動作を続けます。取得結果は次のように表示されます：</li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/06.jpg alt=pir width=800 height=auto></p>
 <ul>
-<li><strong>Step 8.</strong> 生データの右上をクリックして「Split Sample」を選択し、データを分割します。+Add Segmentをクリックしてからグラフをクリックします。これを20回以上繰り返してセグメントを追加します。Splitをクリックすると、それぞれ1秒間のサンプルデータが表示されます。</li>
+<li><strong>ステップ 8.</strong> 生データの右上をクリックして「Split Sample」を選択し、データを分割します。+Add Segmentをクリックしてからグラフをクリックします。これを20回以上繰り返してセグメントを追加します。Splitをクリックすると、それぞれ1秒間のサンプルデータが表示されます。</li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/07.jpg alt=pir width=800 height=auto></p>
 <ul>
-<li><strong>Step 9.</strong> **Step 7.<strong>と</strong>Step 8.**を繰り返し、<code>circle</code>や<code>line</code>など異なる名前でデータにラベルを付けて、異なる動作データをクリックします。提供されている例では、上下、左右、円の分類を行っています。ここで必要に応じて変更することができます。</li>
+<li><strong>ステップ 9.</strong> **ステップ 7.<strong>と</strong>ステップ 8.**を繰り返し、<code>circle</code>や<code>line</code>など異なる名前でデータにラベルを付けて、異なる動作データをクリックします。提供されている例では、上下、左右、円の分類を行っています。ここで必要に応じて変更することができます。</li>
 </ul>
-<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></span>note</div><div class=admonitionContent_BuS1><p>Step 8.では分割時間が1秒です。これは、Step 7.で1秒間に少なくとも1回の上下の振りを行う必要があることを意味します。そうでなければ、結果は正確になりません。同時に、自分の動作速度に応じて分割時間を調整することができます。</div></div>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></span>note</div><div class=admonitionContent_BuS1><p>ステップ 8.では分割時間が1秒です。これは、ステップ 7.で1秒間に少なくとも1回の上下の振りを行う必要があることを意味します。そうでなければ、結果は正確になりません。同時に、自分の動作速度に応じて分割時間を調整することができます。</div></div>
 <ul>
-<li><strong>Step 10.</strong> Impulseを作成</li>
+<li><strong>ステップ 10.</strong> Impulseを作成</li>
 </ul>
 <p><strong>Create impulse</strong>をクリック -> Add a processing blockをクリック -> <strong>Spectral Analysis</strong>を選択 -> Add a learning blockをクリック -> **Classification (Keras)**を選択 -> Save Impulseをクリック</p>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/08.jpg alt=pir width=800 height=auto></p>
 <ul>
-<li><strong>Step 11.</strong> スペクトル特徴</li>
+<li><strong>ステップ 11.</strong> スペクトル特徴</li>
 </ul>
 <p>クリックしてSet up</p>
 <p><strong>Spectral features</strong>をクリック -> ページを下にスクロールしてSave parametersをクリック -> <strong>Generate features</strong>をクリック</p>
@@ -89,28 +89,28 @@
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/09.jpg alt=pir width=800 height=auto></p>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/10.jpg alt=pir width=800 height=auto></p>
 <ul>
-<li><strong>Step 12.</strong> モデルのトレーニング</li>
+<li><strong>ステップ 12.</strong> モデルのトレーニング</li>
 </ul>
 <p>NN Classifierをクリック -> Start trainingをクリック -> Unoptimized (float32)を選択</p>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/11.jpg alt=pir width=800 height=auto></p>
 <ul>
-<li><strong>Step 13.</strong> モデルテスト</li>
+<li><strong>ステップ 13.</strong> モデルテスト</li>
 </ul>
 <p>Model testingをクリック -> Classify allをクリック</p>
 <p><strong>精度が低い場合は、トレーニングセットを増やしてサンプル時間を延長することでデータセットを確認できます</strong></p>
 <p>モデルをダウンロードする際に評価も取得できます</p>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/12.jpg alt=pir width=800 height=auto></p>
 <ul>
-<li><strong>Step 14.</strong> Arduinoライブラリをビルド</li>
+<li><strong>ステップ 14.</strong> Arduinoライブラリをビルド</li>
 </ul>
 <p>Deploymentをクリック -> Arduino Libraryをクリック -> <strong>Build</strong>をクリック -> .ZIPファイルをダウンロード</p>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/13.jpg alt=pir width=800 height=auto></p>
 <ul>
-<li><strong>Step 15.</strong> .ZIPファイルの名前は非常に重要で、デフォルトでEdge Impulseプロジェクトの名前として設定されます。ここではプロジェクト名が「RP2040」です。ファイルを選択して「.ZIPファイル」をArduinoライブラリに追加します</li>
+<li><strong>ステップ 15.</strong> .ZIPファイルの名前は非常に重要で、デフォルトでEdge Impulseプロジェクトの名前として設定されます。ここではプロジェクト名が「RP2040」です。ファイルを選択して「.ZIPファイル」をArduinoライブラリに追加します</li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/14.jpg alt=pir width=800 height=auto></p>
 <ul>
-<li><strong>Step 16.</strong> Arduinoを開く -> Sketchをクリック -> <strong>Include Library</strong>をクリック ->
+<li><strong>ステップ 16.</strong> Arduinoを開く -> Sketchをクリック -> <strong>Include Library</strong>をクリック ->
 <strong>ADD .ZIP Library</strong>をクリック</li>
 </ul>
 <p>以下のコードをコピーします。edgeimpulseのプロジェクト名がカスタマイズされている場合、zipアーカイブのテキストは同じ名前になります。includeの最初の行をヘッダーファイルに変更できます。</p>

@@ -1,4 +1,4 @@
-<!doctype html><html lang=en-US dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-ja/Network/SenseCAP_K1100/Wi-Fi-Network_Application/Azure_IoT_Platform_Usage/ja_Develop-in-Microsoft-Azure-IoT-Central" data-has-hydrated=false><meta charset=UTF-8><meta name=generator content="Docusaurus v3.8.1"><title data-rh=true>Microsoft Azure IoT Centralでの開発 | Seeed Studio Wiki</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"><meta data-rh=true name=twitter:card content=summary_large_image><meta data-rh=true property=og:url content=https://wiki.seeedstudio.com/ja/Develop-in-Microsoft-Azure-IoT-Central/><meta data-rh=true property=og:locale content=en_US><meta data-rh=true name=docusaurus_locale content=en><meta data-rh=true name=docsearch:language content=en><meta data-rh=true name=docusaurus_version content=current><meta data-rh=true name=docusaurus_tag content=docs-default-current><meta data-rh=true name=docsearch:version content=current><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current><meta data-rh=true property=og:title content="Microsoft Azure IoT Centralでの開発 | Seeed Studio Wiki"><meta data-rh=true name=description content="Microsoft Azure IoT Centralでの開発"><meta data-rh=true property=og:description content="Microsoft Azure IoT Centralでの開発"><meta data-rh=true name=keywords content=SenseCap><meta data-rh=true property=og:image content=https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png><meta data-rh=true name=twitter:image content=https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png><link data-rh=true rel=icon href=/img/S.png><link data-rh=true rel=canonical href=https://wiki.seeedstudio.com/ja/Develop-in-Microsoft-Azure-IoT-Central/><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/ja/Develop-in-Microsoft-Azure-IoT-Central/ hreflang=en-US><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/ja/Develop-in-Microsoft-Azure-IoT-Central/ hreflang=x-default><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://wiki.seeedstudio.com/ja/SenseCAP_K1100_Intro","name":"SenseCAP K1100","position":1},{"@type":"ListItem","item":"https://wiki.seeedstudio.com/ja/Develop-in-Microsoft-Azure-IoT-Central","name":"Microsoft Azure IoT Centralでの開発","position":2}]}</script><link rel=alternate type=application/rss+xml href=/blog/rss.xml title="Seeed Studio Wiki RSS Feed"><link rel=alternate type=application/atom+xml href=/blog/atom.xml title="Seeed Studio Wiki Atom Feed"><link rel=preconnect href=https://www.googletagmanager.com><script>window.dataLayer=window.dataLayer||[],function(e,t,a,n,r){e[n]=e[n]||[],e[n].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var d=t.getElementsByTagName(a)[0],g=t.createElement(a);g.async=!0,g.src="https://www.googletagmanager.com/gtm.js?id="+r+("dataLayer"!=n?"&l="+n:""),d.parentNode.insertBefore(g,d)}(window,document,"script","dataLayer","GTM-M4JG2HVB")</script><link rel=search type=application/opensearchdescription+xml title="Seeed Studio Wiki" href=/opensearch.xml><script src=https://viewer.altium.com/client/static/js/embed.js async></script><script src=/js/custom.js async></script><script src=/js/language-switcher.js async></script><link rel=stylesheet href=/assets/css/styles.e5b41788.css><script src=/assets/js/runtime~main.f59630cd.js defer></script><script src=/assets/js/main.d0b29a29.js defer></script><body class=navigation-with-keyboard><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4JG2HVB" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript>
+<!doctype html><html lang=en-US dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-ja/Network/SenseCAP_K1100/Wi-Fi-Network_Application/Azure_IoT_Platform_Usage/ja_Develop-in-Microsoft-Azure-IoT-Central" data-has-hydrated=false><meta charset=UTF-8><meta name=generator content="Docusaurus v3.8.1"><title data-rh=true>Microsoft Azure IoT Centralでの開発 | Seeed Studio Wiki</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"><meta data-rh=true name=twitter:card content=summary_large_image><meta data-rh=true property=og:url content=https://wiki.seeedstudio.com/ja/Develop-in-Microsoft-Azure-IoT-Central/><meta data-rh=true property=og:locale content=en_US><meta data-rh=true name=docusaurus_locale content=en><meta data-rh=true name=docsearch:language content=en><meta data-rh=true name=docusaurus_version content=current><meta data-rh=true name=docusaurus_tag content=docs-default-current><meta data-rh=true name=docsearch:version content=current><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current><meta data-rh=true property=og:title content="Microsoft Azure IoT Centralでの開発 | Seeed Studio Wiki"><meta data-rh=true name=description content="Microsoft Azure IoT Centralでの開発"><meta data-rh=true property=og:description content="Microsoft Azure IoT Centralでの開発"><meta data-rh=true name=keywords content=SenseCap><meta data-rh=true property=og:image content=https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png><meta data-rh=true name=twitter:image content=https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png><link data-rh=true rel=icon href=/img/S.png><link data-rh=true rel=canonical href=https://wiki.seeedstudio.com/ja/Develop-in-Microsoft-Azure-IoT-Central/><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/ja/Develop-in-Microsoft-Azure-IoT-Central/ hreflang=en-US><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/ja/Develop-in-Microsoft-Azure-IoT-Central/ hreflang=x-default><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://wiki.seeedstudio.com/ja/SenseCAP_K1100_Intro","name":"SenseCAP K1100","position":1},{"@type":"ListItem","item":"https://wiki.seeedstudio.com/ja/Develop-in-Microsoft-Azure-IoT-Central","name":"Microsoft Azure IoT Centralでの開発","position":2}]}</script><link rel=alternate type=application/rss+xml href=/blog/rss.xml title="Seeed Studio Wiki RSS Feed"><link rel=alternate type=application/atom+xml href=/blog/atom.xml title="Seeed Studio Wiki Atom Feed"><link rel=preconnect href=https://www.googletagmanager.com><script>window.dataLayer=window.dataLayer||[],function(e,t,a,n,r){e[n]=e[n]||[],e[n].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var d=t.getElementsByTagName(a)[0],g=t.createElement(a);g.async=!0,g.src="https://www.googletagmanager.com/gtm.js?id="+r+("dataLayer"!=n?"&l="+n:""),d.parentNode.insertBefore(g,d)}(window,document,"script","dataLayer","GTM-M4JG2HVB")</script><link rel=search type=application/opensearchdescription+xml title="Seeed Studio Wiki" href=/opensearch.xml><script src=https://viewer.altium.com/client/static/js/embed.js async></script><script src=/js/custom.js async></script><script src=/js/language-switcher.js async></script><link rel=stylesheet href=/assets/css/styles.e5b41788.css><script src=/assets/js/runtime~main.962a43b2.js defer></script><script src=/assets/js/main.a25c96a2.js defer></script><body class=navigation-with-keyboard><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4JG2HVB" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript>
 
 
 <svg xmlns=http://www.w3.org/2000/svg style="display: none;"><defs>
@@ -10,44 +10,44 @@
 例えば、このデモでは、光の強度レベルが50未満の場合にIoT Centralがメールを送信するよう設定できます。</p>
 <ul>
 <li>
-<p><strong>STEP 1:</strong> Azure IoT Centralの左側のナビゲーションメニューから<strong>Rules</strong>をクリックします。</p>
+<p><strong>ステップ 1:</strong> Azure IoT Centralの左側のナビゲーションメニューから<strong>Rules</strong>をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 2:</strong> <strong>+New</strong>または<strong>Create a rule</strong>をクリックします。</p>
+<p><strong>ステップ 2:</strong> <strong>+New</strong>または<strong>Create a rule</strong>をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 3:</strong> ルールの名前を入力します。</p>
+<p><strong>ステップ 3:</strong> ルールの名前を入力します。</p>
 </li>
 <li>
-<p><strong>STEP 4:</strong> <strong>Device template</strong>の下で、<strong>Seeed Wio Terminal</strong>を選択します。</p>
+<p><strong>ステップ 4:</strong> <strong>Device template</strong>の下で、<strong>Seeed Wio Terminal</strong>を選択します。</p>
 </li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/Azure_IoTc_WT/rule_1.png alt=pir width=830 height=auto></p>
 <ul>
-<li><strong>STEP 5:</strong> <strong>Conditions</strong>の下で、<strong>time aggregation</strong>をオンにし、任意の<strong>time window</strong>を選択します。ここでは<strong>5分</strong>に設定します。</li>
+<li><strong>ステップ 5:</strong> <strong>Conditions</strong>の下で、<strong>time aggregation</strong>をオンにし、任意の<strong>time window</strong>を選択します。ここでは<strong>5分</strong>に設定します。</li>
 </ul>
 <p><strong>注意:</strong> <strong>xx</strong>分ごとに、ルールは過去<strong>xx</strong>分間のデータを評価します。</p>
 <ul>
 <li>
-<p><strong>STEP 6:</strong> <strong>Telemetry</strong>の下で、任意のテレメトリを選択します。ここでは<strong>Light intensity</strong>を設定します。</p>
+<p><strong>ステップ 6:</strong> <strong>Telemetry</strong>の下で、任意のテレメトリを選択します。ここでは<strong>Light intensity</strong>を設定します。</p>
 </li>
 <li>
-<p><strong>STEP 7:</strong> <strong>Aggregation</strong>の下で、<strong>Average</strong>を選択します。これにより、設定した<strong>time window</strong>内の平均値が取得されます。</p>
+<p><strong>ステップ 7:</strong> <strong>Aggregation</strong>の下で、<strong>Average</strong>を選択します。これにより、設定した<strong>time window</strong>内の平均値が取得されます。</p>
 </li>
 <li>
-<p><strong>STEP 8:</strong> <strong>Operator</strong>の下で、任意の条件を選択します。ここでは<strong>is less than</strong>条件を使用します。</p>
+<p><strong>ステップ 8:</strong> <strong>Operator</strong>の下で、任意の条件を選択します。ここでは<strong>is less than</strong>条件を使用します。</p>
 </li>
 <li>
-<p><strong>STEP 9:</strong> <strong>Value</strong>の下で値を入力します。ここでは<strong>50</strong>を入力します。</p>
+<p><strong>ステップ 9:</strong> <strong>Value</strong>の下で値を入力します。ここでは<strong>50</strong>を入力します。</p>
 </li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/Azure_IoTc_WT/conditions_1.png alt=pir width=1200 height=auto></p>
 <ul>
 <li>
-<p><strong>STEP 10:</strong> <strong>Actions</strong>の下で、<strong>Email</strong>をクリックします。</p>
+<p><strong>ステップ 10:</strong> <strong>Actions</strong>の下で、<strong>Email</strong>をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 11:</strong> メールの<strong>Display name</strong>、<strong>To address</strong>、および<strong>Note</strong>を入力します。</p>
+<p><strong>ステップ 11:</strong> メールの<strong>Display name</strong>、<strong>To address</strong>、および<strong>Note</strong>を入力します。</p>
 </li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/Azure_IoTc_WT/email_3.png alt=pir width=1200 height=auto></p>
@@ -58,10 +58,10 @@
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/Azure_IoTc_WT/assign_user.png alt=pir width=800 height=auto></p>
 <ul>
 <li>
-<p><strong>STEP 12:</strong> <strong>Done</strong>をクリックします。</p>
+<p><strong>ステップ 12:</strong> <strong>Done</strong>をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 13:</strong> 最後に<strong>Save</strong>をクリックします。</p>
+<p><strong>ステップ 13:</strong> 最後に<strong>Save</strong>をクリックします。</p>
 </li>
 </ul>
 <p>これで、メールを送信するルールが正常に作成されました。</p>
@@ -69,15 +69,15 @@
 <p>Azure IoT Centralでテレメトリデータを表示するだけでなく、それを使用してハードウェアを制御することもできます。このデモでは、Wio Terminalの内蔵ブザーを制御し、ブザーが鳴る時間を指定することができます。</p>
 <ul>
 <li>
-<p><strong>STEP 1:</strong> <strong>Command</strong>タブをクリックします。</p>
+<p><strong>ステップ 1:</strong> <strong>Command</strong>タブをクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 2:</strong> <strong>Duration</strong>列の下にある欄に<strong>値</strong>を入力します。</p>
+<p><strong>ステップ 2:</strong> <strong>Duration</strong>列の下にある欄に<strong>値</strong>を入力します。</p>
 </li>
 </ul>
 <p><strong>注意:</strong> 値はミリ秒単位です。例: 1000 = 1000ms = 1秒</p>
 <ul>
-<li><strong>STEP 3:</strong> <strong>Run</strong>をクリックすると、指定した時間の間、ブザーからビープ音が聞こえます。</li>
+<li><strong>ステップ 3:</strong> <strong>Run</strong>をクリックすると、指定した時間の間、ブザーからビープ音が聞こえます。</li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/Azure_IoTc_WT/1000.png alt=pir width=500 height=auto></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id=他のセンサーを追加する方法>他のセンサーを追加する方法<a href=#他のセンサーを追加する方法 class=hash-link aria-label="Direct link to 他のセンサーを追加する方法" title="Direct link to 他のセンサーを追加する方法">​</a></h2>
@@ -87,100 +87,100 @@
 <p>Azure IoT Central にテレメトリデータを送信するために Wio Terminal にさらにセンサーを追加したい場合、以前使用した .uf2 ファイルを簡単に使用することはできません。なぜなら、その .uf2 ファイルにはコードがすでにコンパイルされているからです。そのため、デモにさらにコードを追加したい場合は、Microsoft Visual Studio Code という IDE を使用して必要なコードを追加し、最終的にそれを Wio Terminal にアップロードする必要があります。</p>
 <p>では、コンピュータに Microsoft Visual Studio Code をインストールする手順を見ていきましょう。</p>
 <ul>
-<li><strong>STEP 1:</strong> code.visualstudio.com にアクセスし、<strong>Download</strong> をクリックします。</li>
+<li><strong>ステップ 1:</strong> code.visualstudio.com にアクセスし、<strong>Download</strong> をクリックします。</li>
 </ul>
 <p><strong>注意:</strong> オペレーティングシステムに応じたインストーラーを選択してください。</p>
 <ul>
 <li>
-<p><strong>STEP 2:</strong> インストールウィザードを進めてインストールを完了します。</p>
+<p><strong>ステップ 2:</strong> インストールウィザードを進めてインストールを完了します。</p>
 </li>
 <li>
-<p><strong>STEP 3:</strong> Visual Studio Code を開きます。</p>
+<p><strong>ステップ 3:</strong> Visual Studio Code を開きます。</p>
 </li>
 <li>
-<p><strong>STEP 4:</strong> 左側のナビゲーションメニューから <strong>Extensions</strong> をクリックし、検索ボックスに <strong>platformIO</strong> と入力します。</p>
+<p><strong>ステップ 4:</strong> 左側のナビゲーションメニューから <strong>Extensions</strong> をクリックし、検索ボックスに <strong>platformIO</strong> と入力します。</p>
 </li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/Azure_IoTc_WT/platformio.png alt=pir width=380 height=auto></p>
 <ul>
-<li><strong>STEP 5:</strong> <strong>install</strong> をクリックします。</li>
+<li><strong>ステップ 5:</strong> <strong>install</strong> をクリックします。</li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/Azure_IoTc_WT/platformio_install.png alt=pir width=550 height=auto></p>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id=visual-studio-code-でのデモ用コード>Visual Studio Code でのデモ用コード<a href=#visual-studio-code-でのデモ用コード class=hash-link aria-label="Direct link to Visual Studio Code でのデモ用コード" title="Direct link to Visual Studio Code でのデモ用コード">​</a></h4>
 <ul>
 <li>
-<p><strong>STEP 1:</strong> <a href=https://github.com/SeeedJP/wioterminal-aziot-example/releases target=_blank rel="noopener noreferrer">このリンク</a> にアクセスし、<a href=https://github.com/SeeedJP/wioterminal-aziot-example target=_blank rel="noopener noreferrer">SeeedJP/wioterminal-aziot-example リポジトリ</a> 内の利用可能なリリースを見つけます。</p>
+<p><strong>ステップ 1:</strong> <a href=https://github.com/SeeedJP/wioterminal-aziot-example/releases target=_blank rel="noopener noreferrer">このリンク</a> にアクセスし、<a href=https://github.com/SeeedJP/wioterminal-aziot-example target=_blank rel="noopener noreferrer">SeeedJP/wioterminal-aziot-example リポジトリ</a> 内の利用可能なリリースを見つけます。</p>
 </li>
 <li>
-<p><strong>STEP 2:</strong> <strong>Latest release</strong> に移動し、<strong>Assets</strong> の下にある <strong>Source code (zip)</strong> をクリックします。これにより、ソースコードが .zip ファイルとしてダウンロードされます。</p>
+<p><strong>ステップ 2:</strong> <strong>Latest release</strong> に移動し、<strong>Assets</strong> の下にある <strong>Source code (zip)</strong> をクリックします。これにより、ソースコードが .zip ファイルとしてダウンロードされます。</p>
 </li>
 <li>
-<p><strong>STEP 3:</strong> <strong>.zip ファイル</strong> を解凍します。</p>
+<p><strong>ステップ 3:</strong> <strong>.zip ファイル</strong> を解凍します。</p>
 </li>
 <li>
-<p><strong>STEP 4:</strong> Visual Studio Code に戻り、<code>File > Open Folder...</code> に移動します。</p>
+<p><strong>ステップ 4:</strong> Visual Studio Code に戻り、<code>File > Open Folder...</code> に移動します。</p>
 </li>
 <li>
-<p><strong>STEP 5:</strong> 先ほど解凍したフォルダを選択し、<strong>Select Folder</strong> をクリックします。</p>
+<p><strong>ステップ 5:</strong> 先ほど解凍したフォルダを選択し、<strong>Select Folder</strong> をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 6:</strong> 左側のナビゲーションメニューから <code>wioterminal-aziot-example-0.10 > include > config.h</code> に移動します。</p>
+<p><strong>ステップ 6:</strong> 左側のナビゲーションメニューから <code>wioterminal-aziot-example-0.10 > include > config.h</code> に移動します。</p>
 </li>
 <li>
-<p><strong>STEP 7:</strong> <strong>config.h</strong> を開いたら、<strong>"dtmi:seeedkk:wioterminal<!-- -->:wioterminal_aziot_example<!-- -->;5"</strong> を探し、<strong>"dtmi:local<!-- -->:wioterminal_aziot_example<!-- -->;5"</strong> に変更します。</p>
+<p><strong>ステップ 7:</strong> <strong>config.h</strong> を開いたら、<strong>"dtmi:seeedkk:wioterminal<!-- -->:wioterminal_aziot_example<!-- -->;5"</strong> を探し、<strong>"dtmi:local<!-- -->:wioterminal_aziot_example<!-- -->;5"</strong> に変更します。</p>
 </li>
 </ul>
 <p><strong>注意:</strong> <strong>dtmi:local<!-- -->:wioterminal_aziot_example<!-- -->;5</strong> はモデル ID です。</p>
 <ul>
 <li>
-<p><strong>STEP 8:</strong> 左側のナビゲーションメニューから <code>wioterminal-aziot-example-0.10 > seeedkk-wioterminal-wioterminal_aziot_example.json</code> に移動します。</p>
+<p><strong>ステップ 8:</strong> 左側のナビゲーションメニューから <code>wioterminal-aziot-example-0.10 > seeedkk-wioterminal-wioterminal_aziot_example.json</code> に移動します。</p>
 </li>
 <li>
-<p><strong>STEP 9:</strong> <strong>seeedkk-wioterminal-wioterminal_aziot_example.json</strong> を開いたら、<strong>"dtmi:seeedkk:wioterminal<!-- -->:wioterminal_aziot_example<!-- -->;5"</strong> を探し、<strong>"dtmi:local<!-- -->:wioterminal_aziot_example<!-- -->;5"</strong> に変更します。</p>
+<p><strong>ステップ 9:</strong> <strong>seeedkk-wioterminal-wioterminal_aziot_example.json</strong> を開いたら、<strong>"dtmi:seeedkk:wioterminal<!-- -->:wioterminal_aziot_example<!-- -->;5"</strong> を探し、<strong>"dtmi:local<!-- -->:wioterminal_aziot_example<!-- -->;5"</strong> に変更します。</p>
 </li>
 </ul>
 <p><strong>注意:</strong> <strong>seeedkk-wioterminal-wioterminal_aziot_example.json</strong> は以前に説明した DTDL モデルです。</p>
 <p>現在、このモデルは <strong>加速度、光強度、ボタンカウント</strong> データ用に定義されています。ここに <strong>温度と湿度</strong> を追加します。</p>
 <ul>
-<li><strong>STEP 10:</strong> 以下のコードを <strong>"contents": [</strong> の下に追加します。</li>
+<li><strong>ステップ 10:</strong> 以下のコードを <strong>"contents": [</strong> の下に追加します。</li>
 </ul>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">  "contents": [</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    {</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">      "@type": [</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">        "Telemetry",</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">        "Temperature"</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">      ],</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">      "name": "temp",</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">      "unit": "degreeCelsius",</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">      "displayName": {</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">        "en": "Temperature (C)",</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">        "ja": "温度"</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">      },</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">      "schema": "integer"</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    },</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    {</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">      "@type": "Telemetry",</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">      "name": "humi",</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">      "displayName": {</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">        "en": "Humidity (%RH)",</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">        "ja": "湿度"</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">      },</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">      "schema": "integer"</span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    },</span><br></span></code></pre></div></div>
 <p><strong>注意:</strong> ここで、<strong>name</strong> は後でコード内で特定のテレメトリデータを識別するために使用される名前です。<strong>unit</strong> はデータに対応する単位、<strong>displayName</strong> は Azure IoT Central に表示される名前（"en" は英語、"ja" は日本語）、<strong>schema</strong> はデータ型を示します。</p>
 <ul>
 <li>
-<p><strong>STEP 11:</strong> 左側のナビゲーションメニューから <code>wioterminal-aziot-example-0.10 > platformio.ini</code> に移動します。</p>
+<p><strong>ステップ 11:</strong> 左側のナビゲーションメニューから <code>wioterminal-aziot-example-0.10 > platformio.ini</code> に移動します。</p>
 </li>
 <li>
-<p><strong>STEP 12:</strong> <strong>platformio.ini</strong> を開いたら、<strong>lib_deps</strong> の下に以下を追加します。</p>
+<p><strong>ステップ 12:</strong> <strong>platformio.ini</strong> を開いたら、<strong>lib_deps</strong> の下に以下を追加します。</p>
 </li>
 </ul>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">lib_deps = </span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor</span><br></span></code></pre></div></div>
 <p><strong>注意:</strong> これは Grove - 温度・湿度センサー (DHT11) 用のライブラリです。</p>
 <ul>
 <li>
-<p><strong>STEP 13:</strong> 左側のナビゲーションメニューから <code>wioterminal-aziot-example-0.10 > src > main.cpp</code> に移動します。</p>
+<p><strong>ステップ 13:</strong> 左側のナビゲーションメニューから <code>wioterminal-aziot-example-0.10 > src > main.cpp</code> に移動します。</p>
 </li>
 <li>
-<p><strong>STEP 14:</strong> <strong>main.cpp</strong> を開いたら、<strong>#include "CliMode.h"</strong> の後に DHT11 ライブラリを追加します。</p>
+<p><strong>ステップ 14:</strong> <strong>main.cpp</strong> を開いたら、<strong>#include "CliMode.h"</strong> の後に DHT11 ライブラリを追加します。</p>
 </li>
 </ul>
 <div class="language-cpp codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-cpp codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token macro property directive-hash">#</span><span class="token macro property directive keyword" style="color:rgb(189, 147, 249);font-style:italic">include</span><span class="token macro property"> </span><span class="token macro property string" style="color:rgb(255, 121, 198)">"CliMode.h"</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token macro property directive-hash">#</span><span class="token macro property directive keyword" style="color:rgb(189, 147, 249);font-style:italic">include</span><span class="token macro property"> </span><span class="token macro property string" style="color:rgb(255, 121, 198)">"DHT.h"</span><br></span></code></pre></div></div>
 <ul>
-<li><strong>STEP 15:</strong> <strong>LIS3DHTR  AccelSensor;</strong> の後に DHT11 の定義と初期化を追加します。</li>
+<li><strong>ステップ 15:</strong> <strong>LIS3DHTR  AccelSensor;</strong> の後に DHT11 の定義と初期化を追加します。</li>
 </ul>
 <div class="language-cpp codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-cpp codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">LIS3DHTR</span><span class="token operator">&lt;</span><span class="token plain">TwoWire</span><span class="token operator">></span><span class="token plain"> AccelSensor</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain" style=display:inline-block></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token macro property directive-hash">#</span><span class="token macro property directive keyword" style="color:rgb(189, 147, 249);font-style:italic">define</span><span class="token macro property"> </span><span class="token macro property macro-name">DHTPIN</span><span class="token macro property"> </span><span class="token macro property expression number">0</span><span class="token macro property expression"> </span><span class="token macro property comment" style="color:rgb(98, 114, 164)">// DHT センサーの信号ピンを定義</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)">// #define DHTPIN PIN_WIRE_SCL // I2C ポートをデジタルポートとして使用</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token macro property directive-hash">#</span><span class="token macro property directive keyword" style="color:rgb(189, 147, 249);font-style:italic">define</span><span class="token macro property"> </span><span class="token macro property macro-name">DHTTYPE</span><span class="token macro property"> </span><span class="token macro property expression">DHT11 </span><span class="token macro property comment" style="color:rgb(98, 114, 164)">// DHT センサーのタイプを定義</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">DHT </span><span class="token function" style="color:rgb(80, 250, 123)">dht</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">DHTPIN</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> DHTTYPE</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"> </span><span class="token comment" style="color:rgb(98, 114, 164)">// DHT センサーを初期化</span><br></span></code></pre></div></div>
 <p><strong>注意:</strong> DHT11 センサーは Wio Terminal の両方の Grove ポートに接続できます。<strong>デジタルポート</strong> を使用する場合、ピンは <strong>0</strong> と定義され、<strong>I2C ポート</strong> を使用する場合、ピンは <strong>PIN_WIRE_SCL</strong> と定義されます。ポートの図はこのドキュメントの後半で示されます。</p>
 <ul>
-<li><strong>STEP 16:</strong> <strong>SendTelemetry()</strong> 関数の下に以下のコードを追加し、テレメトリデータとともに JSON ファイルを解析します。</li>
+<li><strong>ステップ 16:</strong> <strong>SendTelemetry()</strong> 関数の下に以下のコードを追加し、テレメトリデータとともに JSON ファイルを解析します。</li>
 </ul>
 <div class="language-cpp codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-cpp codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">static</span><span class="token plain"> az_result </span><span class="token function" style="color:rgb(80, 250, 123)">SendTelemetry</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain"></span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">float</span><span class="token plain"> accelX</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">float</span><span class="token plain"> accelY</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">float</span><span class="token plain"> accelZ</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    AccelSensor</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">getAcceleration</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token operator">&</span><span class="token plain">accelX</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> </span><span class="token operator">&</span><span class="token plain">accelY</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> </span><span class="token operator">&</span><span class="token plain">accelZ</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain" style=display:inline-block></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">int</span><span class="token plain"> light</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    light </span><span class="token operator">=</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">analogRead</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">WIO_LIGHT</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"> </span><span class="token operator">*</span><span class="token plain"> </span><span class="token number">100</span><span class="token plain"> </span><span class="token operator">/</span><span class="token plain"> </span><span class="token number">1023</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain" style=display:inline-block></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">int</span><span class="token plain"> temp</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"> </span><span class="token comment" style="color:rgb(98, 114, 164)">// 温度を格納する変数を割り当て</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">int</span><span class="token plain"> humi</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"> </span><span class="token comment" style="color:rgb(98, 114, 164)">// 湿度を格納する変数を割り当て</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    temp </span><span class="token operator">=</span><span class="token plain"> dht</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">readTemperature</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"> </span><span class="token comment" style="color:rgb(98, 114, 164)">// 温度を読み取る</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    humi </span><span class="token operator">=</span><span class="token plain"> dht</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">readHumidity</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"> </span><span class="token comment" style="color:rgb(98, 114, 164)">// 湿度を読み取る</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain" style=display:inline-block></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">char</span><span class="token plain"> telemetry_topic</span><span class="token punctuation" style="color:rgb(248, 248, 242)">[</span><span class="token number">128</span><span class="token punctuation" style="color:rgb(248, 248, 242)">]</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">if</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token function" style="color:rgb(80, 250, 123)">az_result_failed</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token function" style="color:rgb(80, 250, 123)">az_iot_hub_client_telemetry_get_publish_topic</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token operator">&</span><span class="token plain">HubClient</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> </span><span class="token constant" style="color:rgb(189, 147, 249)">NULL</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> telemetry_topic</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">sizeof</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">telemetry_topic</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> </span><span class="token constant" style="color:rgb(189, 147, 249)">NULL</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">        </span><span class="token function" style="color:rgb(80, 250, 123)">Log</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token string" style="color:rgb(255, 121, 198)">"Failed az_iot_hub_client_telemetry_get_publish_topic"</span><span class="token plain"> DLM</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">        </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">return</span><span class="token plain"> AZ_ERROR_NOT_SUPPORTED</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain" style=display:inline-block></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    az_json_writer json_builder</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">char</span><span class="token plain"> telemetry_payload</span><span class="token punctuation" style="color:rgb(248, 248, 242)">[</span><span class="token number">200</span><span class="token punctuation" style="color:rgb(248, 248, 242)">]</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    </span><span class="token function" style="color:rgb(80, 250, 123)">AZ_RETURN_IF_FAILED</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token function" style="color:rgb(80, 250, 123)">az_json_writer_init</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token operator">&</span><span class="token plain">json_builder</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">AZ_SPAN_FROM_BUFFER</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">telemetry_payload</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> </span><span class="token constant" style="color:rgb(189, 147, 249)">NULL</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    </span><span class="token function" style="color:rgb(80, 250, 123)">AZ_RETURN_IF_FAILED</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token function" style="color:rgb(80, 250, 123)">az_json_writer_append_begin_object</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token operator">&</span><span class="token plain">json_builder</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    </span><span class="token function" style="color:rgb(80, 250, 123)">AZ_RETURN_IF_FAILED</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token function" style="color:rgb(80, 250, 123)">az_json_writer_append_property_name</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token operator">&</span><span class="token plain">json_builder</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">AZ_SPAN_LITERAL_FROM_STR</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token string" style="color:rgb(255, 121, 198)">"temp"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    </span><span class="token function" style="color:rgb(80, 250, 123)">AZ_RETURN_IF_FAILED</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token function" style="color:rgb(80, 250, 123)">az_json_writer_append_int32</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token operator">&</span><span class="token plain">json_builder</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> temp</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    </span><span class="token function" style="color:rgb(80, 250, 123)">AZ_RETURN_IF_FAILED</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token function" style="color:rgb(80, 250, 123)">az_json_writer_append_property_name</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token operator">&</span><span class="token plain">json_builder</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">AZ_SPAN_LITERAL_FROM_STR</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token string" style="color:rgb(255, 121, 198)">"humi"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class=token-line style=color:#F8F8F2><span class="token plain">    </span><span class="token function" style="color:rgb(80, 250, 123)">AZ_RETURN_IF_FAILED</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token function" style="color:rgb(80, 250, 123)">az_json_writer_append_int32</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token operator">&</span><span class="token plain">json_builder</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> humi</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><br></span></code></pre></div></div>
 <ul>
-<li><strong>STEP 17:</strong> <strong>ntp.begin</strong> の行の後に以下のコードを追加して、DHT11センサーを起動します。</li>
+<li><strong>ステップ 17:</strong> <strong>ntp.begin</strong> の行の後に以下のコードを追加して、DHT11センサーを起動します。</li>
 </ul>
 <div class="language-cpp codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-cpp codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">dht</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">begin</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"> </span><span class="token comment" style="color:rgb(98, 114, 164)">// DHTセンサーを起動</span><br></span></code></pre></div></div>
 <p>これで、このデモのすべてのコードが完成しました。</p>
 <ul>
-<li><strong>STEP 18:</strong> 左側のナビゲーションメニューから <strong>PlatformIO アイコン</strong> をクリックし、<strong>Build</strong> をクリックします。</li>
+<li><strong>ステップ 18:</strong> 左側のナビゲーションメニューから <strong>PlatformIO アイコン</strong> をクリックし、<strong>Build</strong> をクリックします。</li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/Azure_IoTc_WT/platformio_build.png alt=pir width=400 height=auto></p>
 <p>以下のメッセージが表示された場合、コードのコンパイルに成功しています。</p>
@@ -190,47 +190,47 @@
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id=新しいデバイステンプレートの作成>新しいデバイステンプレートの作成<a href=#新しいデバイステンプレートの作成 class=hash-link aria-label="Direct link to 新しいデバイステンプレートの作成" title="Direct link to 新しいデバイステンプレートの作成">​</a></h4>
 <ul>
 <li>
-<p><strong>STEP 1:</strong> Azure IoT Central にアクセスし、左側のナビゲーションメニューから <code>Device templates</code> をクリックします。</p>
+<p><strong>ステップ 1:</strong> Azure IoT Central にアクセスし、左側のナビゲーションメニューから <code>Device templates</code> をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 2:</strong> <strong>+ New</strong> をクリックし、<strong>IoT device</strong> を選択して <strong>Next<!-- -->:Customize</strong> をクリックします。</p>
+<p><strong>ステップ 2:</strong> <strong>+ New</strong> をクリックし、<strong>IoT device</strong> を選択して <strong>Next<!-- -->:Customize</strong> をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 3:</strong> <strong>Device template name</strong> ボックスに名前を入力し、<strong>Next<!-- -->:Review</strong> をクリックします。</p>
+<p><strong>ステップ 3:</strong> <strong>Device template name</strong> ボックスに名前を入力し、<strong>Next<!-- -->:Review</strong> をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 4:</strong> <strong>Create</strong> をクリックします。</p>
+<p><strong>ステップ 4:</strong> <strong>Create</strong> をクリックします。</p>
 </li>
 </ul>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id=カスタムデバイスモデルのインポート>カスタムデバイスモデルのインポート<a href=#カスタムデバイスモデルのインポート class=hash-link aria-label="Direct link to カスタムデバイスモデルのインポート" title="Direct link to カスタムデバイスモデルのインポート">​</a></h4>
 <ul>
 <li>
-<p><strong>STEP 1:</strong> <strong>Import a model</strong> をクリックします。</p>
+<p><strong>ステップ 1:</strong> <strong>Import a model</strong> をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 2:</strong> 以前使用した <strong>wioterminal-aziot-example-0.10</strong> フォルダに移動し、<strong>seeedkk-wioterminal-wioterminal_aziot_example.json</strong> ファイルを見つけてクリックします。</p>
+<p><strong>ステップ 2:</strong> 以前使用した <strong>wioterminal-aziot-example-0.10</strong> フォルダに移動し、<strong>seeedkk-wioterminal-wioterminal_aziot_example.json</strong> ファイルを見つけてクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 3:</strong> <strong>Open</strong> をクリックします。</p>
+<p><strong>ステップ 3:</strong> <strong>Open</strong> をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 4:</strong> 左側のメニューから <strong>Views</strong> をクリックし、<strong>Generate default views</strong> をクリックします。</p>
+<p><strong>ステップ 4:</strong> 左側のメニューから <strong>Views</strong> をクリックし、<strong>Generate default views</strong> をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 5:</strong> <strong>Generate default dashboard view(s)</strong> をクリックします。</p>
+<p><strong>ステップ 5:</strong> <strong>Generate default dashboard view(s)</strong> をクリックします。</p>
 </li>
 <li>
-<p><strong>STEP 6:</strong> 左側のメニューから <strong>Overview</strong> に移動し、ダッシュボードを好みに応じてカスタマイズします。</p>
+<p><strong>ステップ 6:</strong> 左側のメニューから <strong>Overview</strong> に移動し、ダッシュボードを好みに応じてカスタマイズします。</p>
 </li>
 </ul>
 <p><strong>注意:</strong> このドキュメント内で、ダッシュボードのカスタマイズ方法については以前に説明しています。</p>
 <ul>
-<li><strong>STEP 7:</strong> 以下の設定を行います。</li>
+<li><strong>ステップ 7:</strong> 以下の設定を行います。</li>
 </ul>
 <table><thead><tr><th>タイル名<th>タイルサイズ<th>タイルの可視化<tbody><tr><td>Light Intensity<td>2 x 2<td>折れ線グラフ<tr><td>Light Intensity<td>1 x 1<td>最後に記録された値<tr><td>Temperature (C), Humidity (%RH)<td>2 x 2<td>折れ線グラフ<tr><td>Temperature (C)<td>1 x 1<td>最後に記録された値<tr><td>Humidity (%RH)<td>1 x 1<td>最後に記録された値<tr><td>Left button<td>1 x 1<td>KPI<tr><td>Middle button<td>1 x 1<td>KPI<tr><td>Right button<td>1 x 1<td>KPI</table>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/Azure_IoTc_WT/dashboard.png alt=pir width=1000 height=auto></p>
 <ul>
-<li><strong>STEP 8:</strong> <strong>Save</strong> と <strong>Publish</strong> をクリックします。</li>
+<li><strong>ステップ 8:</strong> <strong>Save</strong> と <strong>Publish</strong> をクリックします。</li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id=wio-terminal-のセットアップ>Wio Terminal のセットアップ<a href=#wio-terminal-のセットアップ class=hash-link aria-label="Direct link to Wio Terminal のセットアップ" title="Direct link to Wio Terminal のセットアップ">​</a></h3>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id=ハードウェアのセットアップ>ハードウェアのセットアップ<a href=#ハードウェアのセットアップ class=hash-link aria-label="Direct link to ハードウェアのセットアップ" title="Direct link to ハードウェアのセットアップ">​</a></h4>
@@ -242,46 +242,46 @@
 <h5 class="anchor anchorWithStickyNavbar_LWe7" id=コードを-wio-terminal-にアップロード>コードを Wio Terminal にアップロード<a href=#コードを-wio-terminal-にアップロード class=hash-link aria-label="Direct link to コードを Wio Terminal にアップロード" title="Direct link to コードを Wio Terminal にアップロード">​</a></h5>
 <p>次に、Wio Terminal にコードをアップロードして、Azure IoT Central にテレメトリデータを送信します。</p>
 <ul>
-<li><strong>STEP 1:</strong> VS Code に戻り、<strong>PlatformIO アイコン</strong> をクリックして <strong>Upload</strong> をクリックします。</li>
+<li><strong>ステップ 1:</strong> VS Code に戻り、<strong>PlatformIO アイコン</strong> をクリックして <strong>Upload</strong> をクリックします。</li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/Azure_IoTc_WT/platformIO_upload.png alt=pir width=380 height=auto></p>
 <h5 class="anchor anchorWithStickyNavbar_LWe7" id=wi-fi-と-azure-iot-の設定>Wi-Fi と Azure IoT の設定<a href=#wi-fi-と-azure-iot-の設定 class=hash-link aria-label="Direct link to Wi-Fi と Azure IoT の設定" title="Direct link to Wi-Fi と Azure IoT の設定">​</a></h5>
 <p>次に、Wi-Fi と Azure IoT の接続を設定します。これは以前と同じ手順です。</p>
 <ul>
-<li><strong>STEP 1:</strong> 3つのボタンを押しながら Wio Terminal をオンにして、設定モードに入ります。</li>
+<li><strong>ステップ 1:</strong> 3つのボタンを押しながら Wio Terminal をオンにして、設定モードに入ります。</li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/Azure_IoTc_WT/config.png alt=pir width=700 height=auto></p>
 <ul>
 <li>
-<p><strong>STEP 2:</strong> <a href=https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html target=_blank rel="noopener noreferrer">PUTTY</a> などのシリアルコンソールアプリケーションを開きます。</p>
+<p><strong>ステップ 2:</strong> <a href=https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html target=_blank rel="noopener noreferrer">PUTTY</a> などのシリアルコンソールアプリケーションを開きます。</p>
 </li>
 <li>
-<p><strong>STEP 3:</strong> 正しいシリアル <strong>COM ポート</strong> を入力し、<strong>9600</strong> をボーレートとして設定して Wio Terminal に接続します。</p>
+<p><strong>ステップ 3:</strong> 正しいシリアル <strong>COM ポート</strong> を入力し、<strong>9600</strong> をボーレートとして設定して Wio Terminal に接続します。</p>
 </li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/Azure_IoTc_WT/config_new.png alt=pir width=500 height=auto></p>
 <ul>
-<li><strong>STEP 4:</strong> キーボードで <strong>ENTER</strong> を押し、シリアルターミナルで <strong>help</strong> と入力して設定の使用方法を確認します。</li>
+<li><strong>ステップ 4:</strong> キーボードで <strong>ENTER</strong> を押し、シリアルターミナルで <strong>help</strong> と入力して設定の使用方法を確認します。</li>
 </ul>
 <p><strong>注意:</strong> Wi-Fi SSID とパスワードは以前の設定で保存されているため、再入力する必要はありません。</p>
 <ul>
 <li>
-<p><strong>STEP 5:</strong> <a href=https://apps.azureiotcentral.com target=_blank rel="noopener noreferrer">Azure IoT Central</a> で以前作成したアプリケーションにアクセスし、Azure IoT の接続情報を設定します。</p>
+<p><strong>ステップ 5:</strong> <a href=https://apps.azureiotcentral.com target=_blank rel="noopener noreferrer">Azure IoT Central</a> で以前作成したアプリケーションにアクセスし、Azure IoT の接続情報を設定します。</p>
 </li>
 <li>
-<p><strong>STEP 6:</strong> 左側のナビゲーションメニューから <code>Administration > Device Connection</code> に移動し、<strong>ID scope</strong> を <strong>notepad</strong> にコピーします。</p>
+<p><strong>ステップ 6:</strong> 左側のナビゲーションメニューから <code>Administration > Device Connection</code> に移動し、<strong>ID scope</strong> を <strong>notepad</strong> にコピーします。</p>
 </li>
 <li>
-<p><strong>STEP 7:</strong> <strong>SAS-IoT-Devices</strong> をクリックし、<strong>primary key</strong> を <strong>notepad</strong> にコピーします。</p>
+<p><strong>ステップ 7:</strong> <strong>SAS-IoT-Devices</strong> をクリックし、<strong>primary key</strong> を <strong>notepad</strong> にコピーします。</p>
 </li>
 <li>
-<p><strong>STEP 8:</strong> 先ほど開いたシリアルターミナルに移動し、以下を入力します。</p>
+<p><strong>ステップ 8:</strong> 先ほど開いたシリアルターミナルに移動し、以下を入力します。</p>
 </li>
 </ul>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">set_az_iotc your_ID_scope your_primary_key your_device_name</span><br></span></code></pre></div></div>
 <p><strong>注意:</strong> 各フィールドの間にスペースを1つ追加してください。また、<code>device name</code> は任意で決めることができます。</p>
 <ul>
-<li><strong>STEP 9:</strong> スイッチを ON の位置からさらに下げてリリースすることで、Wio Terminal をリセットします。</li>
+<li><strong>ステップ 9:</strong> スイッチを ON の位置からさらに下げてリリースすることで、Wio Terminal をリセットします。</li>
 </ul>
 <p style=text-align:center><img src=https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-Reset.png alt=pir width=500 height=auto></p>
 <p>これで、Wio Terminal の LCD に Wi-Fi 接続中、次に Azure IoT Hub 接続中と表示され、その後 Azure IoT Central に送信されるテレメトリデータが表示されます。</p>
