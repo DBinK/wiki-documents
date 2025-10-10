@@ -1,4 +1,4 @@
-<!doctype html><html lang=en-US dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-ja/Sensor/SeeedStudio_XIAO_Gadgets/trmnl_7inch5_diy_kit/ja_works_with_trmnl" data-has-hydrated=false><meta charset=UTF-8><meta name=generator content="Docusaurus v3.8.1"><title data-rh=true>TRMNLとの連携 | Seeed Studio Wiki</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"><meta data-rh=true name=twitter:card content=summary_large_image><meta data-rh=true property=og:url content=https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_trmnl/><meta data-rh=true property=og:locale content=en_US><meta data-rh=true name=docusaurus_locale content=en><meta data-rh=true name=docsearch:language content=en><meta data-rh=true name=docusaurus_version content=current><meta data-rh=true name=docusaurus_tag content=docs-default-current><meta data-rh=true name=docsearch:version content=current><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current><meta data-rh=true property=og:title content="TRMNLとの連携 | Seeed Studio Wiki"><meta data-rh=true name=description content="この記事では、TRMNL 7.5inch(OG) DIY KitをTRMNLと連携させる方法について説明します。"><meta data-rh=true property=og:description content="この記事では、TRMNL 7.5inch(OG) DIY KitをTRMNLと連携させる方法について説明します。"><meta data-rh=true name=keywords content="ePaper display,TRMNL"><meta data-rh=true property=og:image content=https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/trmnl_head.webp><meta data-rh=true name=twitter:image content=https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/trmnl_head.webp><link data-rh=true rel=icon href=/img/S.png><link data-rh=true rel=canonical href=https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_trmnl/><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_trmnl/ hreflang=en-US><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_trmnl/ hreflang=x-default><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://wiki.seeedstudio.com/ja/trmnl_7inch5_diy_kit_main_page","name":"TRMNL 7.5インチ(OG) DIYキット","position":1},{"@type":"ListItem","item":"https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_trmnl","name":"TRMNLとの連携","position":2}]}</script><link rel=alternate type=application/rss+xml href=/blog/rss.xml title="Seeed Studio Wiki RSS Feed"><link rel=alternate type=application/atom+xml href=/blog/atom.xml title="Seeed Studio Wiki Atom Feed"><link rel=preconnect href=https://www.googletagmanager.com><script>window.dataLayer=window.dataLayer||[],function(e,t,a,n,r){e[n]=e[n]||[],e[n].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var d=t.getElementsByTagName(a)[0],g=t.createElement(a);g.async=!0,g.src="https://www.googletagmanager.com/gtm.js?id="+r+("dataLayer"!=n?"&l="+n:""),d.parentNode.insertBefore(g,d)}(window,document,"script","dataLayer","GTM-M4JG2HVB")</script><link rel=search type=application/opensearchdescription+xml title="Seeed Studio Wiki" href=/opensearch.xml><script src=https://viewer.altium.com/client/static/js/embed.js async></script><script src=/js/custom.js async></script><script src=/js/language-switcher.js async></script><link rel=stylesheet href=/assets/css/styles.e5b41788.css><script src=/assets/js/runtime~main.eb3160db.js defer></script><script src=/assets/js/main.5dfaf906.js defer></script><body class=navigation-with-keyboard><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4JG2HVB" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript>
+<!doctype html><html lang=en-US dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-ja/Sensor/SeeedStudio_XIAO_Gadgets/trmnl_7inch5_diy_kit/ja_works_with_trmnl" data-has-hydrated=false><meta charset=UTF-8><meta name=generator content="Docusaurus v3.8.1"><title data-rh=true>TRMNLとの連携 | Seeed Studio Wiki</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"><meta data-rh=true name=twitter:card content=summary_large_image><meta data-rh=true property=og:url content=https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_trmnl/><meta data-rh=true property=og:locale content=en_US><meta data-rh=true name=docusaurus_locale content=en><meta data-rh=true name=docsearch:language content=en><meta data-rh=true name=docusaurus_version content=current><meta data-rh=true name=docusaurus_tag content=docs-default-current><meta data-rh=true name=docsearch:version content=current><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current><meta data-rh=true property=og:title content="TRMNLとの連携 | Seeed Studio Wiki"><meta data-rh=true name=description content="この記事では、TRMNL 7.5inch(OG) DIY KitをTRMNLと連携させる方法について説明します。"><meta data-rh=true property=og:description content="この記事では、TRMNL 7.5inch(OG) DIY KitをTRMNLと連携させる方法について説明します。"><meta data-rh=true name=keywords content="ePaper display,TRMNL"><meta data-rh=true property=og:image content=https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/trmnl_head.webp><meta data-rh=true name=twitter:image content=https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/trmnl_head.webp><link data-rh=true rel=icon href=/img/S.png><link data-rh=true rel=canonical href=https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_trmnl/><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_trmnl/ hreflang=en-US><link data-rh=true rel=alternate href=https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_trmnl/ hreflang=x-default><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://wiki.seeedstudio.com/ja/trmnl_7inch5_diy_kit_main_page","name":"TRMNL 7.5インチ(OG) DIYキット","position":1},{"@type":"ListItem","item":"https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_trmnl","name":"TRMNLとの連携","position":2}]}</script><link rel=alternate type=application/rss+xml href=/blog/rss.xml title="Seeed Studio Wiki RSS Feed"><link rel=alternate type=application/atom+xml href=/blog/atom.xml title="Seeed Studio Wiki Atom Feed"><link rel=preconnect href=https://www.googletagmanager.com><script>window.dataLayer=window.dataLayer||[],function(e,t,a,n,r){e[n]=e[n]||[],e[n].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var d=t.getElementsByTagName(a)[0],g=t.createElement(a);g.async=!0,g.src="https://www.googletagmanager.com/gtm.js?id="+r+("dataLayer"!=n?"&l="+n:""),d.parentNode.insertBefore(g,d)}(window,document,"script","dataLayer","GTM-M4JG2HVB")</script><link rel=search type=application/opensearchdescription+xml title="Seeed Studio Wiki" href=/opensearch.xml><script src=https://viewer.altium.com/client/static/js/embed.js async></script><script src=/js/custom.js async></script><script src=/js/language-switcher.js async></script><link rel=stylesheet href=/assets/css/styles.e5b41788.css><script src=/assets/js/runtime~main.56071eb6.js defer></script><script src=/assets/js/main.80695d8f.js defer></script><body class=navigation-with-keyboard><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4JG2HVB" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript>
 
 
 <svg xmlns=http://www.w3.org/2000/svg style="display: none;"><defs>
@@ -9,37 +9,65 @@
 <br>
 <div class=get_one_now_container style=text-align:center><a class=get_one_now_item href=https://www.seeedstudio.com/TRMNL-7-5-Inch-OG-DIY-Kit-p-6481.html target=_blank><strong><span><font color=FFFFFF size=4> 今すぐ購入 🖱️</font></span></strong></a></div>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id=trmnlとは><a href=https://trmnl.app/ target=_blank rel="noopener noreferrer">TRMNL</a>とは？<a href=#trmnlとは class=hash-link aria-label="Direct link to trmnlとは" title="Direct link to trmnlとは">​</a></h2>
-<p>TRMNLは、ますます注意散漫になるデジタル世界において、人々が集中力を保ち、落ち着いた状態を維持できるよう支援するために設計された革新的なプラットフォームです。2023年に設立されたTRMNLは、E Ink®ダッシュボード管理の主要ソリューションとして急速に成長し、従来のスクリーンの絶え間ない通知や注意散漫要素なしに情報を表示するユニークなアプローチを提供しています。</p>
-<p>TRMNLの核心は、テクノロジーは絶え間ない注意を要求することなく私たちの生活を向上させるべきだという哲学に基づいて構築されています。このプラットフォームは、E Ink®ディスプレイを通じて重要な情報を一目で確認できるエレガントな方法を提供し、より思慮深く、侵入的でないテクノロジー体験を創造します。</p>
+<p>TRMNLは、ますます注意散漫になるデジタル世界において、人々が集中力を保ち、落ち着いた状態を維持できるよう支援するために設計された革新的なプラットフォームです。2023年に設立されたTRMNLは、E Ink®ダッシュボード管理の主要なソリューションとして急速に成長し、従来のスクリーンの絶え間ない通知や気を散らす要素なしに情報を表示するユニークなアプローチを提供しています。</p>
+<p>TRMNLの核心は、テクノロジーは絶え間ない注意を要求することなく私たちの生活を向上させるべきだという哲学に基づいています。このプラットフォームは、E Ink®ディスプレイを通じて重要な情報を一目で確認できるエレガントな方法を提供し、より思慮深く、侵入的でないテクノロジー体験を創造します。</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id=なぜtrmnlを使用するのか>なぜTRMNLを使用するのか？<a href=#なぜtrmnlを使用するのか class=hash-link aria-label="Direct link to なぜTRMNLを使用するのか？" title="Direct link to なぜTRMNLを使用するのか？">​</a></h3>
 <p>TRMNLの統合により、いくつかの魅力的な利点がもたらされます：</p>
 <ul>
 <li><strong>簡素化されたダッシュボード作成</strong>: TRMNLの成長するアプリとインテグレーションライブラリにより、複雑なプログラミングなしでカスタム情報ディスプレイを簡単に作成できます</li>
 <li><strong>低消費電力</strong>: TRMNLの効率的なソフトウェアと当社のE Ink®ディスプレイの最小限の電力要件の組み合わせにより、極めてエネルギー効率の高いソリューションを実現します</li>
-<li><strong>注意散漫のない情報表示</strong>: 従来のスクリーンに関連する絶え間ない通知や眼精疲労なしに、必要な情報を取得できます</li>
+<li><strong>気を散らさない情報表示</strong>: 従来のスクリーンに関連する絶え間ない通知や眼精疲労なしに、必要な情報を取得できます</li>
 <li><strong>定期的なアップデート</strong>: TRMNLの活発な開発により、新機能とインテグレーションが毎週追加され、ディスプレイの可能性を継続的に拡張します</li>
 <li><strong>開発者フレンドリー</strong>: TRMNLのオープンAPIと開発者ツールにより、特定のニーズに合わせたカスタムプラグインとインテグレーションを作成できます</li>
 </ul>
 <p>TRMNLの強力なプラットフォームと当社の高品質E Ink®ディスプレイを組み合わせることで、ユーザーの注意と時間の両方を尊重する、パーソナライズされた低消費電力情報ダッシュボードを作成するためのエレガントなソリューションを提供しています。</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id=trmnlの開始方法>TRMNLの開始方法<a href=#trmnlの開始方法 class=hash-link aria-label="Direct link to TRMNLの開始方法" title="Direct link to TRMNLの開始方法">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id=trmnlアカウントのセットアップとtrmnlアクセス>TRMNLアカウントのセットアップとTRMNLアクセス<a href=#trmnlアカウントのセットアップとtrmnlアクセス class=hash-link aria-label="Direct link to TRMNLアカウントのセットアップとTRMNLアクセス" title="Direct link to TRMNLアカウントのセットアップとTRMNLアクセス">​</a></h3>
-<p>キットをTRMNLに接続する前に、以下の手順が必要です：</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id=機器の設置>機器の設置<a href=#機器の設置 class=hash-link aria-label="Direct link to 機器の設置" title="Direct link to 機器の設置">​</a></h3>
+<p><strong>ステップ1. ディスプレイをドライバーボードに接続</strong><br>
+<!-- -->FPCケーブルをXIAO ePaper Display Boardのコネクタに合わせ、ラッチを固定して確実な接続を確保します。</p>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 12 16"><path fill-rule=evenodd d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"/></svg></span>tip</div><div class=admonitionContent_BuS1><p>FPCケーブルの金属面は上向きにする必要があります。そうでないと、コンテンツが表示されません。<p>以下の設置チュートリアルに従ってください。多くの人が間違えます。</div></div>
+<div style=text-align:center><img src=https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/2.jpg style=width:600px;height:auto></div>
+<p><strong>ステップ2. バッテリーの取り付け</strong><br>
+<!-- -->バッテリーケーブルをドライバーボードのJSTコネクタに接続し、正しい極性（赤線を+、黒線を-）を確認します。</p>
+<div style=text-align:center><img src=https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/3.jpg style=width:600px;height:auto></div>
+<p><strong>ステップ3. エンクロージャーの組み立て（オプション）</strong></p>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 12 16"><path fill-rule=evenodd d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"/></svg></span>tip</div><div class=admonitionContent_BuS1><p>スクリーンのフレキシブルケーブルは非常に壊れやすいことにご注意ください。操作時は注意してください。損傷すると、スクリーン全体が動作しなくなります。</div></div>
+<p><a href=#resources>Resource part</a>からオープンソースのエンクロージャー部品を印刷し、内部にコンポーネントを組み立てます。</p>
+<div style=text-align:center><img src=https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/4.jpeg style=width:600px;height:auto></div>
+<p>まず、ドライバーボードとバッテリーを組み立てます。</p>
+<div class=table-center><iframe width=600 height=340 src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/base.mp4?
+autoplay=0" scrolling=no border=0 frameborder=no framespacing=0 allowfullscreen></iframe></div>
+<p>TRMNLキットが正常に動作するかテストします。</p>
+<div class=table-center><iframe width=600 height=340 src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/test.mp4?
+autoplay=0" scrolling=no border=0 frameborder=no framespacing=0 allowfullscreen></iframe></div>
+<p>スクリーンをケースに差し込み、FPCを外に出します。</p>
+<div class=table-center><iframe width=600 height=340 src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/cable.mp4?
+autoplay=0" scrolling=no border=0 frameborder=no framespacing=0 allowfullscreen></iframe></div>
+<p>FPC延長ケーブルを接続し、ケース全体を組み立てます。</p>
+<div class=table-center><iframe width=600 height=340 src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/assembly.mp4?
+autoplay=0" scrolling=no border=0 frameborder=no framespacing=0 allowfullscreen></iframe></div>
+<p>L字型エンクロージャーも非常に似ています。</p>
+<div class=table-center><iframe width=300 height=500 src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/Lshape.mp4?
+autoplay=0" scrolling=no border=0 frameborder=no framespacing=0 allowfullscreen></iframe></div>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 12 16"><path fill-rule=evenodd d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"/></svg></span>tip</div><div class=admonitionContent_BuS1><p>TRMNLキットがルーターから遠い場合は、アンテナをケースの外に移動できます。より良いパフォーマンスが得られます。</div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id=trmnlアカウントの設定とtrmnlアクセス>TRMNLアカウントの設定とTRMNLアクセス<a href=#trmnlアカウントの設定とtrmnlアクセス class=hash-link aria-label="Direct link to TRMNLアカウントの設定とTRMNLアクセス" title="Direct link to TRMNLアカウントの設定とTRMNLアクセス">​</a></h3>
+<p>キットをTRMNLに接続する前に、以下を行う必要があります：</p>
 <ol>
 <li>
 <p><strong>TRMNLアクセスの購入</strong></p>
 <ul>
-<li>TRMNLウェブアプリ + デバイス機能へのアクセスを購入してください：<a href=https://shop.usetrmnl.com/products/byod target=_blank rel="noopener noreferrer">https://shop.usetrmnl.com/products/byod</a></li>
+<li>TRMNLウェブアプリ + デバイス機能へのアクセスを購入：<a href=https://shop.usetrmnl.com/products/byod target=_blank rel="noopener noreferrer">https://shop.usetrmnl.com/products/byod</a></li>
 <li>これにより、TRMNLのプラットフォームを使用するために必要な認証情報が提供されます</li>
-<li><a href=https://usetrmnl.com/claim-a-device target=_blank rel="noopener noreferrer">https://usetrmnl.com/claim-a-device</a>にアクセスして仮想デバイスをアクティベートしてください（購入後最大10分かかる場合があります）</li>
+<li><a href=https://usetrmnl.com/claim-a-device target=_blank rel="noopener noreferrer">https://usetrmnl.com/claim-a-device</a>にアクセスして仮想デバイスをアクティベートします（購入後最大10分かかる場合があります）</li>
 </ul>
 <div style=text-align:center><img src=https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/211.png style=width:700px;height:auto></div>
 </li>
 <li>
 <p><strong>TRMNLアカウントの作成</strong></p>
 <ul>
-<li><a href=https://usetrmnl.com target=_blank rel="noopener noreferrer">TRMNLのウェブサイト</a>にアクセスしてください</li>
-<li>"Sign Up"をクリックして新しいアカウントを作成してください</li>
-<li>登録プロセスに従ってください</li>
+<li><a href=https://usetrmnl.com target=_blank rel="noopener noreferrer">TRMNLのウェブサイト</a>にアクセス</li>
+<li>"Sign Up"をクリックして新しいアカウントを作成</li>
+<li>登録プロセスに従います</li>
 </ul>
 <div style=text-align:center><img src=https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/210.png style=width:900px;height:auto></div>
 </li>
@@ -47,35 +75,35 @@
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></span>note</div><div class=admonitionContent_BuS1><p>TRMNLの認証情報は機密情報です。公開したり、バージョン管理システムにコミットしたりしないでください。</div></div>
 <p>材料を準備し、TRMNLアクセスを購入したら、デバイスをTRMNLのプラットフォームに接続する手順に進むことができます。問題が発生したり質問がある場合は、<a href=mailto:team@usetrmnl.com target=_blank rel="noopener noreferrer">team@usetrmnl.com</a>でTRMNLチームに直接連絡できます。</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id=ファームウェアの書き込み>ファームウェアの書き込み<a href=#ファームウェアの書き込み class=hash-link aria-label="Direct link to ファームウェアの書き込み" title="Direct link to ファームウェアの書き込み">​</a></h3>
-<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 12 16"><path fill-rule=evenodd d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"/></svg></span>tip</div><div class=admonitionContent_BuS1><p>新品のキットを入手した場合、内部にファームウェアが入っています。そのため、この手順をスキップできます。</div></div>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 12 16"><path fill-rule=evenodd d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"/></svg></span>tip</div><div class=admonitionContent_BuS1><p>新品のキットを入手した場合、内部にファームウェアが入っています。そのため、このステップをスキップできます。</div></div>
 <p>TRMNL 7.5inch(OG) DIYキットをTRMNLと連携させるには、デバイスに適切なファームウェアを書き込む必要があります。推奨される方法は3つあります：</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id=方法1-trmnl-web-flasherによる書き込み最も簡単>方法1: TRMNL Web Flasherによる書き込み（最も簡単）<a href=#方法1-trmnl-web-flasherによる書き込み最も簡単 class=hash-link aria-label="Direct link to 方法1: TRMNL Web Flasherによる書き込み（最も簡単）" title="Direct link to 方法1: TRMNL Web Flasherによる書き込み（最も簡単）">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id=方法1-trmnl-web-flasherで書き込み最も簡単>方法1: TRMNL Web Flasherで書き込み（最も簡単）<a href=#方法1-trmnl-web-flasherで書き込み最も簡単 class=hash-link aria-label="Direct link to 方法1: TRMNL Web Flasherで書き込み（最も簡単）" title="Direct link to 方法1: TRMNL Web Flasherで書き込み（最も簡単）">​</a></h4>
 <div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 12 16"><path fill-rule=evenodd d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"/></svg></span>tip</div><div class=admonitionContent_BuS1><p>Seeed互換性のため、<strong>FW 1.5.12</strong>以降のファームウェアを使用してください。</div></div>
 <ol>
 <li>
 <p><strong>TRMNL Web Flasherにアクセス</strong></p>
 <ul>
-<li><a href=https://usetrmnl.com/flash target=_blank rel="noopener noreferrer">https://usetrmnl.com/flash</a>にアクセスしてください</li>
+<li><a href=https://usetrmnl.com/flash target=_blank rel="noopener noreferrer">https://usetrmnl.com/flash</a>にアクセス</li>
 <li>このツールを使用すると、ブラウザから直接デバイスに書き込みができます。</li>
-<li>画面の指示に従って書き込みプロセスを完了してください。</li>
+<li>画面の指示に従って書き込みプロセスを完了します。</li>
 </ul>
 </li>
 </ol>
 <div style=text-align:center><img src=https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/224.png style=width:700px;height:auto></div>
 <hr>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id=方法2-ソースからのビルドと書き込み上級ユーザー開発者向け>方法2: ソースからのビルドと書き込み（上級ユーザー/開発者向け）<a href=#方法2-ソースからのビルドと書き込み上級ユーザー開発者向け class=hash-link aria-label="Direct link to 方法2: ソースからのビルドと書き込み（上級ユーザー/開発者向け��）" title="Direct link to 方法2: ソースからのビルドと書き込み（上級ユーザー/開発者向け）">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id=方法2-ソースからビルドして書き込み上級ユーザー開発者向け>方法2: ソースからビルドして書き込み（上級ユーザー/開発者向け）<a href=#方法2-ソースからビルドして書き込み上級ユーザー開発者向け class=hash-link aria-label="Direct link to 方法2: ソースからビルドして書き込み（上級ユーザー/開発者向け）" title="Direct link to 方法2: ソースからビルドして書き込み（上級ユーザー/開発者向け）">​</a></h4>
 <ol>
 <li><strong>ファームウェアリポジトリのクローン</strong></li>
 </ol>
 <ul>
 <li>
-<p><a href=https://github.com/usetrmnl/trmnl-firmware target=_blank rel="noopener noreferrer">公式ファームウェアリポジトリ</a>にアクセスしてクローンしてください：</p>
+<p><a href=https://github.com/usetrmnl/trmnl-firmware target=_blank rel="noopener noreferrer">公式ファームウェアリポジトリ</a>にアクセスしてクローンします：</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-text codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">git clone https://github.com/usetrmnl/trmnl-firmware.git</span><br></span></code></pre></div></div>
 </li>
 </ul>
 <div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 12 16"><path fill-rule=evenodd d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"/></svg></span>tip</div><div class=admonitionContent_BuS1><p>コードを更新してTRMNLにPRを提出し、表示される前にレビューが必要な場合があります。最新のファームウェアバージョンを最初に使用したい場合は、Seeed ProjectのTRMNLリポジトリも使用できます。<ul>
 <li>
-<p><a href=https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project target=_blank rel="noopener noreferrer">Seedリポジトリ</a>にアクセスしてクローンしてください：</p>
+<p><a href=https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project target=_blank rel="noopener noreferrer">Seedリポジトリ</a>にアクセスしてクローンします：</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-text codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">git clone https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project.git</span><br></span></code></pre></div></div>
 </li>
 </ul></div></div>
@@ -83,19 +111,19 @@
 <li>
 <p><strong>PlatformIOのインストール</strong></p>
 <ul>
-<li><a href=https://platformio.org/ target=_blank rel="noopener noreferrer">PlatformIO</a>をVSCode拡張機能として、またはコマンドライン経由でインストールしてください。</li>
+<li><a href=https://platformio.org/ target=_blank rel="noopener noreferrer">PlatformIO</a>をVSCode拡張機能として、またはコマンドライン経由でインストールします。</li>
 </ul>
 </li>
 <li>
 <p><strong>プロジェクトを開く</strong></p>
 <ul>
-<li>クローンした<code>firmware</code>フォルダをVSCodeで開いてください。</li>
+<li>クローンした<code>firmware</code>フォルダをVSCodeで開きます。</li>
 </ul>
 </li>
 <li>
 <p><strong>正しい環境を選択</strong></p>
 <ul>
-<li><code>platformio.ini</code>で、<code>TRMNL_7inch5_OG_DIY_Kit</code>環境を選択してください。</li>
+<li><code>platformio.ini</code>で、<code>TRMNL_7inch5_OG_DIY_Kit</code>環境を選択します。</li>
 </ul>
 </li>
 </ol>
@@ -104,14 +132,14 @@
 <li>
 <p><strong>デバイスの接続</strong></p>
 <ul>
-<li>TRMNL 7.5inch(OG) DIYキットを接続してください。</li>
+<li>TRMNL 7.5inch(OG) DIYキットを接続します。</li>
 </ul>
 </li>
 <li>
 <p><strong>ビルドとアップロード</strong></p>
 <ul>
 <li>
-<p>PlatformIOで"Upload"ボタンをクリックするか、以下を実行してください：</p>
+<p>PlatformIOで"Upload"ボタンをクリックするか、以下を実行します：</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#F8F8F2;--prism-background-color:#282A36><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-text codeBlock_bY9V thin-scrollbar" style=color:#F8F8F2;background-color:#282A36><code class=codeBlockLines_e6Vv><span class=token-line style=color:#F8F8F2><span class="token plain">pio run --target upload</span><br></span></code></pre></div></div>
 </li>
 </ul>
@@ -126,73 +154,73 @@
 <blockquote>
 <p>💡 <strong>Wi-Fiのトラブルシューティング？</strong> デバイスをWi-Fiに接続する際に問題が発生した場合は、一般的なネットワークとルーター互換性の問題の解決策について<a href=https://help.usetrmnl.com/en/articles/10193157-device-wifi-troubleshooting target=_blank rel="noopener noreferrer">TRMNL Device Wi-Fi Troubleshooting Guide</a>を参照してください。</p>
 </blockquote>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id=電源投入とプロビジョニングモードへの移行>電源投入とプロビジョニングモードへの移行<a href=#電源投入とプロビジョニングモードへの移行 class=hash-link aria-label="Direct link to 電源投入とプロビジョニングモードへの移行" title="Direct link to 電源投入とプロビジョニングモードへの移行">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id=電源投入とプロビジョニングモードの開始>電源投入とプロビジョニングモードの開始<a href=#電源投入とプロビジョニングモードの開始 class=hash-link aria-label="Direct link to 電源投入とプロビジョニングモードの開始" title="Direct link to 電源投入とプロビジョニングモードの開始">​</a></h3>
 <ul>
-<li>TRMNLファームウェアを書き込んでデバイスの電源を入れた後、Wi-Fiにまだ接続されていない場合は自動的にプロビジョニングモードに入ります。</li>
+<li>TRMNLファームウェアを書き込んでデバイスの電源を入れた後、まだWi-Fiに接続されていない場合は自動的にプロビジョニングモードに入ります。</li>
 </ul>
 <div style=text-align:center><img src=https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/216.jpg style=width:700px;height:auto></div>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id=trmnl-wi-fiへの接続>TRMNL Wi-Fiへの接続<a href=#trmnl-wi-fiへの接続 class=hash-link aria-label="Direct link to TRMNL Wi-Fiへの接続" title="Direct link to TRMNL Wi-Fiへの接続">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id=trmnl-wi-fi-に接続する>TRMNL Wi-Fi に接続する<a href=#trmnl-wi-fi-に接続する class=hash-link aria-label="Direct link to TRMNL Wi-Fi に接続する" title="Direct link to TRMNL Wi-Fi に接続する">​</a></h3>
 <ul>
-<li><strong>スマートフォン</strong>または<strong>コンピューター</strong>で、利用可能なWi-Fiネットワークのリストを開いてください。</li>
-<li><strong>TRMNL</strong>という名前のネットワークを探して接続してください。（デフォルトではパスワードは不要です。）</li>
+<li><strong>スマートフォン</strong>または<strong>コンピューター</strong>で、利用可能な Wi-Fi ネットワークのリストを開きます。</li>
+<li><strong>TRMNL</strong> という名前のネットワークを探して接続します。（デフォルトではパスワードは不要です。）</li>
 </ul>
 <div style=text-align:center><img src=https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/217.png style=width:400px;height:auto></div>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id=キャプティブポータルを開く>キャプティブポータルを開く<a href=#キャプティブポータルを開く class=hash-link aria-label="Direct link to キャプティブポータルを開く" title="Direct link to キャプティブポータルを開く">​</a></h3>
 <ul>
-<li>接続したら、ウェブブラウザ（ChromeやEdgeなど）を開いてください。</li>
-<li>デバイスは自動的にTRMNL設定ページにリダイレクトするはずです。リダイレクトされない場合は、ブラウザで手動で<a href=http://4.3.2.1 target=_blank rel="noopener noreferrer">http://4.3.2.1</a>にアクセスしてください。</li>
+<li>接続したら、ウェブブラウザ（Chrome や Edge など）を開きます。</li>
+<li>デバイスは自動的に TRMNL 設定ページにリダイレクトするはずです。リダイレクトされない場合は、ブラウザで手動で <a href=http://4.3.2.1 target=_blank rel="noopener noreferrer">http://4.3.2.1</a> にアクセスしてください。</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id=wi-fi認証情報の入力>Wi-Fi認証情報の入力<a href=#wi-fi認証情報の入力 class=hash-link aria-label="Direct link to Wi-Fi認証情報の入力" title="Direct link to Wi-Fi認証情報の入力">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id=wi-fi-認証情報を入力する>Wi-Fi 認証情報を入力する<a href=#wi-fi-認証情報を入力する class=hash-link aria-label="Direct link to Wi-Fi 認証情報を入力する" title="Direct link to Wi-Fi 認証情報を入力する">​</a></h3>
 <ul>
-<li>設定ページで、利用可能なWi-Fiネットワークのリストが表示されます。</li>
-<li><strong>2.4GHz Wi-Fiネットワークを選択してください</strong>（TRMNLは5GHzネットワークをサポートしていません）。</li>
-<li>Wi-Fiパスワードを入力してください。</li>
-<li><strong>Save</strong>または<strong>Connect</strong>をクリックしてください。</li>
+<li>設定ページで、利用可能な Wi-Fi ネットワークのリストが表示されます。</li>
+<li><strong>2.4GHz Wi-Fi ネットワークを選択してください</strong>（TRMNL は 5GHz ネットワークをサポートしていません）。</li>
+<li>Wi-Fi パスワードを入力します。</li>
+<li><strong>Save</strong> または <strong>Connect</strong> をクリックします。</li>
 </ul>
 <blockquote>
-<p>⚠️ <strong>重要：</strong> 2.4GHz Wi-Fiネットワークを使用してください。5GHzネットワークはESP32-C3チップでサポートされていません。</p>
+<p>⚠️ <strong>重要：</strong> 2.4GHz Wi-Fi ネットワークを使用してください。5GHz ネットワークは ESP32-C3 チップでサポートされていません。</p>
 </blockquote>
 <div style=text-align:center><img src=https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/218.png style=width:800px;height:auto></div>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id=デバイスのネットワークへの接続>デバイスのネットワークへの接続<a href=#デバイスのネットワークへの接続 class=hash-link aria-label="Direct link to デバイスのネットワークへの接続" title="Direct link to デバイスのネットワークへの接続">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id=デバイスがネットワークに接続する>デバイスがネットワークに接続する<a href=#デバイスがネットワークに接続する class=hash-link aria-label="Direct link to デバイスがネットワークに接続する" title="Direct link to デバイスがネットワークに接続する">​</a></h3>
 <ul>
-<li>デバイスはWi-Fiへの接続を試行します。</li>
-<li>成功すると、TRMNL Wi-Fiから切断され、ホームネットワークに参加します。</li>
-<li>ウィンドウとe-inkスクリーンにデバイスのMACアドレスが表示されます。<strong>MACアドレスを記録してください</strong>。後の手順で必要になります。</li>
+<li>デバイスは Wi-Fi への接続を試行します。</li>
+<li>成功すると、TRMNL Wi-Fi から切断され、ホームネットワークに参加します。</li>
+<li>ウィンドウと e-ink スクリーンにデバイスの MAC アドレスが表示されます。<strong>MAC アドレスを記録してください</strong>。後のステップで必要になります。</li>
 </ul>
 <div style=text-align:center><img src=https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/219.png style=width:800px;height:auto></div>
 <blockquote>
-<p>⚠️ <strong>注意：</strong> MACアドレスはキャプティブポータルで1-2秒間のみ表示されます。見逃した場合は、以下の方法でも取得できます：</p>
+<p>⚠️ <strong>注意：</strong> MAC アドレスはキャプティブポータルで 1-2 秒間のみ表示されます。見逃した場合は、以下の方法でも確認できます：</p>
 <ul>
-<li>VS Code > PlatformIOのビルド/アップロードログから取得する。</li>
-<li><a href=https://usetrmnl.com/flash target=_blank rel="noopener noreferrer">usetrmnl.com/flash</a>方法を使用し、書き込み中にChrome/Edge/Firefoxの開発者コンソールでMACアドレスを確認する。</li>
-<li>ルーターまたはメッシュネットワークアプリの接続デバイスリストで見つける。</li>
+<li>VS Code > PlatformIO のビルド/アップロードログから取得する。</li>
+<li><a href=https://usetrmnl.com/flash target=_blank rel="noopener noreferrer">usetrmnl.com/flash</a> 方法を使用し、フラッシュ中に Chrome/Edge/Firefox の開発者コンソールで MAC アドレスを確認する。</li>
+<li>ルーターまたは Mesh ネットワークアプリの接続デバイスリストで見つける。</li>
 </ul>
 <p>詳細とスクリーンショットについては、公式ガイドを参照してください：<a href=https://help.usetrmnl.com/en/articles/10614205-finding-your-trmnl-mac-address target=_blank rel="noopener noreferrer">Finding your TRMNL MAC address</a></p>
 </blockquote>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id=trmnlウェブインターフェースへのアクセス>TRMNLウェブインターフェースへのアクセス<a href=#trmnlウェブインターフェースへのアクセス class=hash-link aria-label="Direct link to TRMNLウェブインターフェースへのアクセス" title="Direct link to TRMNLウェブインターフェースへのアクセス">​</a></h3>
-<p>TRMNL 7.5inch(OG) DIYキットがWi-Fiに接続され、MACアドレス（デバイスID）を記録した後、TRMNLアカウントに追加できます：</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id=trmnl-ウェブインターフェースにアクセスする>TRMNL ウェブインターフェースにアクセスする<a href=#trmnl-ウェブインターフェースにアクセスする class=hash-link aria-label="Direct link to TRMNL ウェブインターフェースにアクセスする" title="Direct link to TRMNL ウェブインターフェースにアクセスする">​</a></h3>
+<p>TRMNL 7.5inch(OG) DIY キットが Wi-Fi に接続され、MAC アドレス（Device ID）を記録したら、TRMNL アカウントに追加できます：</p>
 <ol>
 <li>
-<p><strong>TRMNLウェブインターフェースを開く</strong></p>
+<p><strong>TRMNL ウェブインターフェースを開く</strong></p>
 <ul>
-<li>コンピューターまたはモバイルデバイスでブラウザを開き、<a href=https://trmnl.app target=_blank rel="noopener noreferrer">TRMNLウェブインターフェース</a>にアクセスしてください。</li>
+<li>コンピューターまたはモバイルデバイスでブラウザを開き、<a href=https://trmnl.app target=_blank rel="noopener noreferrer">TRMNL ウェブインターフェース</a>にアクセスします。</li>
 </ul>
 </li>
 <li>
-<p><strong>Devicesページに移動</strong></p>
+<p><strong>Devices ページに移動する</strong></p>
 <ul>
-<li>TRMNLインターフェースで、<strong>Devices</strong>セクションに移動してください。</li>
+<li>TRMNL インターフェースで、<strong>Devices</strong> セクションに移動します。</li>
 </ul>
 </li>
 <li>
-<p><strong>新しいデバイスを追加</strong></p>
+<p><strong>新しいデバイスを追加する</strong></p>
 <ul>
-<li><strong>Add new device</strong>ボタンをクリックしてください。通常、Devicesページの右上角または中央にあります。</li>
+<li><strong>Add new device</strong> ボタンをクリックします。通常、Devices ページの右上角または中央にあります。</li>
 </ul>
 <div style=text-align:center><img src=https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/220.png style=width:800px;height:auto></div>
 </li>
 <li>
-<p><strong>Device ID を入力</strong></p>
+<p><strong>Device ID を入力する</strong></p>
 <ul>
 <li>ポップアップウィンドウで、TRMNL アクセスを購入した際に受け取った Device ID を入力します（これは MAC アドレスではありません）。購入確認メールまたは TRMNL ダッシュボードの Device ID を使用してください。</li>
 <li><strong>Add new device</strong> をクリックしてプロセスを完了します。</li>
@@ -200,15 +228,15 @@
 <div style=text-align:center><img src=https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/212.png style=width:700px;height:auto></div>
 </li>
 <li>
-<p><strong>XIAO 7.5" デバイス MAC アドレスの登録</strong></p>
-<p>XIAO ePaper パネルと TRMNL の間の接続を構築するために、TRMNL 設定ページ内で正しいデバイス MAC アドレスをバインドする必要があります。</p>
+<p><strong>XIAO 7.5" デバイス MAC アドレスを登録する</strong></p>
+<p>XIAO epaper パネルと TRMNL の間の接続を構築するために、TRMNL 設定ページ内で正しいデバイス MAC アドレスをバインドする必要があります。</p>
 <div style=text-align:center><img src=https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/223.png style=width:900px;height:auto></div>
 <ul>
 <li>
-<p>MAC アドレスは PlatformIO アップロードプロセス中（アップロードログを確認）、またはプロビジョニングポータルから取得できます（Wi-Fi セットアップ後に表示されます）。</p>
+<p>PlatformIO アップロードプロセス中に MAC アドレスを取得できます（アップロードログを確認）、またはプロビジョニングポータルから取得できます（Wi-Fi セットアップ後に表示されます）。</p>
 </li>
 <li>
-<p>MAC アドレスを早期に追加することで、スムーズなオンボーディングプロセスとデバイス管理を確保できます。</p>
+<p>MAC アドレスを早期に追加することで、スムーズなオンボーディングプロセスとデバイス管理が確保されます。</p>
 </li>
 <li>
 <p>その後、ePaper パネルにカスタム名を設定し、必要に応じて他の設定を調整できます。</p>
@@ -217,43 +245,43 @@
 <div style=text-align:center><img src=https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/213.png style=width:700px;height:auto></div>
 </li>
 </ol>
-<p>これで TRMNL 7.5inch(OG) DIY キットが TRMNL アカウントにリンクされました！TRMNL インターフェースから直接プレイリスト、画像、その他のコンテンツをディスプレイに送信できるようになりました。</p>
+<p>TRMNL 7.5inch(OG) DIY キットが TRMNL アカウントにリンクされました！TRMNL インターフェースから直接、プレイリスト、画像、その他のコンテンツをディスプレイに送信できるようになりました。</p>
 <blockquote>
-<p>💡 <strong>ヒント:</strong> 複数の ePaper パネルをお持ちの場合は、それぞれの固有の Device ID を使用して上記の手順を繰り返してください。</p>
+<p>💡 <strong>ヒント：</strong> 複数の ePaper パネルがある場合は、それぞれの固有の Device ID を使用して上記の手順を繰り返してください。</p>
 </blockquote>
 <div class="theme-admonition theme-admonition-caution admonition_xJq3 alert alert--warning"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 16 16"><path fill-rule=evenodd d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></span>caution</div><div class=admonitionContent_BuS1><p>TRMNL ウェブインターフェースでデバイスを追加した後、デバイスの設定ページに移動し、<strong>Firmware Early Release</strong> と <strong>OTA Updates Enabled</strong> の両方を<strong>オフ</strong>にしてください。<p>これらのオプションが有効のままになっていると、デバイスがインターネットに接続された際に TRMNL からファームウェアアップデートを自動的にダウンロードしてインストールする可能性があります。これらのアップデートは公式 TRMNL ハードウェア用であり、<strong>TRMNL 7.5inch(OG) DIY キットとは互換性がありません</strong>。互換性のないファームウェアをインストールすると、デバイスが誤動作したり応答しなくなったりする可能性があります。<p>XIAO ePaper パネルの安定した動作を確保するため、常に両方のオプションを無効にしておいてください。</div></div>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id=ボタンの使用方法>ボタンの使用方法<a href=#ボタンの使用方法 class=hash-link aria-label="Direct link to ボタンの使用方法" title="Direct link to ボタンの使用方法">​</a></h3>
 <p>この開発ボードには 4 つのボタンがあります。RESET、KEY1、KEY2、KEY3 で、<strong>TRMNL ファームウェアでは RESET と KEY1 ボタンのみを使用します。</strong></p>
-<p><strong>KEY1 の使用方法:</strong></p>
+<p><strong>KEY1 の使用方法：</strong></p>
 <ol>
-<li><strong>1 回クリック:</strong> ページを即座に更新します。</li>
-<li><strong>ダブルクリック:</strong> カスタム機能、設定ページで確認できます。</li>
-<li><strong>長押し:</strong> 約 5 秒間、ネットワークを再設定します。</li>
+<li><strong>1 回クリック：</strong> ページを即座に更新します。</li>
+<li><strong>ダブルクリック：</strong> カスタム機能、設定ページで確認できます。</li>
+<li><strong>長押し：</strong> 約 5 秒間、ネットワークを再設定します。</li>
 </ol>
-<p><strong>RESET の使用方法:</strong> 1 回クリックのみでデバイスをリセットします。</p>
+<p><strong>RESET の使用方法：</strong> 1 回クリックのみでデバイスをリセットします。</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id=trmnl-プレイリスト機能の理解>TRMNL プレイリスト機能の理解<a href=#trmnl-プレイリスト機能の理解 class=hash-link aria-label="Direct link to TRMNL プレイリスト機能の理解" title="Direct link to TRMNL プレイリスト機能の理解">​</a></h2>
 <div style=text-align:center><img src=https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/221.png style=width:1000px;height:auto></div>
-<p>TRMNL プレイリスト機能により、ePaper パネルに何を表示するか、いつ表示するかを正確に制御できます。上記のスクリーンショットに示されているように、主要なセクションとコントロールの内訳は以下の通りです：</p>
+<p>TRMNL プレイリスト機能により、ePaper パネルに何を表示するか、いつ表示するかを正確に制御できます。上のスクリーンショットに示されているように、主要なセクションとコントロールの内訳は以下の通りです：</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id=プレイリスト概要>プレイリスト概要<a href=#プレイリスト概要 class=hash-link aria-label="Direct link to プレイリスト概要" title="Direct link to プレイリスト概要">​</a></h3>
 <ul>
-<li><strong>プレイリストタイトル</strong>: 上部に TRMNL デバイスの名前が表示されます（例：「MengDu's TRMNL」）。</li>
-<li><strong>表示時間範囲</strong>: プレイリストがアクティブな時間範囲を設定できます（例：00:00 から 23:45 まで）。</li>
-<li><strong>更新間隔</strong>: ディスプレイの更新頻度を選択します（例：5 分ごと）。</li>
-<li><strong>Add a Group / Add a Plugin</strong>: これらのボタンを使用してプレイリストをグループに整理したり、新しいコンテンツプラグイン（天気、カレンダー、カスタムテキストなど）を追加したりします。</li>
+<li><strong>プレイリストタイトル</strong>：上部に TRMNL デバイスの名前が表示されます（例：「MengDu's TRMNL」）。</li>
+<li><strong>表示時間範囲</strong>：プレイリストがアクティブな時間範囲を設定できます（例：00:00 から 23:45 まで）。</li>
+<li><strong>更新間隔</strong>：ディスプレイの更新頻度を選択します（例：5 分ごと）。</li>
+<li><strong>Add a Group / Add a Plugin</strong>：これらのボタンを使用してプレイリストをグループに整理したり、新しいコンテンツプラグイン（天気、カレンダー、カスタムテキストなど）を追加したりします。</li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id=プレイリストアイテム>プレイリストアイテム<a href=#プレイリストアイテム class=hash-link aria-label="Direct link to プレイリストアイテム" title="Direct link to プレイリストアイテム">​</a></h3>
-<p>プレイリストの各行は、ePaper パネルに表示される画面またはウィジェットを表します（参考のみ）：</p>
+<p>プレイリストの各行は、ePaper パネルに表示されるスクリーンまたはウィジェットを表します（参考のみ）：</p>
 <ol>
 <li><strong>Weather</strong>
 <ul>
 <li>選択した場所の現在の天気情報を表示します。</li>
-<li>緑色の「Displayed now」ラベルは、この画面が現在デバイスに表示されていることを示します。</li>
+<li>緑色の「Displayed now」ラベルは、このスクリーンが現在デバイスに表示されていることを示します。</li>
 </ul>
 </li>
 <li><strong>Days Left This Year</strong>
 <ul>
 <li>現在の年の残り日数のカウントダウンを表示します（例：「2025」）。</li>
-<li>ラベル（例：「9 days ago」）は、この画面が最後に更新または表示された時期を示します。</li>
+<li>ラベル（例：「9 days ago」）は、このスクリーンが最後に更新または表示された時期を示します。</li>
 </ul>
 </li>
 <li><strong>Custom Text</strong>
@@ -265,17 +293,17 @@
 </ol>
 <p>各アイテムには、いくつかのコントロールがあります：</p>
 <ul>
-<li><strong>Settings（歯車アイコン）</strong>: プラグインのオプションを設定します。</li>
-<li><strong>Delete（X アイコン）</strong>: プレイリストからアイテムを削除します。</li>
-<li><strong>Preview（目のアイコン）</strong>: 画面がどのように見えるかをプレビューします。</li>
-<li><strong>Reorder（バーアイコン）</strong>: ドラッグして画面が表示される順序を変更します。</li>
+<li><strong>Settings（歯車アイコン）</strong>：プラグインのオプションを設定します。</li>
+<li><strong>Delete（X アイコン）</strong>：プレイリストからアイテムを削除します。</li>
+<li><strong>Preview（目のアイコン）</strong>：スクリーンがどのように見えるかをプレビューします。</li>
+<li><strong>Reorder（バーアイコン）</strong>：ドラッグしてスクリーンが表示される順序を変更します。</li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id=スマートプレイリスト>スマートプレイリスト<a href=#スマートプレイリスト class=hash-link aria-label="Direct link to スマートプレイリスト" title="Direct link to スマートプレイリスト">​</a></h3>
 <ul>
-<li><strong>スマートプレイリストオプション</strong>: 下部で、コンテンツが変更されていない画面を自動的にスキップするかどうかを選択できます（例：「Never skip screens」）。</li>
+<li><strong>スマートプレイリストオプション</strong>：下部で、コンテンツが変更されていないスクリーンを自動的にスキップするかどうかを選択できます（例：「Never skip screens」）。</li>
 </ul>
 <blockquote>
-<p>📖 詳しく知りたいですか？高度なヒントと詳細については、<a href=https://usetrmnl.com/blog/smart-playlists target=_blank rel="noopener noreferrer">Smart Playlists ブログ投稿</a>をお読みください。</p>
+<p>📖 詳しく知りたいですか？高度なヒントと詳細については、<a href=https://usetrmnl.com/blog/smart-playlists target=_blank rel="noopener noreferrer">Smart Playlists blog post</a> をお読みください。</p>
 </blockquote>
 <p>この柔軟なプレイリストシステムにより、ePaper パネルに表示する内容、更新頻度、表示順序を完全にカスタマイズできます。さまざまなプラグインを組み合わせて、ニーズに合ったパーソナライズされたダッシュボードを作成できます。</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id=trmnl-プラグインの探索>TRMNL プラグインの探索<a href=#trmnl-プラグインの探索 class=hash-link aria-label="Direct link to TRMNL プラグインの探索" title="Direct link to TRMNL プラグインの探索">​</a></h2>
@@ -286,41 +314,41 @@
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id=接続済みプラグイン>接続済みプラグイン<a href=#接続済みプラグイン class=hash-link aria-label="Direct link to 接続済みプラグイン" title="Direct link to 接続済みプラグイン">​</a></h3>
 <p>プラグインページの上部には、すでに TRMNL アカウントに接続されているすべてのプラグインが表示されます。これらはプレイリストに追加して ePaper パネルに表示する準備ができています。例：</p>
 <ul>
-<li><strong>Weather</strong>: 現在の天気状況を表示します。</li>
-<li><strong>Days Left This Year</strong>: 年末までのカウントダウン。</li>
-<li><strong>Stock Price</strong>: お気に入りの株式を追跡します。</li>
-<li><strong>RSS Feed</strong>: ニュースやブログの更新を表示します。</li>
-<li><strong>Reddit、Hacker News</strong>: トレンドの投稿を表示します。</li>
-<li><strong>Language Learning、Motivational Quote、Custom Text</strong>: 学習ツールやカスタムメッセージでディスプレイをパーソナライズします。</li>
+<li><strong>Weather</strong>：現在の天気状況を表示します。</li>
+<li><strong>Days Left This Year</strong>：年末までのカウントダウン。</li>
+<li><strong>Stock Price</strong>：お気に入りの株式を追跡します。</li>
+<li><strong>RSS Feed</strong>：ニュースやブログの更新を表示します。</li>
+<li><strong>Reddit、Hacker News</strong>：トレンドの投稿を表示します。</li>
+<li><strong>Language Learning、Motivational Quote、Custom Text</strong>：学習ツールやカスタムメッセージでディスプレイをパーソナライズします。</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id=プラグインマーケットプレイス>プラグインマーケットプレイス<a href=#プラグインマーケットプレイス class=hash-link aria-label="Direct link to プラグインマーケットプレイス" title="Direct link to プラグインマーケットプレイス">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id=プラグインマーケットプレイス>プラグインマーケットプレイス<a href=#プラグインマーケットプレイス class=hash-link aria-label="Direct link to プラグインマーケットプレイス" title="Direct link to ��プラグインマーケットプレイス">​</a></h3>
 <p>接続済みプラグインの下に、プラグインマーケットプレイスがあります。ここで、デバイスに追加する新しいプラグインを閲覧、検索、発見できます。プラグインはカテゴリとタグ（#productivity、#news、#ecommerce など）で整理されており、必要なものを簡単に見つけることができます。</p>
 <ul>
-<li><strong>閲覧と検索</strong>: 検索バーやタグを使用して、興味のあるプラグインを素早く見つけます。</li>
-<li><strong>プラグインの追加</strong>: 任意のプラグインをクリックしてアカウントに接続し、プレイリストで使用を開始します。</li>
+<li><strong>閲覧と検索</strong>：検索バーやタグを使用して、興味のあるプラグインを素早く見つけます。</li>
+<li><strong>プラグインの追加</strong>：任意のプラグインをクリックしてアカウントに接続し、プレイリストで使用を開始します。</li>
 </ul>
 <p>開発者は他の人が使用できる独自のプラグインを作成して公開することもでき、エコシステムは新しい可能性で継続的に拡張されています（<a href=https://docs.usetrmnl.com/go/plugin-marketplace/introduction target=_blank rel="noopener noreferrer">プラグイン作成について詳しく学ぶ</a>）。</p>
 <hr>
-<p>TRMNL の使用について質問がある場合や、より高度な機能を探索したい場合は、詳細について公式 TRMNL ドキュメントをお読みください：<a href=https://docs.usetrmnl.com/go target=_blank rel="noopener noreferrer">https://docs.usetrmnl.com/go</a></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id=トラブルシューティング>トラブルシューティング<a href=#トラブルシューティング class=hash-link aria-label="Direct link to トラブルシューティング" title="Direct link to トラ��ブルシューティング">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id=q1-ウェブまたは-platformio-を使用する際にファームウェアをフラッシュできない問題が発生しましたどうすればよいですか>Q1: ウェブまたは PlatformIO を使用する際に、ファームウェアをフラッシュできない問題が発生しました。どうすればよいですか？<a href=#q1-ウェブまたは-platformio-を使用する際にファームウェアをフラッシュできない問題が発生しましたどうすればよいですか class=hash-link aria-label="Direct link to Q1: ウェブまたは PlatformIO を使用する際に、ファームウェアをフラッシュできない問題が発生しました。どうすればよいですか？" title="Direct link to Q1: ウェブまたは PlatformIO を使用する際に、ファームウェアをフラッシュできない問題が発生しました。どうすればよいですか？">​</a></h3>
-<p>時々、間違ったプログラムを使用すると、XIAO がポートを失ったり、正しく機能しなくなったりすることがあります。一般的な問題には以下があります：</p>
+<p>TRMNLの使用について質問がある場合や、より高度な機能を探求したい場合は、公式TRMNLドキュメントをお読みください：<a href=https://docs.usetrmnl.com/go target=_blank rel="noopener noreferrer">https://docs.usetrmnl.com/go</a></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id=トラブルシューティング>トラブルシューティング<a href=#トラブルシューティング class=hash-link aria-label="Direct link to トラブルシューティング" title="Direct link to トラブルシューティング">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id=q1-webやplatformioを使用する際にファームウェアをフラッシュできない問題が発生しましたどうすればよいですか>Q1: WebやPlatformIOを使用する際に、ファームウェアをフラッシュできない問題が発生しました。どうすればよいですか？<a href=#q1-webやplatformioを使用する際にファームウェアをフラッシュできない問題が発生しましたどうすればよいですか class=hash-link aria-label="Direct link to Q1: WebやPlatformIOを使用する際に、ファームウェアをフラッシュできない問題が発生しました。どうすればよいですか？" title="Direct link to Q1: WebやPlatformIOを使用する際に、ファームウェアをフラッシュできない問題が発生しました。どうすればよいですか？">​</a></h3>
+<p>時々、間違ったプログラムを使用すると、XIAOがポートを失ったり、正常に機能しなくなったりすることがあります。一般的な問題には以下があります：</p>
 <ul>
 <li>XIAO がコンピュータに接続されているが、<em>ポート番号が見つからない</em>。</li>
 <li>XIAO が接続され、ポート番号が表示されるが、<em>プログラムのアップロードが失敗する</em>。</li>
 </ul>
-<p>上記の 2 つの状況に遭遇した場合、XIAO を BootLoader モードにすることを試すことができます。これにより、認識されないデバイスやアップロード失敗の問題の大部分を解決できます。具体的な方法は：</p>
+<p>上記の2つの状況に遭遇した場合、XIAOをBootLoaderモードにすることで、デバイスが認識されない問題やアップロード失敗の問題の大部分を解決できます。具体的な方法は以下の通りです：</p>
 <ul>
 <li><strong>ステップ 1</strong>. XIAO ESP32S3 の <code>BOOT</code> ボタンを離さずに押し続けます。</li>
 <li><strong>ステップ 2</strong>. <code>BOOT</code> ボタンを押したまま、データケーブルでコンピュータに接続します。コンピュータに接続した後、<code>BOOT</code> ボタンを離します。</li>
 <li><strong>ステップ 3</strong>. プログラムをアップロードするか、ファームウェアをフラッシュして XIAO ESP32S3 の動作を確認します。</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id=特別な感謝>特別な感謝<a href=#特別な感謝 class=hash-link aria-label="Direct link to 特別な感謝" title="Direct link to 特別な感謝">​</a></h2>
-<p>このプロジェクトに対する強力なサポートと貴重な支援をいただいた <strong>TRMNL チーム</strong>全体に特別な感謝を申し上げます。特に、開発とドキュメント作成プロセス全体を通じて献身的な支援をいただいた <strong>Bogdan</strong>、<strong>Ryan Kulp</strong>、<strong>Fr3d</strong>、その他すべてのチームメンバーに感謝いたします。</p>
-<p>皆様の専門知識とコミットメントにより、この統合が可能になり、TRMNL 7.5inch(OG) DIY キットコミュニティのユーザーエクスペリエンスが大幅に向上しました。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id=特別な謝辞>特別な謝辞<a href=#特別な謝辞 class=hash-link aria-label="Direct link to 特別な謝辞" title="Direct link to 特別な謝辞">​</a></h2>
+<p>このプロジェクトに対する強力なサポートと貴重な支援をいただいた<strong>TRMNLチーム</strong>全体に特別な感謝を申し上げます。特に、開発とドキュメント作成プロセス全体を通じて献身的な支援をいただいた<strong>Bogdan</strong>、<strong>Ryan Kulp</strong>、<strong>Fr3d</strong>、そして他のすべてのチームメンバーに感謝いたします。</p>
+<p>皆様の専門知識と献身により、この統合が可能になり、TRMNL 7.5inch(OG) DIYキットコミュニティのユーザーエクスペリエンスが大幅に向上しました。</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id=トラブルシューティング-1>トラブルシューティング<a href=#トラブルシューティング-1 class=hash-link aria-label="Direct link to トラブルシューティング" title="Direct link to トラブルシューティング">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id=ネットワークを再設定するには>ネットワークを再設定するには？<a href=#ネットワークを再設定するには class=hash-link aria-label="Direct link to ネットワークを再設定するには？" title="Direct link to ネットワークを再設定するには？">​</a></h3>
-<p>Key3（Reset ボタンの隣のボタン）を 5 秒間押し続けます。デバイスは初期 TRMNL インターフェースに戻り、AP をアクティブにします。</p>
+<p>Key3（Resetボタンの隣のボタン）を5秒間押し続けます。デバイスは初期のTRMNLインターフェースに戻り、APをアクティブにします。</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id=リソース>リソース<a href=#リソース class=hash-link aria-label="Direct link to リソース" title="Direct link to リソース">​</a></h2>
 <ul>
 <li><strong>[ファームウェア]</strong> <a href=https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project target=_blank rel="noopener noreferrer">TRMNL ePaper ライブラリ（GitHub）</a></li>
@@ -332,9 +360,9 @@
 <li><strong>[Thingiverse]</strong> <a href=https://www.thingiverse.com/thing:7097231 target=_blank rel="noopener noreferrer">保護付き三角形ベース</a></li>
 <li><strong>[Thingiverse]</strong> <a href=https://www.thingiverse.com/thing:7091096 target=_blank rel="noopener noreferrer">L 字型ベース</a></li>
 <li><strong>[Makerworld]</strong> <a href=https://makerworld.com/en/models/1625037-trmnl-7-5-og-diy-triangular-prism-shell-kit target=_blank rel="noopener noreferrer">三角形ベース</a></li>
-<li><strong>[Makerworld]</strong> <a href=https://makerworld.com/en/models/1625119-trmnl-7-5-og-diy-triangular-prism-shell-kit target=_blank rel="noopener noreferrer">保護された三角形ベース</a></li>
+<li><strong>[Makerworld]</strong> <a href=https://makerworld.com/en/models/1625119-trmnl-7-5-og-diy-triangular-prism-shell-kit target=_blank rel="noopener noreferrer">保護付き三角形ベース</a></li>
 <li><strong>[Makerworld]</strong> <a href=https://makerworld.com/en/models/1625065-trmnl-7-5-og-diy-l-shaped-case-kit target=_blank rel="noopener noreferrer">L字型ベース</a></li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id=技術サポート--製品ディスカッション>技術サポート & 製品ディスカッション<a href=#技術サポート--製品ディスカッション class=hash-link aria-label="Direct link to 技術サポート & 製品ディスカッション" title="Direct link to 技術サポート & 製品ディスカッション">​</a></h2>
-<p>弊社製品をお選びいただき、ありがとうございます！弊社製品でのご体験ができる限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。</p>
-<div class=table-center><div class=button_tech_support_container><a href=https://forum.seeedstudio.com/ class=button_forum></a><a href=https://www.seeedstudio.com/contacts class=button_email></a></div><div class=button_tech_support_container><a href=https://discord.gg/eWkprNDMU7 class=button_discord></a><a href=https://github.com/Seeed-Studio/wiki-documents/discussions/69 class=button_discussion></a></div></div></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class=col><a href=https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/docs/ja/Sensor/SeeedStudio_XIAO_Gadgets/trmnl_7inch5_diy_kit/ja_works_with_trmnl.md target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_Z9Sw aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"><span class=theme-last-updated>Last updated<!-- --> on <b><time datetime=2025-06-29T00:00:00.000Z itemprop=dateModified>Jun 29, 2025</time></b> by <b>Allen</b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href=/ja/trmnl_7inch5_diy_kit_main_page/><div class=pagination-nav__sublabel>Previous</div><div class=pagination-nav__label>TRMNL 7.5inch(OG) DIY Kitを始める</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/ja/ogdiy_kit_works_with_esphome/><div class=pagination-nav__sublabel>Next</div><div class=pagination-nav__label>ESPHomeとの連携</div></a></nav></div><div>Loading Comments...</div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#trmnlとは class="table-of-contents__link toc-highlight">TRMNLとは？</a><ul><li><a href=#なぜtrmnlを使用するのか class="table-of-contents__link toc-highlight">なぜTRMNLを使用するのか？</a></ul><li><a href=#trmnlの開始方法 class="table-of-contents__link toc-highlight">TRMNLの開始方法</a><ul><li><a href=#trmnlアカウントのセットアップとtrmnlアクセス class="table-of-contents__link toc-highlight">TRMNLアカウントのセットアップとTRMNLアクセス</a><li><a href=#ファームウェアの書き込み class="table-of-contents__link toc-highlight">ファームウェアの書き込み</a><ul><li><a href=#方法1-trmnl-web-flasherによる書き込み最も簡単 class="table-of-contents__link toc-highlight">方法1: TRMNL Web Flasherによる書き込み（最も簡単）</a><li><a href=#方法2-ソースからのビルドと書き込み上級ユーザー開発者向け class="table-of-contents__link toc-highlight">方法2: ソースからのビルドと書き込み（上級ユーザー/開発者向け）</a></ul></ul><li><a href=#wi-fiの設定とtrmnlへのプレイリスト送信 class="table-of-contents__link toc-highlight">Wi-Fiの設定とTRMNLへのプレイリスト送信</a><ul><li><a href=#電源投入とプロビジョニングモードへの移行 class="table-of-contents__link toc-highlight">電源投入とプロビジョニングモードへの移行</a><li><a href=#trmnl-wi-fiへの接続 class="table-of-contents__link toc-highlight">TRMNL Wi-Fiへの接続</a><li><a href=#キャプティブポータルを開く class="table-of-contents__link toc-highlight">キャプティブポータルを開く</a><li><a href=#wi-fi認証情報の入力 class="table-of-contents__link toc-highlight">Wi-Fi認証情報の入力</a><li><a href=#デバイスのネットワークへの接続 class="table-of-contents__link toc-highlight">デバイスのネットワークへの接続</a><li><a href=#trmnlウェブインターフェースへのアクセス class="table-of-contents__link toc-highlight">TRMNLウェブインターフェースへのアクセス</a><li><a href=#ボタンの使用方法 class="table-of-contents__link toc-highlight">ボタンの使用方法</a></ul><li><a href=#trmnl-プレイリスト機能の理解 class="table-of-contents__link toc-highlight">TRMNL プレイリスト機能の理解</a><ul><li><a href=#プレイリスト概要 class="table-of-contents__link toc-highlight">プレイリスト概要</a><li><a href=#プレイリストアイテム class="table-of-contents__link toc-highlight">プレイリストアイテム</a><li><a href=#スマートプレイリスト class="table-of-contents__link toc-highlight">スマートプレイリスト</a></ul><li><a href=#trmnl-プラグインの探索 class="table-of-contents__link toc-highlight">TRMNL プラグインの探索</a><ul><li><a href=#プラグインとは class="table-of-contents__link toc-highlight">プラグインとは？</a><li><a href=#接続済みプラグイン class="table-of-contents__link toc-highlight">接続済みプラグイン</a><li><a href=#プラグインマーケットプレイス class="table-of-contents__link toc-highlight">プラグインマーケットプレイス</a></ul><li><a href=#トラブルシューティング class="table-of-contents__link toc-highlight">トラブルシューティング</a><ul><li><a href=#q1-ウェブまたは-platformio-を使用する際にファームウェアをフラッシュできない問題が発生しましたどうすればよいですか class="table-of-contents__link toc-highlight">Q1: ウェブまたは PlatformIO を使用する際に、ファームウェアをフラッシュできない問題が発生しました。どうすればよいですか？</a></ul><li><a href=#特別な感謝 class="table-of-contents__link toc-highlight">特別な感謝</a><li><a href=#トラブルシューティング-1 class="table-of-contents__link toc-highlight">トラブルシューティング</a><ul><li><a href=#ネットワークを再設定するには class="table-of-contents__link toc-highlight">ネットワークを再設定するには？</a></ul><li><a href=#リソース class="table-of-contents__link toc-highlight">リソース</a><li><a href=#技術サポート--製品ディスカッション class="table-of-contents__link toc-highlight">技術サポート & 製品ディスカッション</a></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Navigation</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/Getting_Started/>Getting Started</a><li class=footer__item><a class=footer__link-item href=/Sensor_Network/>Sensor and Sensing</a><li class=footer__item><a class=footer__link-item href=/Network/>Network</a><li class=footer__item><a class=footer__link-item href=/Edge_Computing/>Edge Computing</a><li class=footer__item><a class=footer__link-item href=/Cloud/>Cloud</a><li class=footer__item><a href=https://solution.seeed.cc/ target=_blank rel="noopener noreferrer" class=footer__link-item>Solutions</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Ecosystem</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://discord.com/invite/QqMgVwHT3X target=_blank rel="noopener noreferrer" class=footer__link-item>Discord</a><li class=footer__item><a href=https://project.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=footer__link-item>Project Hub</a><li class=footer__item><a href=https://www.seeedstudio.com/ecosystem/ target=_blank rel="noopener noreferrer" class=footer__link-item>Partners</a><li class=footer__item><a href=https://www.seeedstudio.com/distributors.html target=_blank rel="noopener noreferrer" class=footer__link-item>Distributors</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Quick Guide</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://www.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=footer__link-item>Bazaar</a><li class=footer__item><a href=https://www.seeedstudio.com/get_help/HowToGetHelp target=_blank rel="noopener noreferrer" class=footer__link-item>How to get help</a><li class=footer__item><a href=https://support.seeedstudio.com/knowledgebase target=_blank rel="noopener noreferrer" class=footer__link-item>FAQs</a><li class=footer__item><a href=https://forum.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=footer__link-item>Forum</a><li class=footer__item><a href=https://www.seeedstudio.com/get_help/TechnicalSupport target=_blank rel="noopener noreferrer" class=footer__link-item>Technical Support</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Company</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://www.seeedstudio.com/about-us/ target=_blank rel="noopener noreferrer" class=footer__link-item>About Seeed</a><li class=footer__item><a href=https://www.seeedstudio.com/join-us/ target=_blank rel="noopener noreferrer" class=footer__link-item>Join us</a><li class=footer__item><a href=https://www.seeedstudio.com/contacts target=_blank rel="noopener noreferrer" class=footer__link-item>Contact Us</a><li class=footer__item><a href=https://www.seeedstudio.com/blog/2020/04/22/seeed-in-the-news/ target=_blank rel="noopener noreferrer" class=footer__link-item>Press</a></ul></div></div><div class="footer__bottom text--center"><div class=footer__copyright>Copyright © 2025 Seeed Studio, Inc. Built with Docusaurus.</div></div></div></footer></div>
+<p>弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。</p>
+<div class=table-center><div class=button_tech_support_container><a href=https://forum.seeedstudio.com/ class=button_forum></a><a href=https://www.seeedstudio.com/contacts class=button_email></a></div><div class=button_tech_support_container><a href=https://discord.gg/eWkprNDMU7 class=button_discord></a><a href=https://github.com/Seeed-Studio/wiki-documents/discussions/69 class=button_discussion></a></div></div></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class=col><a href=https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/docs/ja/Sensor/SeeedStudio_XIAO_Gadgets/trmnl_7inch5_diy_kit/ja_works_with_trmnl.md target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_Z9Sw aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"><span class=theme-last-updated>Last updated<!-- --> on <b><time datetime=2025-06-29T00:00:00.000Z itemprop=dateModified>Jun 29, 2025</time></b> by <b>Allen</b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href=/ja/trmnl_7inch5_diy_kit_main_page/><div class=pagination-nav__sublabel>Previous</div><div class=pagination-nav__label>TRMNL 7.5inch(OG) DIY Kitを始める</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/ja/ogdiy_kit_works_with_esphome/><div class=pagination-nav__sublabel>Next</div><div class=pagination-nav__label>ESPHomeとの連携</div></a></nav></div><div>Loading Comments...</div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#trmnlとは class="table-of-contents__link toc-highlight">TRMNLとは？</a><ul><li><a href=#なぜtrmnlを使用するのか class="table-of-contents__link toc-highlight">なぜTRMNLを使用するのか？</a></ul><li><a href=#trmnlの開始方法 class="table-of-contents__link toc-highlight">TRMNLの開始方法</a><ul><li><a href=#機器の設置 class="table-of-contents__link toc-highlight">機器の設置</a><li><a href=#trmnlアカウントの設定とtrmnlアクセス class="table-of-contents__link toc-highlight">TRMNLアカウントの設定とTRMNLアクセス</a><li><a href=#ファームウェアの書き込み class="table-of-contents__link toc-highlight">ファームウェアの書き込み</a><ul><li><a href=#方法1-trmnl-web-flasherで書き込み最も簡単 class="table-of-contents__link toc-highlight">方法1: TRMNL Web Flasherで書き込み（最も簡単）</a><li><a href=#方法2-ソースからビルドして書き込み上級ユーザー開発者向け class="table-of-contents__link toc-highlight">方法2: ソースからビルドして書き込み（上級ユーザー/開発者向け）</a></ul></ul><li><a href=#wi-fiの設定とtrmnlへのプレイリスト送信 class="table-of-contents__link toc-highlight">Wi-Fiの設定とTRMNLへのプレイリスト送信</a><ul><li><a href=#電源投入とプロビジョニングモードの開始 class="table-of-contents__link toc-highlight">電源投入とプロビジョニングモードの開始</a><li><a href=#trmnl-wi-fi-に接続する class="table-of-contents__link toc-highlight">TRMNL Wi-Fi に接続する</a><li><a href=#キャプティブポータルを開く class="table-of-contents__link toc-highlight">キャプティブポータルを開く</a><li><a href=#wi-fi-認証情報を入力する class="table-of-contents__link toc-highlight">Wi-Fi 認証情報を入力する</a><li><a href=#デバイスがネットワークに接続する class="table-of-contents__link toc-highlight">デバイスがネットワークに接続する</a><li><a href=#trmnl-ウェブインターフェースにアクセスする class="table-of-contents__link toc-highlight">TRMNL ウェブインターフェースにアクセスする</a><li><a href=#ボタンの使用方法 class="table-of-contents__link toc-highlight">ボタンの使用方法</a></ul><li><a href=#trmnl-プレイリスト機能の理解 class="table-of-contents__link toc-highlight">TRMNL プレイリスト機能の理解</a><ul><li><a href=#プレイリスト概要 class="table-of-contents__link toc-highlight">プレイリスト概要</a><li><a href=#プレイリストアイテム class="table-of-contents__link toc-highlight">プレイリストアイテム</a><li><a href=#スマートプレイリスト class="table-of-contents__link toc-highlight">スマートプレイリスト</a></ul><li><a href=#trmnl-プラグインの探索 class="table-of-contents__link toc-highlight">TRMNL プラグインの探索</a><ul><li><a href=#プラグインとは class="table-of-contents__link toc-highlight">プラグインとは？</a><li><a href=#接続済みプラグイン class="table-of-contents__link toc-highlight">接続済みプラグイン</a><li><a href=#プラグインマーケットプレイス class="table-of-contents__link toc-highlight">プラグインマーケットプレイス</a></ul><li><a href=#トラブルシューティング class="table-of-contents__link toc-highlight">トラブルシューティング</a><ul><li><a href=#q1-webやplatformioを使用する際にファームウェアをフラッシュできない問題が発生しましたどうすればよいですか class="table-of-contents__link toc-highlight">Q1: WebやPlatformIOを使用する際に、ファームウェアをフラッシュできない問題が発生しました。どうすればよいですか？</a></ul><li><a href=#特別な謝辞 class="table-of-contents__link toc-highlight">特別な謝辞</a><li><a href=#トラブルシューティング-1 class="table-of-contents__link toc-highlight">トラブルシューティング</a><ul><li><a href=#ネットワークを再設定するには class="table-of-contents__link toc-highlight">ネットワークを再設定するには？</a></ul><li><a href=#リソース class="table-of-contents__link toc-highlight">リソース</a><li><a href=#技術サポート--製品ディスカッション class="table-of-contents__link toc-highlight">技術サポート & 製品ディスカッション</a></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Navigation</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/Getting_Started/>Getting Started</a><li class=footer__item><a class=footer__link-item href=/Sensor_Network/>Sensor and Sensing</a><li class=footer__item><a class=footer__link-item href=/Network/>Network</a><li class=footer__item><a class=footer__link-item href=/Edge_Computing/>Edge Computing</a><li class=footer__item><a class=footer__link-item href=/Cloud/>Cloud</a><li class=footer__item><a href=https://solution.seeed.cc/ target=_blank rel="noopener noreferrer" class=footer__link-item>Solutions</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Ecosystem</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://discord.com/invite/QqMgVwHT3X target=_blank rel="noopener noreferrer" class=footer__link-item>Discord</a><li class=footer__item><a href=https://project.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=footer__link-item>Project Hub</a><li class=footer__item><a href=https://www.seeedstudio.com/ecosystem/ target=_blank rel="noopener noreferrer" class=footer__link-item>Partners</a><li class=footer__item><a href=https://www.seeedstudio.com/distributors.html target=_blank rel="noopener noreferrer" class=footer__link-item>Distributors</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Quick Guide</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://www.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=footer__link-item>Bazaar</a><li class=footer__item><a href=https://www.seeedstudio.com/get_help/HowToGetHelp target=_blank rel="noopener noreferrer" class=footer__link-item>How to get help</a><li class=footer__item><a href=https://support.seeedstudio.com/knowledgebase target=_blank rel="noopener noreferrer" class=footer__link-item>FAQs</a><li class=footer__item><a href=https://forum.seeedstudio.com/ target=_blank rel="noopener noreferrer" class=footer__link-item>Forum</a><li class=footer__item><a href=https://www.seeedstudio.com/get_help/TechnicalSupport target=_blank rel="noopener noreferrer" class=footer__link-item>Technical Support</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Company</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://www.seeedstudio.com/about-us/ target=_blank rel="noopener noreferrer" class=footer__link-item>About Seeed</a><li class=footer__item><a href=https://www.seeedstudio.com/join-us/ target=_blank rel="noopener noreferrer" class=footer__link-item>Join us</a><li class=footer__item><a href=https://www.seeedstudio.com/contacts target=_blank rel="noopener noreferrer" class=footer__link-item>Contact Us</a><li class=footer__item><a href=https://www.seeedstudio.com/blog/2020/04/22/seeed-in-the-news/ target=_blank rel="noopener noreferrer" class=footer__link-item>Press</a></ul></div></div><div class="footer__bottom text--center"><div class=footer__copyright>Copyright © 2025 Seeed Studio, Inc. Built with Docusaurus.</div></div></div></footer></div>
